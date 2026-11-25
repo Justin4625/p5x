@@ -29,6 +29,11 @@ Started 2026-11-25. Fan site for Persona 5: The Phantom X, modelled on lufel.net
 - Reruns: a banner is a rerun when the unit's first Global release (walk of lufel's schedule → `released` on each unit) is 3+ weeks before the banner start. lufel's schedule has no future reruns; they appear once lufel's gacha feed lists them.
 - Card art: `/assets/img/character-cards/<KR name>.webp`, resized to 360px wide by sharp into `public/cards/<sha1(KR id) first 12 hex>.webp`. Stable per unit: index-based names broke when a unit was inserted mid-list. Unused card files are deleted on each scrape.
 
+## Hosting (GitHub Pages)
+- `.github/workflows/deploy-pages.yml` builds with `BASE_PATH=/<repo>/` (vite `base`) and deploys `dist` on every push to main, after each "Update units from lufel.net" run (workflow_run, because bot commits don't trigger push workflows) and by hand.
+- Pages must be enabled once in repo Settings → Pages → Source: GitHub Actions. A private repo needs a paid GitHub plan for Pages.
+- Always build URLs with `import.meta.env.BASE_URL` (cards, nav), never a leading `/`.
+
 ## Auto-update (new units)
 - `.github/workflows/update-units.yml` runs `npm run scrape` daily (04:23 UTC) and on demand (Actions → "Run workflow"), then `npm run build`, and commits `src/data` + `public/cards` to main only if something changed. Commit subject names new units ("Add X from lufel.net").
 - Scraper safety: per-unit load failure keeps the previous data; an empty/unknown roster or a drop below 80% of the previous count writes nothing and exits 1. Unchanged data keeps the old `scraped` timestamp so the daily run doesn't commit noise.

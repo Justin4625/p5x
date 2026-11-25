@@ -13,6 +13,10 @@ npm install
 npx vite --port 5181
 ```
 
+## Hosting
+
+GitHub Pages, via `.github/workflows/deploy-pages.yml`: every push to main and every daily data update is built and published. Enable it once under Settings → Pages → Source: GitHub Actions.
+
 ## Update data
 
 ```
