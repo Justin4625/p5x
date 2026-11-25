@@ -1,4 +1,4 @@
-import { BY_ID, type Unit } from './data';
+import { ALL_BY_ID, type Unit } from './data';
 import { skillLinks } from './skills';
 
 /*
@@ -94,6 +94,15 @@ export function rankTiers(matches: Map<string, Match>, best = 4, good = 12) {
   ranked.forEach(([, m], i) => { m.tier = i < best && m.score >= 5 ? 'best' : i < good ? 'good' : 'none'; });
 }
 
+const pairCache = new Map<string, number>();
+/** Sum of pairReasons weights for a pair, cached (team search calls this a lot). */
+export function pairTotal(a: Unit, b: Unit): number {
+  const k = a.id < b.id ? `${a.id}|${b.id}` : `${b.id}|${a.id}`;
+  let v = pairCache.get(k);
+  if (v === undefined) { v = pairReasons(a, b).reduce((s, r) => s + r.weight, 0); pairCache.set(k, v); }
+  return v;
+}
+
 export function teamScore(team: Unit[]): { score: number; label: string } {
   if (team.length < 2) return { score: 0, label: 'Pick your thieves' };
   let pairs = 0;
@@ -101,7 +110,7 @@ export function teamScore(team: Unit[]): { score: number; label: string } {
   for (let i = 0; i < team.length; i++) {
     for (let j = i + 1; j < team.length; j++) {
       pairs++;
-      total += pairReasons(team[i], team[j]).reduce((s, r) => s + r.weight, 0);
+      total += pairTotal(team[i], team[j]);
     }
   }
   const fighters = team.filter((u) => !u.navigator);
@@ -117,5 +126,5 @@ export function teamScore(team: Unit[]): { score: number; label: string } {
 }
 
 export function unit(id: string | null | undefined): Unit | undefined {
-  return id ? BY_ID.get(id) : undefined;
+  return id ? ALL_BY_ID.get(id) : undefined;
 }

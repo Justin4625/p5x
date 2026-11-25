@@ -1,8 +1,13 @@
 import raw from './data/units.json';
 import tags from './data/tags.json';
+import upcomingRaw from './data/upcoming.json';
 
 export interface Skill { name: string; desc: string; type: string; sp: number | null }
 export interface Rotation { label: string; steps: string[][] }
+export interface Weapon { key: string; rarity: number; name: string; effect: string; desc: string }
+/** lufel tier: rank 0 = T0. list 'kr' means the KR server list (used for units not on Global yet). */
+export interface Tier { label: string; rank: number; awareness: number | null; list: 'global' | 'kr' }
+export interface Banner { kind: 'unit' | 'weapon'; unit: string; name: string; title: string; start: string; end: string }
 export interface Unit {
   id: string;
   name: string;
@@ -29,6 +34,12 @@ export interface Unit {
   card: string | null;
   /** ISO date this unit first appeared in our data (null for the original roster). */
   added?: string | null;
+  weapons: Weapon[];
+  tier: Tier | null;
+  tierKr: Tier | null;
+  /** Upcoming units only: estimated Global release date from lufel's schedule. */
+  eta?: string | null;
+  etaConfirmed?: boolean;
   /** English mechanic keywords, derived from tagsKr */
   mechanics: string[];
 }
@@ -45,11 +56,20 @@ function mechanicsOf(tagsKr: string): string[] {
   return [...out];
 }
 
-export const UNITS: Unit[] = (raw.units as Omit<Unit, 'mechanics'>[]).map((u) => ({
+export const UNITS: Unit[] = (raw.units as unknown as Omit<Unit, 'mechanics'>[]).map((u) => ({
   ...u,
   mechanics: mechanicsOf(u.tagsKr),
 }));
 export const BY_ID = new Map(UNITS.map((u) => [u.id, u]));
+/** Units announced for Global but not out yet (next ones on lufel's schedule). */
+export const UPCOMING: Unit[] = (upcomingRaw.upcoming as unknown as Omit<Unit, 'mechanics'>[]).map((u) => ({
+  ...u,
+  mechanics: mechanicsOf(u.tagsKr),
+}));
+/** Global banners running now or announced, newest end date last. */
+export const BANNERS = upcomingRaw.banners as Banner[];
+/** Global + upcoming, for lookups that may hit either. */
+export const ALL_BY_ID = new Map([...UNITS, ...UPCOMING].map((u) => [u.id, u]));
 export const WONDER = BY_ID.get('원더')!;
 export const SCRAPED = raw.scraped;
 

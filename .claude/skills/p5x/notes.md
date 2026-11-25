@@ -9,12 +9,23 @@ Started 2026-11-25. Fan site for Persona 5: The Phantom X, modelled on lufel.net
 - Synergy highlights: BEST (top 4 with score ≥ 5) and GOOD (next up to 12 total with score ≥ 2.5). Navigators are ranked separately (1 BEST, 3 total). Units that don't match are dimmed. Reasons show on hover (desktop) and in the drawer under "Fit with your crew".
 - Detail drawer per unit: overview (lufel review_en), best partners, skills, rotations.
 
+## My roster · Should I pull? (roster.html, src/roster.ts)
+- Second page (Vite multi-page via `vite.config.js`). Nav links on both heroes (`navHTML()` in `src/ui.ts`, shared helpers live there).
+- Collection (`src/collection.ts`): owned units + awareness A0–A6 + 5★ signature weapon, in localStorage `p5x-collection`. "Copy link" makes `roster.html#have=CODENAME~6w.…` to move it to another device; opening it asks before replacing.
+- Advice (`src/advice.ts`, weights at the top): candidates = Global banners running now (lufel gacha feed) + next 8 upcoming units. Crew value = team meter × 0.5 + member strength by tier (T0 20 … T4 0); score = crew upgrade (≤30) + partners (≤15) + role gap (15) + first dealer of element (4) + tier (25…0) + limited (+8/−5) − same-role-same-or-better-tier (8). PULL ≥ 50, MAYBE ≥ 32. No ticked units → no verdict, just facts. Highest PULL = "BEST BET".
+- Weapon advice: only for owned/PULL units; WORTH IT if in best crew and dealer or T0; OPTIONAL if in crew or tier ≤ T0.5.
+- Calibrated on a starter roster (old T2–T4 units → T0 limiteds become PULL) and a stacked roster (mostly MAYBE/SKIP).
+
 ## Data (lufel.net)
 - Roster: `/data/character_info_glb.js` (`characterList.mainParty` / `supportParty` = navigators). Full info (en names, element, position, color, tags) is in `/data/character_info.js` (KR, covers more units than Global).
 - Per unit: `/data/characters/<KR name>/{party,operation,skill,setting,review,base_stats}.js`.
   - party.js `party[].members` = 3 thieves + navigator (Wonder is never listed). `friends[]` = best partners with `comment_en`.
   - operation.js `basic[]` = `{label: '의식 N', value: '1 › 2↺+3 › …'}` (↺ = auto, HL = highlight, TH = theurgy, ⓘA = item, `·` = hold).
   - skill.js has `enCharacterSkillsData`.
+- Weapons: `/data/characters/<KR>/weapon.js` (`enCharacterWeaponData`, keys weapon5-1 = 5★ signature, weapon4-1 = 4★).
+- Tiers: `/apps/tier/global_tier.json` (Global units) and `kr_tier.json` (used for units not on Global yet). Best label per unit; `awareness` = rated at A-n.
+- Upcoming: `/apps/schedule/data.js` (`ReleaseScheduleData`: manualReleases + autoGenerateCharacters; date given or previous date + previous `days`; then KR release_order). Next 8 are scraped like normal units into `src/data/upcoming.json` with `eta` (estimate).
+- Banners: `/data/external/gacha/en.json` (Global, thief + weapon banners, start/end UTC), matched to units by English name and to weapons by 5★ name.
 - Card art: `/assets/img/character-cards/<KR name>.webp`, resized to 360px wide by sharp into `public/cards/<sha1(KR id) first 12 hex>.webp`. Stable per unit: index-based names broke when a unit was inserted mid-list. Unused card files are deleted on each scrape.
 
 ## Auto-update (new units)
@@ -49,7 +60,9 @@ Not modelled yet: overall unit strength/meta, awareness (A0–A6), Wonder's pers
 - Codenames like `WIND·Tempest` are split: the base is shown big and the variant small (`code()` in main.ts).
 
 ## Open points / next steps
-- More lufel features: tactic library (Firestore), revelations, persona, weapons.
+- More lufel features: tactic library (Firestore), revelations, persona.
+- Pull advice ignores currency/pity and dupes (awareness) value; could add a "tickets on hand" input.
+- Team builder could offer "only my units" using the collection.
 - Wonder's persona choice in the team (buff/debuff persona per element).
 - Real action order uses gear speed. A user-editable speed per slot would make the turn order exact.
 - Check the Miku token translation and Kotone (no rotations on lufel yet).

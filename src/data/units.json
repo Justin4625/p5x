@@ -1,6 +1,6 @@
 {
  "source": "lufel.net",
- "scraped": "2026-11-25T07:58:46.379Z",
+ "scraped": "2026-11-25T08:07:14.511Z",
  "units": [
   {
    "id": "YUI·스텔라",
@@ -166,6 +166,34 @@
     }
    ],
    "skillPriority": "3>1>2>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Starlight Decimators",
+     "effect": "",
+     "desc": "Increase critical rate by 18.1%/18.1%/23.5%/23.5%/28.9%/28.9%/34.3%. When Veggie Knights are summoned, increase Cosmic Yui's Attack by 10.7%/13.8%/13.8%/16.9%/16.9%/20.0%/20.0%. This effect is permanent and stacks up to 4 times.\nWhen using [Veg-Out Attack], increase critical damage by 32.8%/42.8%/42.8%/52.8%/52.8%/62.8%/62.8%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Sprouting Voyagers",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. After activating a Resonance, increase Attack when using [Veg-Out Attack] by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0% for 2 turns."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/9114d675daf8.webp"
   },
@@ -339,6 +367,34 @@
     }
    ],
    "skillPriority": "3>4>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Phoenix Dagger",
+     "effect": "",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%. After gaining Will of Rebellion, increase Ren's Curse damage by 10.0%/13.0%/13.0%/16.0%/16.0%/19.0%/19.0% for 2 turns. Stacks up to 3 times. At 3 or more Will of Rebellion stacks, increase Ren's next damage by 23.0%/30.0%/30.0%/37.0%/37.0%/44.0%/44.0%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Machete",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. When attacking a foe with an ailment, increase Attack by 19.1%/24.8%/24.8%/30.5%/30.5%/36.2%/36.2%."
+    }
+   ],
+   "tier": {
+    "label": "T2",
+    "rank": 3,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T2",
+    "rank": 3,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/2bb7c695cf23.webp"
   },
@@ -416,6 +472,34 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>1>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Fallen Angel Wing",
+     "effect": "",
+     "desc": "Increase healing effect by 22.0%/22.0%/28.5%/28.5%/35.0%/35.0%/41.5%. For each Starfire stack on allies, increase healing received by 4.5%/5.9%/5.9%/7.3%/7.3%/8.7%/8.7%, and increase Attack by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Lava Flame",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. If Starfire is active, increase healing effect by 6.9%/9.0%/9.0%/11.1%/11.1%/13.2%/13.2% per stack of Starfire."
+    }
+   ],
+   "tier": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/0793a5e9b8d3.webp"
   },
@@ -489,6 +573,34 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>4>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Final Buster",
+     "effect": "",
+     "desc": "Increase Attack by 30.0/30.0/39.0/39.0/48.0/48.0/57.0%. After using a skill on an ally, grant target 1 of the following buffs:\nIncrease Attack by 16.0/21.0/21.0/26.0/26.0/31.0/31.0% (1 turn).\nIncrease critical damage by 16.0/21.0/21.0/26.0/26.0/31.0/31.0% (1 turn).\nIf target has 2 or more Power of Friendship stacks, grant both buffs, and increase shield effects Kamiyama grants by 10.0%/13.0%/13.0%/16.0%/16.0%/19.0%/19.0% more for 1 turn."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Justice Lance",
+     "effect": "",
+     "desc": "Increase shield by 8.8%/8.8%/11.4%/11.4%/14.0%/14.0%/16.6%. After using a skill on an ally, increase Attack by 9.0%/11.7%/11.7%/14.4%/14.4%/17.1%/17.1% for 1 turn. For every 20% HP the target loses, increase Attack by 20%."
+    }
+   ],
+   "tier": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/2f4720917929.webp"
   },
@@ -661,6 +773,34 @@
     }
    ],
    "skillPriority": "3>1>2>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Cerberus Claws",
+     "effect": "",
+     "desc": "Increase ailment accuracy by 36.0%/36.0%/47.0%/47.0%/58.0%/58.0%/69.0%.\nWhen an ally uses a Fire, Ice, Electric or Wind skill or activates a Resonance, increase Runa's ailment accuracy by 23.0%/28.0%/28.0%/33.0%/33.0%/38.0%/38.0% for 2 turns. This effect does not stack.\nWhen using Woof Woof Blaze and activating the effect of Big Welcome, decrease the target's Defense by 16.6%/21.6%/21.6%/26.6%/26.6%/31.6%/31.6% more for 3 turns. When the effect of Furrocious Follow-Up is activated, decrease the target's Defense by 33.3%/43.3%/43.3%/53.3%/53.3%/63.3%/63.3% more for 3 turns. These 2 debuffs do not stack."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Hunting Hound Claws",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. When Big Welcome or Furrocious Follow-Up is active, increase Runa's ailment accuracy by 22.0%/28.5%/28.5%/35.0%/35.0%/41.5%/41.5%."
+    }
+   ],
+   "tier": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/7069f8b43c64.webp"
   },
@@ -753,6 +893,34 @@
     }
    ],
    "skillPriority": "3>4>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Revenge Axe",
+     "effect": "",
+     "desc": "Increase critical damage by 36.3%/36.3%/47.2%/47.2%/58.1%/58.1%/69.0%. After foes or allies act, gain 1 Fired Up stack. Stacks up to 10 times. When dealing damage, spend all Fired Up stacks to increase skill damage by 4.5%/5.8%/5.8%/7.2%/7.2%/8.6%/8.6% per Fired Up stack."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Grand Presser",
+     "effect": "",
+     "desc": "Increase critical rate by 7.3%/7.3%/9.5%/9.5%/11.7%/11.7%/13.9%. When Ryuji has Rebound and deals a critical with a skill, increase damage by 38.0%/49.5%/49.5%/61.0%/61.0%/72.5%/72.5%."
+    }
+   ],
+   "tier": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/b84713d98faa.webp"
   },
@@ -1005,6 +1173,34 @@
     }
    ],
    "skillPriority": "3>2>1>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Windplum Dance",
+     "effect": "",
+     "desc": "Increase critical damage by 36.3%/36.3%/47.2%/47.2%/58.1%/58.1%/69.0%.\nAfter using a skill on an ally, increase all allies' critical damage by 13.2%/17.2%/17.2%/21.2%/21.2%/25.2%/25.2% besides Tempest Riko for 2 turns. Also, when the main target deals damage with a skill, increase the damage by 3.3%/4.3%/4.3%/5.3%/5.3%/6.3%/6.3% for every 50 SP spent by that skill for 2 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Sparrow's Leap",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen Tempest Riko restores SP with a skill, increase her critical damage by 8.7%/11.3%/11.3%/13.9%/13.9%/16.5%/16.5% for 2 turns. Stacks up to 2 times."
+    }
+   ],
+   "tier": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/843e56b84630.webp"
   },
@@ -1202,6 +1398,34 @@
     }
    ],
    "skillPriority": "3>4>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Nuclear Finisher",
+     "effect": "Will Extinction",
+     "desc": "Increase Nuclear damage by 24.2%/24.2%/31.5%/31.5%/38.8%/38.8%/46.1%. When attacking a foe with an elemental ailment, increase Attack by 30.0%/39.0%/39.0%/48.0%/48.0%/57.0%/57.0%. When an ally inflicts an elemental ailment, gain 1 Heat stack. When entering Crash Out state, spend all Heat stacks to increase next Nuclear skill damage by 10.0%/13.0%/13.0%/16.0%/16.0%/19.0%/19.0% for each Heat stack, up to 60.0%/78.0%/78.0%/96.0%/96.0%/114.0%/114.0%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Omega Knuckle",
+     "effect": "Unquenchable Flame",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. When dealing Nuclear damage, increase damage by 4.4%/5.6%/5.6%/6.8%/6.8%/8.0%/8.0% for each Tenacity stack gained."
+    }
+   ],
+   "tier": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/202f194396fd.webp"
   },
@@ -1288,6 +1512,34 @@
     }
    ],
    "skillPriority": "3>2>1>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Spina Sacramenti",
+     "effect": "",
+     "desc": "Increase Defense by 45.0%/45.0%/59.0%/59.0%/73.0%/73.0%/87.0%.\nIncrease Knight's Protection shield by 30.0%/40.0%/40.0%/50.0%/50.0%/60.0%/60.0%.\nAlso increase the target's damage dealt by 8.0%/10.5%/10.5%/13.0%/13.0%/15.5%/15.5% for each Knight's Protection shield granted. This effect can stack up to 2 times."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Spina Caritatis",
+     "effect": "",
+     "desc": "Increase shield by 8.7%/8.7%/11.3%/11.3%/13.9%/13.9%/16.5%.\nAlso increase shield granted by Ashiya to allies with less than 60% HP by 13.7%/17.8%/17.8%/21.9%/21.9%/26.0%/26.0%."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": 1,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/b653a2ad7c54.webp"
   },
@@ -1388,6 +1640,41 @@
    "parties": [],
    "friends": [],
    "skillPriority": "1>3>2>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Golden Legacy",
+     "effect": "",
+     "desc": "Increase critical rate by 18.0%/18.0%/23.4%/23.4%/28.8%/28.8%/34.2%. If a foe is critically hit with a skill, deal 10.0%/13.3%/13.3%/16.7%/16.7%/20.0%/20.0% of max HP as bonus damage (up to 100.0%/133.3%/133.3%/166.7%/166.7%/200.0%/200.0% of Attack). When using a healing skill, restore 9.0%/11.8%/11.8%/14.6%/14.6%/17.4%/17.4% of the target's max HP. If a skill misses, immediately gain Chivalry."
+    },
+    {
+     "key": "weapon4-2",
+     "rarity": 4,
+     "name": "Headhunter Ladle",
+     "effect": "",
+     "desc": "Increase critical rate by 5.9%/5.9%/7.6%/7.6%/9.3%/9.3%/11.0%. When attacking with a skill, restore HP equal to 6.3%/8.0%/8.0%/9.7%/9.7%/11.4%/11.4% of Attack to the ally with the lowest HP. Also, 2.0%/3.0%/3.0%/4.0%/4.0%/5.0%/5.0% chance to inflict Forget on the target foe for 1 turn."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Shamshir",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. When healing an ally with 80% or more HP, grant Moonlight. Moonlight: Increase HP by 10.0%/13.0%/13.0%/16.0%/16.0%/19.0%/19.0% and Attack by 4.0%/5.3%/5.3%/6.7%/6.7%/8.0%/8.0% for 2 turns."
+    }
+   ],
+   "tier": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/43d183e22d66.webp"
   },
@@ -1576,6 +1863,34 @@
     }
    ],
    "skillPriority": "3>1>2>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Nebula Pennant",
+     "effect": "Gravity Acceleration",
+     "desc": "Increase Speed by 15/15/20/20/25/25/30. When Mayumi's Speed is over 100, for every 10 points of Speed above 100, increase Attack by 12.5%/16.2%/16.2%/20.0%/20.0%/23.8%/23.8% (up to a maximum of 100.0%/130.0%/130.0%/160.0%/160.0%/190.0%/190.0%).\nAfter activating a skill, for every 40 stacks of total Velocity, increase party's damage by 3.4%/4.4%/4.4%/5.4%/5.4%/6.4%/6.4% for 2 turns (up to a maximum of 17.0%/22.0%/22.0%/27.0%/27.0%/32.0%/32.0%)."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Formula Pennant",
+     "effect": "Wake Effect",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen activating Torque Boost, increase damage by 18.0%/23.4%/23.4%/28.8%/28.8%/34.2%/34.2%."
+    }
+   ],
+   "tier": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T2",
+    "rank": 3,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/e1724d5980e3.webp"
   },
@@ -1647,6 +1962,34 @@
    "parties": [],
    "friends": [],
    "skillPriority": "1>2>4>3",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Quasar",
+     "effect": "",
+     "desc": "Increase Electric damage by 24.2%/24.2%/31.5%/31.5%/38.8%/38.8%/46.1%. After using a skill, gain 1 Thundercloud stack: Increase own Attack by 11.0%/16.0%/16.0%/21.0%/21.0%/26.0%/26.0%. Gain 1 more stack if there are any Shocked foes. Lasts 2 turns. Stacks up to 3 times. When Thundercloud is at max stacks, increase party's Electric damage by 10.0%/14.6%/14.6%/19.2%/19.2%/23.8%/23.8%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Crime and Punishment",
+     "effect": "",
+     "desc": "Increase Attack by 12.0/12.0/16.0/16.0/20.0/20.0/24.0%. If there are any Shocked foes, increase Attack by 20/26/26/32/32/38/38%."
+    }
+   ],
+   "tier": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/3e202a4c32e6.webp"
   },
@@ -1792,6 +2135,34 @@
     }
    ],
    "skillPriority": "3>1>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Colorful Coast",
+     "effect": "",
+     "desc": "Increase Bless damage by 24.2%/24.2%/31.5%/31.5%/38.8%/38.8%/46.1%.\nWhen Summer Hype is active, increase critical damage by 26.0%/34.0%/34.0%/42.0%/42.0%/50.0%/50.0%.\nWhen using Surf 'n' Shine when Summer Hype is active, increase that skill's damage by 34.0%/44.0%/44.0%/54.0%/54.0%/64.0%/64.0% and gain 1 Sunlight stack.\nWhen using a skill or Highlight, spend 1 Sunlight stack to increase the skill's damage by the same amount.\nDamage increases from Summer Hype and Sunlight will not stack, even if activated at the same time."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Bubble Puff Star",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen receiving healing while Summer Hype is active, increase damage by 7.6%/9.9%/9.9%/12.2%/12.2%/14.5%/14.5% more for 2 turns. Stacks up to 2 times."
+    }
+   ],
+   "tier": {
+    "label": "T2",
+    "rank": 3,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/de665870d2b5.webp"
   },
@@ -1869,6 +2240,34 @@
    "parties": [],
    "friends": [],
    "skillPriority": "2>3>4>1",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Queen of Winter",
+     "effect": "Hiver Éternel",
+     "desc": "Increase critical damage by 36.3%/36.3%/47.2%/47.2%/58.1%/58.1%/69.0%. Activate Blade Dancer at 8+ Ice Crystal stacks and increase its damage by 46.0%/68.0%/68.0%/90.0%/90.0%/112.0%/112.0%. Increase the power of Durandal of Ice at 8+ Ice Crystal stacks."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Edelweiss",
+     "effect": "Don Glacial",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. Each time Kotone gains Ice Crystal stacks, increase Ice damage by 2.4%/3.1%/3.1%/3.8%/3.8%/4.5%/4.5% for 1 turn. Stacks up to 10 times."
+    }
+   ],
+   "tier": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/357440f109e3.webp"
   },
@@ -2023,6 +2422,34 @@
     }
    ],
    "skillPriority": "3>1>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Lame de l'Amour",
+     "effect": "",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%. Each time Frostgale Kotone gains a Spring's Vestige or Winter's Vestige stack, increase critical rate by 5.4%/7.0%/7.0%/8.6%/8.6%/10.2%/10.2% for 2 turns. This effect can stack up to 3 times. When activating Spring's Edge or Winter's Edge, increase Wind or Ice damage by 27.0%/35.0%/35.0%/43.0%/43.0%/51.0%/51.0% for 2 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Lame de l'Aube",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. Each time Frostgale Kotone gains a Spring's Vestige or Winter's Vestige stack, permanently increase Attack by 1.8%/2.3%/2.3%/2.8%/2.8%/3.3%/3.3%. This effect can stack up to 10 times."
+    }
+   ],
+   "tier": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/7895a9f01e21.webp"
   },
@@ -2094,6 +2521,34 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>2>1>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Angel Heart",
+     "effect": "",
+     "desc": "Increase max HP by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%. When Minami has Diagnosis, increase healing effect by 10.0%/13.0%/13.0%/16.0%/16.0%/19.0%/19.0%. When spending Diagnosis, increase party's damage by 25.0%/33.0%/33.0%/41.0%/41.0%/49.0%/49.0% for 1 turn."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Hymn of Life",
+     "effect": "",
+     "desc": "Increase healing effect by 8.7%/8.7%/11.3%/11.3%/13.9%/13.9%/16.5%. Increase continuous healing effect by 28.5%/37.0%/37.0%/45.5%/45.5%/54.0%/54.0%. After using a healing skill, 26.0%/34.0%/34.0%/42.0%/42.0%/50.0%/50.0% chance to grant Blessing to the main target."
+    }
+   ],
+   "tier": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": 1,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/a47c36800d92.webp"
   },
@@ -2268,6 +2723,34 @@
     }
    ],
    "skillPriority": "3>2>1>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Everlasting Garden",
+     "effect": "Summer Breeze",
+     "desc": "Increase medicine effects by 20.0%/20.0%/26.0%/26.0%/32.0%/32.0%/38.0%. Also, when using medicine on an ally, also increase the main target's critical damage by 15.3%/19.9%/19.9%/24.5%/24.5%/29.1%/29.1% for 3 turns.\nWhen using a skill on an ally, increase the main target's Attack by 10.0%/13.0%/13.0%/16.0%/16.0%/19.0%/19.0% for 2 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Tea Time Delight",
+     "effect": "Sweet Feast",
+     "desc": "Increase max HP by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. When using a skill on an ally, increase Beachflower Minami's critical multiplier by 17.4%/22.6%/22.6%/27.8%/27.8%/33.0%/33.0%."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/52d4340814cc.webp"
   },
@@ -2437,7 +2920,8 @@
       "미유·여름",
       "마사키",
       "유스케",
-      "후카"
+      "후카",
+      "코로마루"
      ],
      "comment": ""
     }
@@ -2454,9 +2938,41 @@
     {
      "id": "미나미·여름",
      "comment": "Can grant an independent bucket Resonance damage boost through item use."
+    },
+    {
+     "id": "코로마루",
+     "comment": "Koromaru can enhance all enemies' Ice weakness and increase the entire party's damage."
     }
    ],
    "skillPriority": "3>2>1>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Mermaid Dreamer",
+     "effect": "",
+     "desc": "Increase critical damage by 36.3%/36.3%/47.2%/47.2%/58.1%/58.1%/69.0% and Resonance critical rate by 16.4%/21.4%/21.4%/26.4%/26.4%/31.4%/31.4%.\nWhen spending SP to activate a skill or Resonance, increase Wavecatcher Miyu's damage by 6.8%/8.8%/8.8%/10.8%/10.8%/12.8%/12.8%. This effect is permanent and stacks up to 5 times."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Jellie Voyager",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen Surf is active, increase Attack by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0%."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/91d2382dbcff.webp"
   },
@@ -2588,6 +3104,34 @@
     }
    ],
    "skillPriority": "3>1>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Entropy",
+     "effect": "Conflagrations, Dauntless",
+     "desc": "Increase ailment accuracy by 36.0%/36.0%/47.0%/47.0%/58.0%/58.0%/69.0%.\nDuring battle, for every 66.0%/68.0%/68.0%/70.0%/70.0%/72.0%/72.0% of Natsukawa's ailment accuracy, increase Attack.\nAlso, each time an Ice Technical is activated, decrease the target's Defense by 23.3%/30.3%/30.3%/37.3%/37.3%/44.3%/44.3% more for 2 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Abyssal Thorn",
+     "effect": "Waterflowing Afterglow",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nFor each Extinguish stack, increase ailment accuracy by 6.0%/7.8%/7.8%/9.6%/9.6%/11.4%/11.4%."
+    }
+   ],
+   "tier": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T2",
+    "rank": 3,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/e8da9974fd26.webp"
   },
@@ -2694,9 +3238,41 @@
     {
      "id": "후카",
      "comment": "Mitsuru's Responsibility passive reduces Fuuka's initial cooldown by 4 ally actions."
+    },
+    {
+     "id": "나루미",
+     "comment": "Mitsuru provides high Defense Reduction and deals additional Damage on every Additional Turn of Narumi."
     }
    ],
    "skillPriority": "4>2>3>1",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Longinus",
+     "effect": "Piercing Fate",
+     "desc": "Increase critical rate by 18.1%/18.1%/23.5%/23.5%/28.9%/28.9%/34.3%.\nWhen Frostbound is inflicted on foes, increase party's Attack by 18.1%/23.5%/23.5%/28.9%/28.9%/34.3%/34.3% for 2 turns.\nAfter activating Mitsuru's Theurgy, increase party's critical damage by 18.1%/23.5%/23.5%/28.9%/28.9%/34.3%/34.3% and Mitsuru's critical damage by 14.7%/19.3%/19.3%/23.9%/23.9%/28.5%/28.5% for 2 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Rose Flamberge",
+     "effect": "Elegant Presence",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. When Frostbound is inflicted on foes, increase Mitsuru's damage by 17.6%/23.2%/23.2%/28.8%/28.8%/34.4%/34.4% for 1 turn."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/868c8c267e04.webp"
   },
@@ -2844,9 +3420,41 @@
     {
      "id": "카타야마",
      "comment": "Can ignore enemy weaknesses and greatly reduce Down, further amplifying Akihiko Sanada’s A2 effect that increases damage against Downed enemies."
+    },
+    {
+     "id": "코로마루",
+     "comment": "Koromaru can enhance all enemies' Elec weakness, inflict Shock, and increase the entire party's damage."
     }
    ],
    "skillPriority": "3>1>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Sabazios",
+     "effect": "Lethality",
+     "desc": "Increase critical damage by 36.3%/36.3%/47.2%/47.2%/58.1%/58.1%/69.0%.\nWhen gaining Mettle stacks, increase critical rate by 8.2%/10.7%/10.7%/13.2%/13.2%/15.7%/15.7% for 2 turns. This effect stacks up to 2 times.\nWhen Sanada activates a critical with a skill, Theurgy, or Resonance, increase that damage by 34.0%/44.0%/44.0%/54.0%/54.0%/64.0%/64.0%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Wicked Cestus",
+     "effect": "Explosiveness",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nAlso, when Grit is at 2 or more stacks, increase Attack by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0%."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/30d4a93d187e.webp"
   },
@@ -2918,6 +3526,34 @@
    "parties": [],
    "friends": [],
    "skillPriority": "2>3>4>1",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Permafrost",
+     "effect": "",
+     "desc": "Increase max HP by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%. When activating Desperado's healing effect, 52.0%/68.0%/68.0%/84.0%/84.0%/100.0%/100.0% chance to grant the same effect to the ally with the lowest remaining HP. When taking an attack, decrease the attacker's Defense by 30.0%/39.0%/39.0%/48.0%/48.0%/57.0%/57.0% for 1 turn."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Demon's Bite",
+     "effect": "",
+     "desc": "Increase max HP by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. While Desperado is active, increase max HP by 11.0%/14.3%/14.3%/17.7%/17.7%/21.0%/21.0% more, Defense by 11.0%/14.3%/14.3%/17.7%/17.7%/21.0%/21.0%, and ailment resistance by 11.0%/14.3%/14.3%/17.7%/17.7%/21.0%/21.0%."
+    }
+   ],
+   "tier": {
+    "label": "T2",
+    "rank": 3,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/726a08c38661.webp"
   },
@@ -2991,6 +3627,41 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>1>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Ribalta",
+     "effect": "Starstruck Throne",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%.\nWhen using a skill on an ally, if the target has Blessing stacks, increase damage by 11.0%/14.0%/14.0%/17.0%/17.0%/20.0%/20.0% for 2 turns.\nEach time Followspot or Improvise is activated with a different Improv state, permanently increase Shoki's Attack by 14.0%/18.0%/18.0%/22.0%/22.0%/26.0%/26.0%. This effect stacks up to 3 times. Also, allies besides Shoki gain 50% of this effect."
+    },
+    {
+     "key": "weapon4-2",
+     "rarity": 4,
+     "name": "Sipario",
+     "effect": "Innumerable Stages",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen using a skill on an ally, increase Shoki's ailment accuracy by 22.0%/28.0%/28.0%/34.0%/34.0%/40.0%/40.0% and grant 60% of this effect to all allies besides Shoki for 2 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Mattatóre",
+     "effect": "Fated Enthroning",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. When Shoki grants Blessing stacks, increase his Attack by 3.3%/4.3%/4.3%/5.3%/5.3%/6.3%/6.3% and ailment accuracy by 3.3%/4.3%/4.3%/5.3%/5.3%/6.3%/6.3% for 2 turns. Stacks up to 3 times."
+    }
+   ],
+   "tier": {
+    "label": "T2",
+    "rank": 3,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/7d6e3a57783f.webp"
   },
@@ -3151,6 +3822,34 @@
     }
    ],
    "skillPriority": "3>2>4>1",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Frontier Justice",
+     "effect": "Defender's Axe",
+     "desc": "Increase max HP by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%.\nWhen Gunslinger Shun grants a shield to himself, increase party's critical damage by 18.1%/23.5%/23.5%/28.9%/28.9%/34.3%/34.3% for 2 turns.\nWhen dealing Gun damage, decrease target's Defense by 15.8%/20.6%/20.6%/25.4%/25.4%/30.2%/30.2% for 2 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Desperado's Toothpick",
+     "effect": "Combat Axe",
+     "desc": "Increase shield by 8.8%/8.8%/11.4%/11.4%/14.0%/14.0%/16.6%.When Shun gains a shield, increase user's max HP by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0% for 2 turns."
+    }
+   ],
+   "tier": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "kr"
+   },
+   "tierKr": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/d337963da7cc.webp"
   },
@@ -3343,6 +4042,34 @@
     }
    ],
    "skillPriority": "3>1>2>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Spada della Vita",
+     "effect": "Vital Blade",
+     "desc": "Increase critical damage by 36.3%/36.3%/47.2%/47.2%/58.1%/58.1%/69.0%. When Stellato has been gained, increase Attack by 42.5%/55.0%/55.0%/67.5%/67.5%/80.0%/80.0%.\nWhen Tenebre Shoki spends his own HP to use a skill, increase critical rate by 16.4%/21.4%/21.4%/26.4%/26.4%/31.4%/31.4% for 2 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Spada Vendetta",
+     "effect": "Blessed Blade",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.When user gains [Night's Blessing], increase user's damage by 3.5%/4.5%/4.5%/5.5%/5.5%/6.5%/6.5% for 2 turns. Stacks up to 5 times."
+    }
+   ],
+   "tier": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "kr"
+   },
+   "tierKr": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/8cfc79ed506b.webp"
   },
@@ -3443,6 +4170,34 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>4>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Venus Sunrise",
+     "effect": "",
+     "desc": "Increase critical rate by 18.0%/18.0%/23.5%/23.5%/29.0%/29.0%/34.5%. At the start of battle, gain 1 Right to Strike stack, and increase critical damage by 12%. For each stack of Right to Strike, increase damage by (current number of stacks × 7.5%/9.8%/9.8%/12.1%/12.1%/14.4%/14.4%). Lasts for 1 turn."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Knight's Reward",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. When dealing damage to the same foe multiple times, each hit has a 30% chance to deal 3.8%/4.9%/4.9%/6.0%/6.0%/7.1%/7.1% more damage (up to 19.0%/24.5%/24.5%/30.0%/30.0%/35.5%/35.5%)."
+    }
+   ],
+   "tier": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/96e300499162.webp"
   },
@@ -3646,8 +4401,10 @@
     {
      "members": [
       "아야카",
+      "모토하·청광",
       "J&C",
-      "후카"
+      "후카",
+      "코로마루"
      ],
      "comment": ""
     }
@@ -3671,6 +4428,34 @@
     }
    ],
    "skillPriority": "3>2>4>1",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Superstar",
+     "effect": "",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%. At the start of battle, fill Highlight gauge by 40.0%/52.0%/52.0%/64.0%/64.0%/76.0%/76.0%.\nIncrease Costar's Attack by 15.0%/19.5%/19.5%/24.0%/24.0%/28.5%/28.5%. Each time an ally uses a Highlight or Theurgy, increase Costar's Attack by 5.0%/6.5%/6.5%/8.0%/8.0%/9.5%/9.5%. Stacks up to 3 times."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Rock 'n' Roller",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nAfter using Catchy Hook, increase Attack by 28.0%/36.0%/36.0%/44.0%/44.0%/52.0%/52.0% for 2 turns."
+    }
+   ],
+   "tier": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/f67bc5b091a8.webp"
   },
@@ -3800,6 +4585,34 @@
     }
    ],
    "skillPriority": "3>1>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Rosethorn",
+     "effect": "",
+     "desc": "Increase Fire damage by 24.2%/24.2%/31.5%/31.5%/38.8%/38.8%/46.1%. When entering La Vie En Rose state, inflict Burn on 1 random foe. Increase Fire damage 25.5%/33.5%/33.5%/41.5%/41.5%/49.5%/49.5% for each Burning foe. Maximum of 76%/100%/100%/124%/124%/148%/148%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Masquerade Ribbon",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/16.0%/16.0%/20.0%/20.0%/24.0%/24.0%. When attacking a Burning foe, increase Attack by 23.7%/23.7%/30.8%/30.8%/37.9%/37.9%/45.0%."
+    }
+   ],
+   "tier": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/c01bb55b8907.webp"
   },
@@ -3915,6 +4728,7 @@
     {
      "members": [
       "아케치",
+      "렌·댄싱 스타",
       "J&C",
       "후카",
       "카타야마"
@@ -3941,6 +4755,34 @@
     }
    ],
    "skillPriority": "3>2>1>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Gordian Kopis",
+     "effect": "Divine Blessing",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%.\nWhen entering Deduction or Stratagem state, increase party's Attack by 21.0%/27.3%/27.3%/33.7%/33.7%/40.0%/40.0% for 2 turns.\nAlso, when an ally with Mastermind activates a skill, Highlight, Theurgy, or Resonance, increase Akechi's critical damage by 15.0%/19.5%/19.5%/24.0%/24.0%/28.5%/28.5% for 2 turns. Stacks up to 2 times."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Victory Beam",
+     "effect": "Planar Cohesion",
+     "desc": "Increase Almighty damage by 9.6%/9.6%/12.8%/12.8%/16.0%/16.0%/19.2%.\nWhen gaining Suspicion, increase Attack by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0%."
+    }
+   ],
+   "tier": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/f3acd53ffc9c.webp"
   },
@@ -4043,6 +4885,34 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>1>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Infinite Moment",
+     "effect": "",
+     "desc": "Increase Speed by 15.0/15.0/20.0/20.0/25.0/25.0/30.0. After attacking a foe with a skill, inflict Waters of Oblivion on the main target. Waters of Oblivion: Increase foe's damage taken by 1.2%/1.6%/1.6%/2.0%/2.0%/2.4%/2.4% for every 10 of Yaoling's Speed for 1 turn. Increase Yaoling's Speed by 15 for 2 turns. After spending Meng Po Soup to use a skill on a foe, inflict this effect on all foes."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Sunstaff",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. After inflicting a debuff, increase Speed by 8/11/11/14/14/17/17 for 2 turns. Stacks up to 2 times. Gain 2 stacks at the start of battle."
+    }
+   ],
+   "tier": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/aa7c5b9b8798.webp"
   },
@@ -4229,6 +5099,7 @@
     {
      "members": [
       "야오링·사자무",
+      "준페이",
       "미나미·여름",
       "마나카"
      ],
@@ -4243,9 +5114,45 @@
     {
      "id": "루우나",
      "comment": "Applies an AoE DEF reduction, inflicts Burn, and increases enemies’ Fire damage taken."
+    },
+    {
+     "id": "준페이",
+     "comment": "Junpei Iori’s value increases significantly when a Fire attribute DPS is present. Additionally, Junpei Iori can inflict Burn on enemies by using Skill 3."
+    },
+    {
+     "id": "코로마루",
+     "comment": "Koromaru can enhance all enemies' Fire weakness, inflict Burn, and increase the entire party's damage."
     }
    ],
    "skillPriority": "3>1>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "New Year's Light",
+     "effect": "",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%.\nWhen Flaming Sword Dance is active, increase critical rate by 16.0%/21.0%/21.0%/26.0%/26.0%/31.0%/31.0%.\nWhen a Fire Technical is activated, increase that damage by 34.0%/44.0%/44.0%/54.0%/54.0%/64.0%/64.0%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Cleansing Blade",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen using Yanhua Slash, increase Attack by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0%."
+    }
+   ],
+   "tier": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/125e7aebfb7b.webp"
   },
@@ -4380,6 +5287,7 @@
     {
      "members": [
       "유키 마코토",
+      "준페이",
       "미츠루",
       "마나카"
      ],
@@ -4402,9 +5310,41 @@
     {
      "id": "미츠루",
      "comment": "Provides high DEF reduction and additional damage."
+    },
+    {
+     "id": "준페이",
+     "comment": "Junpei Iori’s buff increases Fire damage and critical damage significantly."
     }
    ],
    "skillPriority": "3>1>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Deus Xiphos",
+     "effect": "Hour of Reversal",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%.\nFor every 3 Moon Phase or Full Moon stacks gained, increase critical rate by 16.3%/21.2%/21.2%/26.1%/26.1%/31.0%/31.0% for 2 turns.\nWhen Makoto deals 4 or more hits of damage with 1 skill or Theurgy, increase that skill or Theurgy's damage by 34.0%/44.0%/44.0%/54.0%/54.0%/64.0%/64.0%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Translucent Blade",
+     "effect": "Silent Resolve",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen Makoto grants a buff to an ally, increase party's damage by 8.8%/11.6%/11.6%/14.4%/14.4%/17.2%/17.2%, and also increase Makoto's damage by 8.8%/11.6%/11.6%/14.4%/14.4%/17.2%/17.2% more for 2 turns."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/83c8d6fbd045.webp"
   },
@@ -4428,16 +5368,12 @@
    "skills": {},
    "rotations": [],
    "rotationNotes": [],
-   "parties": [
-    {
-     "members": [
-      "원더"
-     ],
-     "comment": ""
-    }
-   ],
+   "parties": [],
    "friends": [],
    "skillPriority": "",
+   "weapons": [],
+   "tier": null,
+   "tierKr": null,
    "added": null,
    "card": "cards/360a228442c5.webp"
   },
@@ -4541,7 +5477,8 @@
       "유스케",
       "J&C",
       "미유·여름",
-      "후카"
+      "후카",
+      "코로마루"
      ],
      "comment": ""
     },
@@ -4550,7 +5487,8 @@
       "유스케",
       "J&C",
       "미나미·여름",
-      "후카"
+      "후카",
+      "코로마루"
      ],
      "comment": ""
     }
@@ -4578,6 +5516,34 @@
     }
    ],
    "skillPriority": "3>2>4>1",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Shadowkiller",
+     "effect": "",
+     "desc": "Increase Defense by 45.0%/45.0%/59.0%/59.0%/73.0%/73.0%/87.0%. At the start of battle, increase counterattack damage by 30.0%/39.0%/39.0%/48.0%/48.0%/57.0%/57.0%. After gaining a shield, gain 1 Blade Spirit stack. Increase counterattack damage by 2% per stack. At 6 stacks, increase counterattack damage by 30.0%/40.0%/40.0%/50.0%/50.0%/60.0%/60.0%. This effect is permanent."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Jagato",
+     "effect": "",
+     "desc": "Increase Defense by 18.0%/18.0%/23.5%/23.5%/29.0%/29.0%/34.5%. Each time a counterattack is activated, increase Ice damage by 7.4%/9.6%/9.6%/11.8%/11.8%/14.0%/14.0% for 2 turns. Stacks up to 2 times."
+    }
+   ],
+   "tier": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/f4b725a109c0.webp"
   },
@@ -4731,6 +5697,34 @@
     }
    ],
    "skillPriority": "3>2>4>1",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Sarnga",
+     "effect": "Verdant Arrow",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%.\nWhen an ally attacks a foe inflicted with Erosion and has their HP recovered, increase HP Recovery by 15.7%/20.3%/20.3%/24.9%/24.9%/29.5%/29.5% + 600/800/800/1000/1000/1200/1200.\nWhen Arrow of Life is used, for every Whisperwind stack spent, increase all allies' damage by 18.0%/23.5%/23.5%/29.0%/29.0%/34.5%/34.5% for 2 turns. Stacks up to 2 times."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Kishin Bow",
+     "effect": "Effortless Arrow",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen Arrow of Life is used, increase HP Recovery by 13.0%/16.9%/16.9%/20.9%/20.9%/24.8%/24.8%."
+    }
+   ],
+   "tier": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T2",
+    "rank": 3,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/3a08692fb866.webp"
   },
@@ -4832,6 +5826,34 @@
     }
    ],
    "skillPriority": "2>3>4>1",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Karmic Cycle",
+     "effect": "",
+     "desc": "Increase Defense by 45.0%/45.0%/59.0%/59.0%/73.0%/73.0%/87.0%. When spending Gavel stacks with Absolute Judgment, add 1 to number of stacks spent. Also steal 13.0%/20.0%/20.0%/27.0%/27.0%/34.0%/34.0% of target's Defense for 2 turns based on own Defense (up to 520/800/800/1080/1080/1360/1360)."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Heavy Metal Pain",
+     "effect": "",
+     "desc": "Increase Defense by 18.0%/18.0%/23.5%/23.5%/29.0%/29.0%/34.5%. When granting a shield to an ally with less than 50% HP, increase shield by 16.3%/21.2%/21.2%/26.1%/26.1%/31.0%/31.0%."
+    }
+   ],
+   "tier": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/156b1b99010a.webp"
   },
@@ -5005,6 +6027,34 @@
     }
    ],
    "skillPriority": "3>4>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "My Destiny",
+     "effect": "Possessive Desire",
+     "desc": "Increase critical rate by 18.1%/18.1%/23.5%/23.5%/28.9%/28.9%/34.3%.\nWhen Chains of Love is at 1/2/3 stacks, increase Ichigo's damage by 11.0%/14.2%/14.2%/17.4%/17.4%/20.6%/20.6%/22.0%/28.5%/28.5%/35.0%/35.0%/41.5%/41.5%/34.0%/44.0%/44.0%/54.0%/54.0%/64.0%/64.0%, respectively.\nWhen activating My Beloved Prince, increase critical damage by 32.8%/42.8%/42.8%/52.8%/52.8%/62.8%/62.8%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Love Letter",
+     "effect": "Love Dependence",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen activating a Highlight, increase Ichigo's damage by 17.6%/23.2%/23.2%/28.8%/28.8%/34.4%/34.4% for 2 turns."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/064939ff4edb.webp"
   },
@@ -5117,6 +6167,34 @@
     }
    ],
    "skillPriority": "3>1>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Cyber Jammers",
+     "effect": "",
+     "desc": "Increase critical rate by 18.1%/18.1%/23.5%/23.5%/28.9%/28.9%/34.3%. Increase follow-up damage by 26.0%/34.0%/34.0%/42.0%/42.0%/50.0%/50.0%. When a follow-up attack is activated by an ally with Player 2, or by an ally dealing Electric damage with a skill, increase follow-up damage by 26.0%/34.0%/34.0%/42.0%/42.0%/50.0%/50.0% more."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Meta Directors",
+     "effect": "",
+     "desc": "Increase critical rate by 7.3%/7.3%/9.5%/9.5%/11.7%/11.7%/13.9%. When performing a follow-up attack, increase Electric damage by 9.7%/12.6%/12.6%/15.5%/15.5%/18.4%/18.4% for 1 turn. Stacks up to 2 times."
+    }
+   ],
+   "tier": {
+    "label": "T2",
+    "rank": 3,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/03edde21ada7.webp"
   },
@@ -5291,6 +6369,34 @@
     }
    ],
    "skillPriority": "4>3>2>1",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Royal Étoile",
+     "effect": "Sunrise",
+     "desc": "Increase critical damage by 36.3%/36.3%/47.2%/47.2%/58.1%/58.1%/69.0%.\nWhen gaining a Step stack, increase Attack by 21.0%/27.0%/27.0%/33.0%/33.0%/39.0%/39.0% for 2 turns. This effect does not stack.\nWhen an ally activates a Highlight or Theurgy, gain 1 Glass Slipper stack, and increase Kasumi's damage by 8.4%/11.1%/11.1%/13.8%/13.8%/16.5%/16.5% for 3 turns. Stacks up to 2 times.\nWhen Glass Slipper is at 2 stacks, increase Kasumi's Highlight damage by 30.0%/39.0%/39.0%/48.0%/48.0%/57.0%/57.0% more."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Divine Sword of Sinai",
+     "effect": "Blessing",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWith 2 or more Step stacks, increase damage by 24.0%/31.0%/31.0%/38.0%/38.0%/45.0%/45.0%."
+    }
+   ],
+   "tier": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T2",
+    "rank": 3,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/1b7fba973d5a.webp"
   },
@@ -5423,6 +6529,7 @@
     {
      "members": [
       "카타야마",
+      "나루미",
       "J&C",
       "후카",
       "미츠루"
@@ -5432,6 +6539,7 @@
     {
      "members": [
       "아케치",
+      "렌·댄싱 스타",
       "J&C",
       "후카",
       "카타야마"
@@ -5446,6 +6554,41 @@
     }
    ],
    "skillPriority": "3>2>1>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Lightning Riders",
+     "effect": "",
+     "desc": "Increase Speed by 15.0/15.0/20.0/20.0/25.0/25.0/30.0.\nAfter using Secret Technique: Lightning Legs, increase Katayama's critical rate by 9.0%/11.7%/11.7%/14.3%/14.3%/17.0%/17.0% for 2 turns.\nIf any foes are knocked down when Katayama is present, increase the target's critical damage taken by 30.6%/39.8%/39.8%/49.0%/49.0%/58.2%/58.2% for 1 turn."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Blitzkrieg Bangs",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen Katayama knocks down foes, increase Attack by 7.5%/9.8%/9.8%/12.0%/12.0%/14.2%/14.2% for each foe knocked down (up to a maximum of 22.5%/29.2%/29.2%/36.0%/36.0%/42.7%/42.7%). Lasts for 1 turn."
+    },
+    {
+     "key": "weapon3-1",
+     "rarity": 3,
+     "name": "Combat Boots",
+     "effect": "Endless Rush",
+     "desc": "When user has [Super Limit], increase Speed by 7.4/8.5/9.6/10.7/11.8/12.9/14.0."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/065a764d8328.webp"
   },
@@ -5505,6 +6648,10 @@
    "parties": [],
    "friends": [
     {
+     "id": "렌·댄싱 스타",
+     "comment": "Uses Skill 3's [Coordinated Damage], which grants buffs to allies while also using the values of buffs copied by Kotone."
+    },
+    {
      "id": "J&C",
      "comment": "Kotone can copy and grant the Skill Effect Amplification value an ally receives from J&C."
     },
@@ -5526,6 +6673,34 @@
     }
    ],
    "skillPriority": "1>3>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Vetri Vel Muruga",
+     "effect": "",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%.\nWhen the ally in the Arcana Link state reaches Lunar Bond 5 or higher, gain Skill Amplification equal to 10.0%/13.0%/13.0%/16.0%/16.0%/19.0%/19.0%. When an ally has Powerful Bond, increase their critical damage by 6.0%/7.8%/7.8%/9.6%/9.6%/11.4%/11.4% for each stack."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Ame-no-Nuboko",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen granting buffs, increase Kotone Shiomi's Attack by 7.3%/9.6%/9.6%/11.9%/11.9%/14.2%/14.2% for 3 turns. Stacks up to 3 times."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/a1a121c16c70.webp"
   },
@@ -5614,6 +6789,34 @@
     }
    ],
    "skillPriority": "2>1>4>3",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Baptism by Fire",
+     "effect": "",
+     "desc": "Increase max HP by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%. When inflicting Burn on a foe, increase target's damage taken by 18.0%/23.0%/23.0%/28.0%/28.0%/33.0%/33.0% for 2 turns. For each Chosen One stack, increase Kurotani's damage by 6.0%/7.5%/7.5%/9.0%/9.0%/10.5%/10.5%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Death Stinger",
+     "effect": "",
+     "desc": "Increase max HP by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. Increase Sacred Flame damage by 34.0%/44.0%/44.0%/54.0%/54.0%/64.0%/64.0%."
+    }
+   ],
+   "tier": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/ff461383ae73.webp"
   },
@@ -5788,6 +6991,34 @@
     }
    ],
    "skillPriority": "2>1>3>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Bloodletter",
+     "effect": "",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%. Increase ailment accuracy by 15%.\nIncrease pierce rate of Rending damage by 25.0%/32.5%/32.5%/40.0%/40.0%/47.5%/47.5%.\nIncrease damage dealt to foes inflicted with Bleed by 25.0%/32.5%/32.5%/40.0%/40.0%/47.5%/47.5%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Undying Embers",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhenever inflicting Bleed on foes, increase Attack by 1.8%/2.4%/2.4%/3.0%/3.0%/3.6%/3.6% more. This effect is permanent and stacks up to 10 times."
+    }
+   ],
+   "tier": {
+    "label": "T2",
+    "rank": 3,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/84786f0f38d1.webp"
   },
@@ -5869,6 +7100,34 @@
    ],
    "friends": [],
    "skillPriority": "1>3>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Jolting Pulse",
+     "effect": "Shakedown",
+     "desc": "Increase ailment accuracy by 36.0%/36.0%/47.0%/47.0%/58.0%/58.0%/69.0%. After inflicting an elemental ailment on a foe, decrease the target's Defense by 33.0%/43.0%/43.0%/53.0%/53.0%/63.0%/63.0% for 2 turns. This effect does not stack. Every 2 turns, at the start of Chizuko's action, 80.0%/95.0%/95.0%/110.0%/110.0%/125.0%/125.0% base chance to inflict 1 foe with a random elemental ailment that it does not have."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Gravitational Force",
+     "effect": "Quantum Radiation",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. When a foe with an elemental ailment is present, decrease that foe's Defense by 9.6%/12.4%/12.4%/15.2%/15.2%/18.0%/18.0%. Also, when inflicted with Radiation, decrease Defense by 9.6%/12.4%/12.4%/15.2%/15.2%/18.0%/18.0% more."
+    }
+   ],
+   "tier": {
+    "label": "T2",
+    "rank": 3,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/a224e3897995.webp"
   },
@@ -5946,6 +7205,34 @@
    "parties": [],
    "friends": [],
    "skillPriority": "2>3>1>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Dream and Nightmare",
+     "effect": "",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%. Increase chance to inflict Sleep by 41.0%/54.0%/54.0%/67.0%/67.0%/80.0%/80.0%. When using a skill on an ally, increase target's Attack by 21.0%/27.0%/27.0%/33.0%/33.0%/39.0%/39.0% for 2 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Shadow Crowns",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. After spending Greenleaf, increase Attack by 19.0%/24.0%/24.0%/29.0%/29.0%/34.0%/34.0% for 2 turns."
+    }
+   ],
+   "tier": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/dd23421d75d0.webp"
   },
@@ -6017,6 +7304,34 @@
    "parties": [],
    "friends": [],
    "skillPriority": "2>3>1>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Bubble Babies",
+     "effect": "",
+     "desc": "Increase healing by 22.0%/22.0%/28.5%/28.5%/35.0%/35.0%/41.5%. Increase multiplier for skill damage from Summer Reminiscence and its healing by 18.5%/24.0%/24.0%/29.5%/29.5%/35.0%/35.0%. When activating Summer Reminiscence, increase the target's damage taken by 8.5%/11.0%/11.0%/13.5%/13.5%/16.0%/16.0% for 3 turns. This effect can stack up to 2 times.\nAlso decrease the target's Defense and ailment resistance by 12% for 3 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Ocean's Tidings",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. When activating Summer Reminiscence, increase Tomoko's healing by 13.0%/16.9%/16.9%/20.9%/20.9%/24.8%/24.8% for 2 turns."
+    }
+   ],
+   "tier": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": 1,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": 1,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/f520f372eb77.webp"
   },
@@ -6126,6 +7441,34 @@
     }
    ],
    "skillPriority": "1>4>2>3",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Babel's Verdict",
+     "effect": "",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%. Increase damage of Sonnet of Fate by 33.0%/43.0%/43.0%/53.0%/53.0%/63.0%/63.0%. After gaining a Verse, 10.0%/13.0%/13.0%/16.0%/16.0%/19.0%/19.0% chance to gain Verse of Zenith. Verse of Zenith has all the effects of Verse of Hate, Verse of Healing, and Verse of Passion."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Scarlet Scepter",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. When gaining Verse of Hate, Verse of Healing, or Verse of Passion, increase damage by 2.0%/2.6%/2.6%/3.2%/3.2%/3.8%/3.8% based on the number of current Verses for 1 turn."
+    }
+   ],
+   "tier": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/b7585bffd743.webp"
   },
@@ -6275,6 +7618,34 @@
     }
    ],
    "skillPriority": "3>4>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Last Quarter",
+     "effect": "",
+     "desc": "Increase ailment accuracy by 36.0%/36.0%/47.0%/47.0%/58.0%/58.0%/69.0%.\nWhen dealing Psychokinesis damage, if Haru has Target Audience, increase Psychokinesis damage by 24.0%/31.0%/31.0%/38.0%/38.0%/45.0%/45.0%. Also, for each Thoughtful Round gained, increase Attack by 34.0%/43.0%/43.0%/52.0%/52.0%/61.0%/61.0% for 1 turn."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Gilgamesh Axe",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nIncrease Attack and ailment accuracy by 3.3%/4.3%/4.3%/5.3%/5.3%/6.3%/6.3% for each foe with a debuff (up to 9.9%/12.9%/12.9%/15.9%/15.9%/18.9%/18.9%)."
+    }
+   ],
+   "tier": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/c3537d9aee0d.webp"
   },
@@ -6352,6 +7723,34 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>4>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Sweet Pickaxe",
+     "effect": "",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%. After spending Childish Heart, gain Whimsy based on number of stacks spent: When Haruna has Whimsy, increase Attack by 22.0%/28.0%/28.0%/34.0%/34.0%/40.0%/40.0%. When allies deal damage with skills, spend 1 Whimsy, and increase the damage by 22.0%/28.0%/28.0%/34.0%/34.0%/40.0%/40.0%. Whimsy lasts for 2 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Chirpy Pickaxe",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. After using a skill on an ally, for each Attack buff on the ally, increase Attack by 2.4%/3.1%/3.1%/3.8%/3.8%/4.5%/4.5% for 2 turns. Stacks up to 3 times."
+    }
+   ],
+   "tier": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/c8357895026a.webp"
   },
@@ -6481,6 +7880,7 @@
     {
      "members": [
       "J&C",
+      "나루미",
       "미츠루",
       "후카",
       "카타야마"
@@ -6490,8 +7890,10 @@
     {
      "members": [
       "J&C",
+      "모토하·청광",
       "아야카",
-      "후카"
+      "후카",
+      "코로마루"
      ],
      "comment": ""
     },
@@ -6500,7 +7902,8 @@
       "J&C",
       "유스케",
       "미나미·여름",
-      "후카"
+      "후카",
+      "코로마루"
      ],
      "comment": ""
     }
@@ -6512,6 +7915,34 @@
     }
    ],
    "skillPriority": "3>2>1>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Warden's Judgement",
+     "effect": "",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%.\nWhen Two Masks as One is activated, increase Desire Level by 10.0%/13.0%/13.0%/16.0%/16.0%/19.0%/19.0%.\nWhen a Facade is gained, increase party's critical damage by 13.0%/17.0%/17.0%/21.0%/21.0%/25.0%/25.0% and damage dealt by 13.0%/17.0%/17.0%/21.0%/21.0%/25.0%/25.0% for 2 turns. Stacks up to 2 times."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Deliverance of Strength",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen Two Masks as One is activated, increase Attack by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0% for 2 turns."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": 1,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": 1,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/cabe12534d6a.webp"
   },
@@ -6633,6 +8064,34 @@
    ],
    "friends": [],
    "skillPriority": "3>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Moonlit Feather",
+     "effect": "Wine & Revelry",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%. For each Cocktail spent, randomly grant 1 of the following effects to the party:\nIncrease Attack by 6.0%/7.8%/7.8%/9.6%/9.6%/11.4%/11.4% (2 turns)\nIncrease damage by 4.0%/5.2%/5.2%/6.4%/6.4%/7.6%/7.6% (2 turns)\nIncrease critical rate by 5.0%/6.5%/6.5%/8.0%/8.0%/9.5%/9.5% (2 turns)\nThese effects do not stack. If the Cocktail spent was Tailor-Made, multiply effect by 120%. If it was Standard, multiply effect by 100%. If it was Basic, multiply effect by 50%. For every 2 Cocktails gained, reduce Yumi's cooldown time by 1 turn."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Starrynight Soothsayer",
+     "effect": "Seductive Kiss",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. After using a skill, increase main target's damage by 4.8%/6.0%/6.0%/7.2%/7.2%/8.4%/8.4% for 2 turns. If this skill spends Cocktails, increase damage by 3.6%/4.5%/4.5%/5.4%/5.4%/6.3%/6.3% more."
+    }
+   ],
+   "tier": {
+    "label": "T2",
+    "rank": 3,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/31694048fad9.webp"
   },
@@ -6733,6 +8192,41 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Kunoichi: Sky's Edge",
+     "effect": "Shadow Dance",
+     "desc": "Increase Speed by 15.0/15.0/20.0/20.0/25.0/25.0/30.0. For every 2 Insight stack spent, gain 2/3/3/4/4/5/5 Intel stacks. Also, increase party's damage by 6.0%/7.8%/7.8%/9.6%/9.6%/11.4%/11.4% for 1 turn. Increase max stacks of Intel to 11/12/12/13/13/14/14."
+    },
+    {
+     "key": "weapon4-2",
+     "rarity": 4,
+     "name": "Red Plum Blossom",
+     "effect": "In Bud",
+     "desc": "Increase Speed by 4.6/4.6/5.9/5.9/7.2/7.2/8.5. For each Insight stack spent, randomly grant 1 of the following effects to the party:\nIncrease Attack by 7.0%/9.0%/9.0%/11.0%/11.0%/13.0%/13.0% (2 turns)\nIncrease Defense by 11.0%/14.0%/14.0%/17.0%/17.0%/20.0%/20.0% (2 turns)\nIncrease max HP by 7.0%/9.0%/9.0%/11.0%/11.0%/13.0%/13.0% (2 turns)\nAlso, 5.0%/6.7%/6.7%/8.3%/8.3%/10.0%/10.0% chance to gain 1 Intel stack."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Moonlight Needle",
+     "effect": "Reflected Moon",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. For each Insight stack spent, permanently increase party's Attack by 3.5%/4.6%/4.6%/5.7%/5.7%/6.8%/6.8%. Stacks up to 5 times."
+    }
+   ],
+   "tier": {
+    "label": "T3",
+    "rank": 4,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/fe372d2ebfdc.webp"
   },
@@ -6895,6 +8389,7 @@
     {
      "members": [
       "마나카",
+      "나루미",
       "J&C",
       "미츠루"
      ],
@@ -6913,9 +8408,41 @@
     {
      "id": "쇼키·암야",
      "comment": "Once Skill 2 stacks are built up, turn rewind lets Dark Shoki repeat its main damage window one more time."
+    },
+    {
+     "id": "나루미",
+     "comment": "After the turn rewind, Narumi can trigger one more additional turn."
     }
    ],
    "skillPriority": "3>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Angel's Hymn",
+     "effect": "Divine Radiance",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%.\nFor each Musical Note gained, grant 1 Angelic Chorus stack to all allies.\nAngelic Chorus: Permanently increase damage by 0.7%/0.9%/0.9%/1.1%/1.1%/1.3%/1.3%. Stacks up to 12 times. At 12 stacks, increase critical damage by 15.3%/19.9%/19.9%/24.5%/24.5%/29.1%/29.1%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Divine Muse",
+     "effect": "Luminous Glaze",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nAfter using a skill, permanently increase Manaka's Attack by 11.0%/14.5%/14.5%/18.0%/18.0%/21.5%/21.5%. Stacks up to 2 times."
+    }
+   ],
+   "tier": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/fa35bc2c46e3.webp"
   },
@@ -6997,6 +8524,34 @@
     }
    ],
    "skillPriority": "3>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Ephemerality",
+     "effect": "",
+     "desc": "Increase Defense by 45.0%/45.0%/59.0%/59.0%/73.0%/73.0%/87.0%. After using a skill, grant 1 Seashell stack to the main target. For every stack of Seashell granted, increase Attack by 3.0%/4.0%/4.0%/5.0%/5.0%/6.0%/6.0% and Defense by 3.0%/4.0%/4.0%/5.0%/5.0%/6.0%/6.0% for 2 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Submarine Sonar",
+     "effect": "",
+     "desc": "Increase shield by 8.7%/8.7%/11.3%/11.3%/13.9%/13.9%/16.5%. Increase Defense of shielded allies by 24.0%/31.0%/31.0%/38.0%/38.0%/45.0%/45.0%."
+    }
+   ],
+   "tier": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/e0986b548edb.webp"
   },
@@ -7094,6 +8649,34 @@
     }
    ],
    "skillPriority": "3>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Retro Disco Style",
+     "effect": "",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%. After granting Pulsating Rhythm, 41.0%/54.0%/54.0%/67.0%/67.0%/80.0%/80.0% chance to gain 1 Beat stack. Increase buffs from Pulsating Rhythm by 26.0%/34.0%/34.0%/42.0%/42.0%/50.0%/50.0% more."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Emerald Charmer",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. After using a support skill, 43.0%/56.0%/56.0%/69.0%/69.0%/82.0%/82.0% chance to gain 1 Beat stack."
+    }
+   ],
+   "tier": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": 6,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/80e109ed1178.webp"
   },
@@ -7200,6 +8783,34 @@
    ],
    "friends": [],
    "skillPriority": "3>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Technomage Ultra FS",
+     "effect": "",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%.\nWhen an ally deals weakness damage, increase the ally's Attack by 10.0%/13.0%/13.0%/16.0%/16.0%/19.0%/19.0% for 2 turns.\nAfter Futaba inflicts a debuff with a skill, increase the foe's critical damage taken by 7.6%/9.9%/9.9%/12.2%/12.2%/14.5%/14.5% for 3 turns. This effect can stack up to 2 times."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Cyberdeck Pro",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nAfter inflicting Virus on a foe, increase the target's damage taken by 10.0%/13.0%/13.0%/16.0%/16.0%/19.0%/19.0% for 2 turns."
+    }
+   ],
+   "tier": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/d5c76d8c5f04.webp"
   },
@@ -7302,6 +8913,7 @@
    "parties": [
     {
      "members": [
+      "나루미",
       "J&C",
       "미츠루",
       "후카",
@@ -7311,16 +8923,21 @@
     },
     {
      "members": [
+      "모토하·청광",
       "아야카",
       "J&C",
-      "후카"
+      "후카",
+      "코로마루"
      ],
      "comment": ""
     },
     {
      "members": [
+      "아란",
+      "모토하·청광",
       "아야카",
-      "후카"
+      "후카",
+      "코로마루"
      ],
      "comment": ""
     },
@@ -7329,7 +8946,8 @@
       "유스케",
       "J&C",
       "미나미·여름",
-      "후카"
+      "후카",
+      "코로마루"
      ],
      "comment": ""
     },
@@ -7337,7 +8955,9 @@
      "members": [
       "유키 마코토",
       "미츠루",
-      "후카"
+      "준페이",
+      "후카",
+      "코로마루"
      ],
      "comment": ""
     }
@@ -7370,9 +8990,41 @@
     {
      "id": "카타야마",
      "comment": "Condition: Fuuka A6. Across 4 swap-ins, Katayama can use Skill 1 + 3 to Down enemies during key damage windows. Her AoE DEF reduction, Shock, and amplification of damage dealt to Downed enemies greatly increase total damage."
+    },
+    {
+     "id": "코로마루",
+     "comment": "On Fire, Ice, and Elec teams, Koromaru is one of Fuuka's best Shift Member options. Aside from his passive, he can apply all of his debuffs as soon as he enters, reducing enemy DEF and changing their weaknesses."
     }
    ],
    "skillPriority": "3>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Rainbow Relay",
+     "effect": "Voice of Hope",
+     "desc": "Increase critical damage by 36.3%/36.3%/47.2%/47.2%/58.1%/58.1%/69.0%.\nWhen gaining Over Oracle, permanently increase party's Attack by 2.0%/2.6%/2.6%/3.2%/3.2%/3.8%/3.8%. This effect stacks up to 5 times.\nWhen activating Oracle Shift, increase party's critical damage by 15.3%/19.9%/19.9%/24.5%/24.5%/29.1%/29.1% for 3 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Dancer in Moonlight",
+     "effect": "Voice of Encouragement",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen activating Oracle Shift, increase Fuuka's Attack by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0%."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/91cd9f34ee9e.webp"
   },
@@ -7535,6 +9187,34 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>1>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Light Up Your World",
+     "effect": "",
+     "desc": "Increase Attack by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%.\nIncrease party's critical damage by 18.1%/23.5%/23.5%/28.9%/28.9%/34.3%/34.3%. For each Track gained, increase party's critical damage by 3.0%/3.9%/3.9%/4.8%/4.8%/5.7%/5.7% more for 3 turns. Stacks up to 3 times.\nWhen Virtual Concert is active, gain Skill Amplification equal to 10.0%/13.0%/13.0%/16.0%/16.0%/19.0%/19.0%."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Trendsetter",
+     "effect": "",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nWhen gaining a Track, increase Miku's Attack by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0%."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "kr"
+   },
    "added": null,
    "card": "cards/92db9e6745e8.webp"
   }

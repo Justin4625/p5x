@@ -21,6 +21,7 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const CARD_DIR = path.join(ROOT, 'public/cards');
 const OUT = path.join(ROOT, 'src/data/units.json');
 const TAGS = path.join(ROOT, 'src/data/tags.json');
+const UPCOMING = path.join(ROOT, 'src/data/upcoming.json');
 const warnings = [];
 const warn = (msg) => {
   warnings.push(msg);
@@ -86,19 +87,72 @@ function parseRotation(value) {
   return value.split('›').map((step) => step.trim().split('+').map((s) => s.trim()).filter(Boolean));
 }
 
-async function readPrev() {
-  try { return JSON.parse(await fs.readFile(OUT, 'utf8')); } catch { return null; }
+async function readJson(file) {
+  try { return JSON.parse(await fs.readFile(file, 'utf8')); } catch { return null; }
+}
+
+/** Write {scraped, ...payload}; keep the old timestamp when the payload didn't change. */
+async function writeData(file, prev, payload) {
+  const same = prev && Object.keys(payload).every((k) => JSON.stringify(prev[k]) === JSON.stringify(payload[k]));
+  await fs.mkdir(path.dirname(file), { recursive: true });
+  await fs.writeFile(file, JSON.stringify({ source: 'lufel.net', scraped: same ? prev.scraped : new Date().toISOString(), ...payload }, null, 1));
+  return same;
+}
+
+/** Best (lowest) tier label per unit from a lufel tier list file. */
+function parseTiers(list) {
+  const out = {};
+  for (const [rank, t] of (Array.isArray(list) ? list : []).entries()) {
+    for (const entries of Object.values(t.positions || {})) {
+      for (const e of entries || []) {
+        if (!e?.name || (out[e.name] && out[e.name].rank <= rank)) continue;
+        out[e.name] = { rank, label: t.label, awareness: e.Awareness ?? null };
+      }
+    }
+  }
+  return out;
+}
+
+/**
+ * Upcoming Global releases from lufel's schedule (apps/schedule/data.js): walk the
+ * entries in order, dates are either given or previous date + previous "days".
+ * Units still missing after that follow KR release_order, two weeks apart.
+ */
+function upcomingSchedule(sched, released, krData, today) {
+  const entries = [...(sched?.manualReleases || []), ...(sched?.autoGenerateCharacters || [])];
+  const out = [];
+  let date = null;
+  let gap = 14;
+  for (const e of entries) {
+    if (e.schedulePending) {
+      for (const c of e.characters || []) if (!released.has(c) && !out.some((o) => o.id === c)) out.push({ id: c, eta: null, confirmed: false });
+      continue;
+    }
+    date = e.date ? new Date(`${e.date}T00:00:00Z`) : date ? new Date(date.getTime() + gap * 864e5) : null;
+    gap = e.days ?? 14;
+    for (const c of e.characters || []) {
+      if (released.has(c) || out.some((o) => o.id === c)) continue;
+      out.push({ id: c, eta: date ? date.toISOString().slice(0, 10) : null, confirmed: !!e.date && date >= today });
+    }
+  }
+  const rest = Object.entries(krData)
+    .filter(([id, i]) => !released.has(id) && !out.some((o) => o.id === id) && i.release_order)
+    .sort((a, b) => a[1].release_order - b[1].release_order);
+  for (const [id] of rest) out.push({ id, eta: null, confirmed: false });
+  return out;
 }
 
 async function main() {
-  const prev = await readPrev();
-  const prevById = new Map((prev?.units || []).map((u) => [u.id, u]));
+  const prev = await readJson(OUT);
+  const prevUp = await readJson(UPCOMING);
+  const prevById = new Map([...(prev?.units || []), ...(prevUp?.upcoming || [])].map((u) => [u.id, u]));
+  const prevGlobal = new Set((prev?.units || []).map((u) => u.id));
   const tagEn = JSON.parse(await fs.readFile(TAGS, 'utf8'));
 
   const glb = evalData(await getText(`${BASE}/data/character_info_glb.js`), {
     list: 'window.characterList', data: 'window.characterData',
   });
-  const kr = evalData(await getText(`${BASE}/data/character_info.js`), { data: 'window.characterData' });
+  const kr = evalData(await getText(`${BASE}/data/character_info.js`), { data: 'window.characterData', list: 'window.characterList' });
   const main = glb?.list?.mainParty;
   const support = glb?.list?.supportParty || [];
   if (!Array.isArray(main) || !main.length || !kr?.data) {
@@ -111,21 +165,28 @@ async function main() {
     process.exit(1);
   }
   const glbOrder = glb.data || {};
+  const krSupport = new Set(kr.list?.supportParty || []);
   await fs.mkdir(CARD_DIR, { recursive: true });
   const today = new Date().toISOString().slice(0, 10);
 
-  const units = [];
-  for (const id of roster) {
+  // Optional extras: a failure here only skips that feature.
+  const optional = async (label, fn) => { try { return await fn(); } catch (e) { warn(`${label}: ${e.message}`); return null; } };
+  const tierGlb = parseTiers(await optional('Global tier list', async () => JSON.parse(await getText(`${BASE}/apps/tier/global_tier.json`))));
+  const tierKr = parseTiers(await optional('KR tier list', async () => JSON.parse(await getText(`${BASE}/apps/tier/kr_tier.json`))));
+  const sched = await optional('Release schedule', async () => evalData(await getText(`${BASE}/apps/schedule/data.js`), { v: 'window.ReleaseScheduleData' })?.v);
+  const gacha = await optional('Global banners', async () => JSON.parse(await getText(`${BASE}/data/external/gacha/en.json`)));
+
+  async function scrapeUnit(id, isNavigator, extra) {
     const info = kr.data[id] || {};
     let files;
     try {
-      files = await Promise.all(['party', 'operation', 'skill', 'setting', 'review', 'base_stats'].map((f) => perChar(id, f)));
+      files = await Promise.all(['party', 'operation', 'skill', 'setting', 'review', 'base_stats', 'weapon'].map((f) => perChar(id, f)));
     } catch (e) {
-      if (prevById.has(id)) { warn(`${id}: could not load (${e.message}); kept previous data.`); units.push(prevById.get(id)); continue; }
+      if (prevById.has(id)) { warn(`${id}: could not load (${e.message}); kept previous data.`); return { ...prevById.get(id), ...extra }; }
       warn(`${id}: could not load (${e.message}); added with roster info only.`);
-      files = [null, null, null, null, null, null];
+      files = [null, null, null, null, null, null, null];
     }
-    const [party, op, skill, setting, review, stats] = files;
+    const [party, op, skill, setting, review, stats, weapon] = files;
     const P = party && evalData(party, { v: `window.recommendParty[${JSON.stringify(id)}]` })?.v;
     const O = op && evalData(op, { v: `window.operationData[${JSON.stringify(id)}]` })?.v;
     const S = skill && evalData(skill, {
@@ -135,6 +196,7 @@ async function main() {
     const R = review && evalData(review, { v: `window.characterReview[${JSON.stringify(id)}]` })?.v;
     const ST = setting && evalData(setting, { v: `window.characterSetting[${JSON.stringify(id)}]` })?.v;
     const B = stats && evalData(stats, { v: `window.basicStatsData[${JSON.stringify(id)}]` })?.v;
+    const W = weapon && evalData(weapon, { en: `window.enCharacterWeaponData[${JSON.stringify(id)}]`, kr: `window.WeaponData[${JSON.stringify(id)}]` });
 
     const skills = {};
     const sk = S?.en && Object.keys(S.en).length > 1 ? S.en : null;
@@ -143,10 +205,17 @@ async function main() {
       const k = S?.kr?.[key];
       if (s?.name || k?.name) skills[key] = { name: s?.name || k?.name, desc: s?.description || '', type: TYPE[(s?.type || k?.type || '').replace(/\s/g, '')] || '', sp: k?.sp ?? null };
     }
+    // Weapons: "weapon5-1" = 5★ signature, "weapon4-1" = 4★. English text when lufel has it.
+    const weapons = Object.keys({ ...(W?.kr || {}), ...(W?.en || {}) }).filter((k) => /^weapon\d-\d$/.test(k)).sort().reverse().map((k) => {
+      const en = W?.en?.[k];
+      const krw = W?.kr?.[k];
+      return { key: k, rarity: Number(k[6]), name: en?.name || krw?.name || '', effect: en?.skill_name || '', desc: en?.description || '' };
+    }).filter((w) => w.name);
 
-    const isNavigator = support.includes(id);
     const roleKr = info.position || '';
-    units.push({
+    const tg = tierGlb[id];
+    const tk = tierKr[id];
+    const u = {
       id,
       name: (info.name_en || R?.name_en || id).replace(/·/g, ' · '),
       codename: info.codename_en || info.codename || R?.codename || '',
@@ -175,9 +244,11 @@ async function main() {
       })).filter((p) => p.members.length),
       friends: (P?.friends || []).filter((f) => f.name).map((f) => ({ id: f.name, comment: f.comment_en || f.comment || '' })),
       skillPriority: ST?.skill_priority || '',
-      added: prevById.has(id) ? prevById.get(id).added ?? null : prev ? today : null,
-    });
-    const u = units.at(-1);
+      weapons,
+      tier: tg ? { label: tg.label, rank: tg.rank, awareness: tg.awareness, list: 'global' } : tk ? { label: tk.label, rank: tk.rank, awareness: tk.awareness, list: 'kr' } : null,
+      tierKr: tk ? { label: tk.label, rank: tk.rank, awareness: tk.awareness, list: 'kr' } : null,
+      ...extra,
+    };
 
     const file = cardName(id);
     const card = path.join(CARD_DIR, file);
@@ -202,36 +273,74 @@ async function main() {
       if (!(t in tagEn)) warn(`${u.codename || id}: tag "${t}" has no English mapping in src/data/tags.json.`);
     }
     process.stdout.write(`${id} `);
+    return u;
   }
-  // Keep only party/friend references to units that exist on Global
-  const ids = new Set(units.map((u) => u.id));
-  for (const u of units) {
-    u.parties = u.parties.map((p) => ({ ...p, members: p.members.filter((m) => ids.has(m)) }));
+
+  const units = [];
+  for (const id of roster) {
+    units.push(await scrapeUnit(id, support.includes(id), {
+      added: prevGlobal.has(id) ? prevById.get(id)?.added ?? null : prev ? today : null,
+    }));
+  }
+
+  // Upcoming Global units (next 8 on lufel's schedule), scraped the same way.
+  const released = new Set(roster);
+  const plan = sched ? upcomingSchedule(sched, released, kr.data, today).filter((p) => kr.data[p.id]).slice(0, 8) : [];
+  if (sched && !plan.length) warn('Release schedule: no upcoming units found.');
+  const upcoming = [];
+  for (const p of plan) {
+    const info = kr.data[p.id];
+    upcoming.push(await scrapeUnit(p.id, krSupport.has(p.id) || info.position === '해명', { eta: p.eta, etaConfirmed: p.confirmed, added: null }));
+  }
+
+  // Keep only party/friend references to units we know (Global + upcoming).
+  const ids = new Set([...units, ...upcoming].map((u) => u.id));
+  for (const u of [...units, ...upcoming]) {
+    u.parties = u.parties.map((p) => ({ ...p, members: p.members.filter((m) => ids.has(m)) })).filter((p) => p.members.length > 1);
     u.friends = u.friends.filter((f) => ids.has(f.id));
   }
+
+  // Global banners running now or announced (lufel's gacha feed), matched to units and signature weapons.
+  const byName = new Map([...units, ...upcoming].map((u) => [u.name.replace(/\s*·\s*/g, ' ').toLowerCase(), u.id]));
+  const byWeapon = new Map([...units, ...upcoming].flatMap((u) => u.weapons.filter((w) => w.rarity === 5).map((w) => [w.name.toLowerCase(), u.id])));
+  const banners = [];
+  for (const kind of ['thief', 'weapon']) {
+    for (const b of gacha?.data?.[kind] || []) {
+      if (!b?.endTime || new Date(`${b.endTime.replace(' ', 'T')}Z`) < new Date()) continue;
+      for (const f of b.fiveStar || []) {
+        const unit = kind === 'thief' ? byName.get(String(f.name).toLowerCase()) : byWeapon.get(String(f.name).toLowerCase());
+        if (!unit) { warn(`Banner "${b.name}": no ${kind === 'thief' ? 'unit' : 'weapon'} named "${f.name}".`); continue; }
+        const entry = { kind: kind === 'thief' ? 'unit' : 'weapon', unit, name: f.name, title: b.name, start: b.startTime, end: b.endTime };
+        if (!banners.some((x) => x.kind === entry.kind && x.unit === entry.unit && x.end === entry.end)) banners.push(entry);
+      }
+    }
+  }
+  banners.sort((a, b) => a.end.localeCompare(b.end));
+
   // Remove card files no unit uses any more (old index-based names, removed units).
-  const used = new Set(units.map((u) => u.card && path.basename(u.card)).filter(Boolean));
+  const used = new Set([...units, ...upcoming].map((u) => u.card && path.basename(u.card)).filter(Boolean));
   for (const f of await fs.readdir(CARD_DIR)) if (f.endsWith('.webp') && !used.has(f)) await fs.rm(path.join(CARD_DIR, f));
 
   // Keep the old timestamp when nothing changed, so the daily run doesn't commit noise.
-  const same = prev && JSON.stringify(prev.units) === JSON.stringify(units);
-  await fs.mkdir(path.dirname(OUT), { recursive: true });
-  await fs.writeFile(OUT, JSON.stringify({ source: 'lufel.net', scraped: same ? prev.scraped : new Date().toISOString(), units }, null, 1));
+  const same = await writeData(OUT, prev, { units });
+  const sameUp = await writeData(UPCOMING, prevUp, { upcoming, banners });
 
-  const added = units.filter((u) => !prevById.has(u.id));
-  const removed = [...prevById.keys()].filter((id) => !units.some((u) => u.id === id));
+  const added = units.filter((u) => !prevGlobal.has(u.id));
+  const removed = [...prevGlobal].filter((id) => !units.some((u) => u.id === id));
   const label = (u) => (u.codename ? `${u.codename} (${u.name})` : u.name);
   const lines = [
     `${units.length} units${same ? ', no changes' : ''}.`,
     ...(prev && added.length ? [`New: ${added.map(label).join(', ')}`] : []),
     ...(removed.length ? [`Removed from Global list: ${removed.map((id) => label(prevById.get(id))).join(', ')}`] : []),
+    `Upcoming: ${upcoming.map((u) => `${u.codename || u.name}${u.eta ? ` (~${u.eta})` : ''}`).join(', ') || 'none'}${sameUp ? ' (no changes)' : ''}.`,
+    `Banners: ${banners.map((b) => `${b.name} until ${b.end.slice(0, 10)}`).join(', ') || 'none'}.`,
     ...warnings.map((w) => `Warning: ${w}`),
   ];
   console.log(`\n${lines.join('\n')}`);
   if (process.env.GITHUB_STEP_SUMMARY) await fs.appendFile(process.env.GITHUB_STEP_SUMMARY, `## lufel.net scrape\n\n${lines.map((l) => `- ${l}`).join('\n')}\n`);
   // Commit subject for the workflow.
   if (process.env.GITHUB_OUTPUT) {
-    const subject = prev && added.length ? `Add ${added.map((u) => u.codename || u.name).join(', ')} from lufel.net` : 'Update unit data from lufel.net';
+    const subject = prev && added.length ? `Add ${added.map((u) => u.codename || u.name).join(', ')} from lufel.net` : same ? 'Update upcoming units and banners from lufel.net' : 'Update unit data from lufel.net';
     await fs.appendFile(process.env.GITHUB_OUTPUT, `subject=${subject}\n`);
   }
 }

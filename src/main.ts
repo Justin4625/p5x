@@ -1,9 +1,10 @@
 import './style.css';
 import {
   UNITS, BY_ID, WONDER, ELEMENTS, ROLES, ELEMENT_COLOR, ELEMENT_SHORT, SCRAPED,
-  parseAction, translateKr, isNew, type Unit,
+  parseAction, translateKr, type Unit,
 } from './data';
 import { matchFor, rankTiers, teamScore, unit, type Match } from './synergy';
+import { esc, md, $, code, cardSrc, trim, ransom, pills, navHTML, BG_HTML } from './ui';
 import { profileLabels } from './skills';
 
 // ---------- state ----------
@@ -21,17 +22,6 @@ const state: State = { slots: [null, null, null], navi: null, q: '', elements: n
 const POOL = UNITS.filter((u) => u.id !== WONDER.id);
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-function esc(s: string) {
-  return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
-}
-const md = (s: string) => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\n{2,}/g, '</p><p>').replace(/\n/g, ' ');
-const $ = <T extends Element = HTMLElement>(sel: string, root: ParentNode = document) => root.querySelector(sel) as T;
-/** "WIND·Tempest" -> big "WIND" + small "Tempest". */
-function code(u: Unit) {
-  const [base, variant] = (u.codename || u.name).split('·');
-  return `${esc(base)}${variant ? `<small>${esc(variant)}</small>` : ''}`;
-}
-const cardSrc = (u: Unit) => (u.card ? `${import.meta.env.BASE_URL}${u.card}` : '');
 
 function team(): Unit[] {
   return [...state.slots.map(unit), unit(state.navi)].filter(Boolean) as Unit[];
@@ -58,28 +48,14 @@ function load() {
 }
 
 // ---------- shell ----------
-function ransom(text: string, cls = '') {
-  const looks = ['r-a', 'r-b', 'r-c', 'r-d', 'r-e', 'r-f'];
-  let k = 0;
-  let i = 0;
-  const words = text.split(' ').map((w) => `<span class="r-word">${[...w].map((ch) => {
-    const look = looks[(i * 7 + text.length) % looks.length];
-    const rot = (((i * 37) % 11) - 5) * 1.2;
-    i++;
-    return `<span class="r ${look}" aria-hidden="true" style="--rot:${rot}deg;--d:${k++ * 45}ms">${esc(ch)}</span>`;
-  }).join('')}</span>`);
-  return `<span class="ransom ${cls}" role="img" aria-label="${esc(text)}">${words.join('<span class="r-gap"></span>')}</span>`;
-}
 
 function shell() {
   const app = $('#app');
   app.innerHTML = `
-  <div class="bg" aria-hidden="true">
-    <div class="bg-rays"></div><div class="bg-dots"></div>
-    <div class="bg-slash s1"></div><div class="bg-slash s2"></div><div class="bg-slash s3"></div>
-  </div>
+  ${BG_HTML}
   <div class="intro" aria-hidden="true"><div class="intro-band"></div><div class="intro-text">TAKE YOUR TIME</div></div>
   <header class="hero">
+    ${navHTML('builder')}
     <div class="hero-tag">P5X · GLOBAL SERVER</div>
     <h1>${ransom('PHANTOM ROSTER', 'logo')}</h1>
     <p class="hero-sub">Build a three-thief crew. See who clicks. Learn the turn order.</p>
@@ -135,10 +111,6 @@ function visibleUnits(): Unit[] {
   return list;
 }
 
-function pills(u: Unit) {
-  const el = u.elements.map((e) => `<span class="pill pill-el" style="--ec:${ELEMENT_COLOR[e] ?? '#ddd'}">${ELEMENT_SHORT[e] ?? esc(e.slice(0, 5).toUpperCase())}</span>`).join('');
-  return `${isNew(u) ? '<span class="pill pill-new">NEW</span>' : ''}${el}<span class="pill pill-role">${esc(u.role || 'Flex')}</span>`;
-}
 
 function renderGrid() {
   const list = visibleUnits();
@@ -191,7 +163,6 @@ function applyHighlights() {
     why.innerHTML = good.map((r) => `<p>${r.with ? `<b>${esc(unit(r.with)!.codename)}</b> ` : ''}${esc(trim(r.text, 110))}</p>`).join('');
   }
 }
-const trim = (s: string, n: number) => (s.length > n ? `${s.slice(0, n - 1)}…` : s);
 
 // ---------- team slots ----------
 function slotHTML(u: Unit | undefined, i: number | 'navi') {

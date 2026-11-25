@@ -64,5 +64,11 @@
  "화염 속성 TECHNICAL": "Fire Technical",
  "전격 대미지보너스": "Elec DMG Bonus",
  "복합 속성": "Multi-element",
- "흡수": "Drain"
+ "흡수": "Drain",
+ "도발": "Taunt",
+ "대미지 전이": "Damage Transfer",
+ "반사": "Reflect",
+ "실드 관통": "Shield Pierce",
+ "다운 허약": "Down Vulnerable",
+ "버프 해제": "Buff Removal"
 }
