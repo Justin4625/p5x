@@ -67,10 +67,12 @@ Not modelled yet: overall unit strength/meta, awareness (A0–A6), Wonder's pers
 - Sticky builder and drawer use `overflow: hidden auto` so slam/hover animations don't flash a horizontal scrollbar. iOS gets 16px on the awareness `select` to stop focus zoom.
 - Codenames like `WIND·Tempest` are split: the base is shown big and the variant small (`code()` in main.ts).
 
+- Kotone's operation.js uses a per-turn table (`skills[]` per turn, several routes per awareness, `variant: 'miku'`) instead of `value` strings. `readRotations()` in the scraper reads `basic_en`, trims to the turn count and labels them `A0 · 1`, `A0 Miku · 1`. `Fatigue` turns show as idle FTG cells.
+
 ## Open points / next steps
 - More lufel features: tactic library (Firestore), revelations, persona.
 - Pull advice ignores currency/pity and dupes (awareness) value; could add a "tickets on hand" input.
 - Team builder could offer "only my units" using the collection.
 - Wonder's persona choice in the team (buff/debuff persona per element).
 - Real action order uses gear speed. A user-editable speed per slot would make the turn order exact.
-- Check the Miku token translation and Kotone (no rotations on lufel yet).
+- Check the Miku token translation.
