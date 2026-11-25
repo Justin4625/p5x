@@ -4,6 +4,7 @@ import {
   parseAction, translateKr, type Unit,
 } from './data';
 import { matchFor, rankTiers, teamScore, unit, type Match } from './synergy';
+import { profileLabels } from './skills';
 
 // ---------- state ----------
 interface State {
@@ -328,6 +329,15 @@ function whyHTML(u: Unit) {
   return `<section class="d-sec d-why"><h4>Fit with your crew</h4>${m.reasons.map((r) => `<p>${r.weight < 0 ? '▼' : '★'} ${r.with ? `<b>${esc(unit(r.with)!.codename)}:</b> ` : ''}${esc(r.text)}</p>`).join('')}</section>`;
 }
 
+/** What the skill text says this unit brings to a team and looks for in partners. */
+function playHTML(u: Unit) {
+  if (u.id === WONDER.id) return '';
+  const { gives, wants } = profileLabels(u);
+  if (!gives.length && !wants.length) return '';
+  const row = (k: string, xs: string[]) => (xs.length ? `<div class="d-play-row"><dt>${k}</dt><dd>${xs.map((x) => `<span>${esc(x)}</span>`).join('')}</dd></div>` : '');
+  return `<section class="d-sec d-play"><h4>From the skills</h4><dl>${row('Brings', gives)}${row('Looks for', wants)}</dl></section>`;
+}
+
 function openDrawer(id: string) {
   const u = BY_ID.get(id);
   if (!u) return;
@@ -354,6 +364,7 @@ function openDrawer(id: string) {
       </div>
     </div>
     ${whyHTML(u)}
+    ${playHTML(u)}
     ${u.review ? `<section class="d-sec"><h4>Overview</h4><p>${md(u.review)}</p></section>` : ''}
     ${u.friends.length ? `<section class="d-sec"><h4>Best partners</h4><div class="d-friends">${u.friends.map((f) => {
       const p = unit(f.id)!;

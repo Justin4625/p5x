@@ -1,13 +1,18 @@
 import { BY_ID, type Unit } from './data';
+import { skillLinks } from './skills';
 
 /*
  * Synergy model. Sources, strongest first:
  *  1. lufel.net "best partners" (friends) with their written reason.     +3..5
  *     (less when the unit lists many partners)
  *  2. Shared lufel.net recommended teams (per co-listing, max 3).          +2 each
- *  3. An element supporter (debuffer/buffer for one element) + a damage
- *     dealer of that element.                                              +2.5
- *  4. Shared core mechanic (Burn, Freeze, Windswept, Down, Highlight...).  +1.5
+ *  3. Skill reading (src/skills.ts): one unit's skills give what the other's
+ *     skills want (element vulnerability → dealer of that element, Burn →
+ *     "hits harder on Burning foes", shields → "stronger while shielded",
+ *     Theurgy gauge → Theurgy user, ...). Each link names both skills.      +1..2.5 each, max 5 per pair
+ *  3b. Fallback from lufel tags: element supporter + dealer of that element,
+ *     only when the skill reading found no element link.                    +1.5
+ *  4. Shared core mechanic (Burn, Freeze, Shock, Windswept, Theurgy...).    +1.5
  *  5. Role balance: fills a missing sustain or support role.               +1
  *     A third damage dealer in a team that already has two.               -1.5
  */
@@ -19,7 +24,8 @@ const DEALERS = new Set(['Sweeper', 'Assassin']);
 const SUPPORT = new Set(['Strategist', 'Saboteur', 'Virtuoso']);
 const SUSTAIN = new Set(['Medic', 'Guardian']);
 
-const CORE_MECHANICS = ['Burn', 'Freeze', 'Shock', 'Windswept', 'DoT', 'Down', 'Highlight', 'Extra Turn', 'Theurgy', 'Theurgy Charge', 'Ailments', 'Transform', 'HP Cost'];
+// Down and Highlight are left out: too many units have them to say anything.
+const CORE_MECHANICS = ['Burn', 'Freeze', 'Shock', 'Windswept', 'DoT', 'Extra Turn', 'Theurgy', 'Theurgy Charge', 'Ailments', 'Transform', 'HP Cost'];
 
 /** Mechanics that signal "this unit powers one element". */
 const ELEMENT_SIGNAL: Record<string, string> = {
@@ -50,10 +56,13 @@ export function pairReasons(c: Unit, m: Unit): Reason[] {
   const together = [...m.parties, ...c.parties].filter((p) => p.members.includes(c.id) && p.members.includes(m.id)).length;
   if (together) out.push({ weight: Math.min(together, 3) * 2, with: m.id, text: `Together in ${together} recommended ${together > 1 ? 'teams' : 'team'}.` });
 
+  const links = skillLinks(c, m);
+  for (const l of links) out.push({ weight: l.weight, with: m.id, text: l.text });
+  const elementLinked = links.some((l) => /^(taken|boost):/.test(l.key));
   for (const [sup, dealer] of [[m, c], [c, m]] as const) {
-    if (!DEALERS.has(dealer.role)) continue;
+    if (elementLinked || !DEALERS.has(dealer.role)) continue;
     const el = poweredElements(sup).find((e) => dealer.elements.includes(e));
-    if (el) out.push({ weight: 2.5, with: m.id, text: `${short(sup)} powers ${el} damage, ${short(dealer)} deals it.` });
+    if (el) out.push({ weight: 1.5, with: m.id, text: `lufel tags ${short(sup)} as ${el} support; ${short(dealer)} deals ${el}.` });
   }
   const shared = CORE_MECHANICS.filter((k) => c.mechanics.includes(k) && m.mechanics.includes(k));
   if (shared.length) out.push({ weight: 1.5, with: m.id, text: `Both build around ${shared.slice(0, 2).join(' & ')}.` });

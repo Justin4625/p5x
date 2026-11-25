@@ -20,13 +20,17 @@ Started 2026-11-25. Fan site for Persona 5: The Phantom X, modelled on lufel.net
 - Position → role map: 지배 Sweeper, 반항 Assassin, 우월 Strategist, 굴복 Saboteur, 방위 Guardian, 구원 Medic, 해명 Elucidator (navigators), 자율 Virtuoso (J&C).
 - Korean tags are translated to English mechanics in `src/data.ts` (`TAG_EN`). Rotation tokens use `TOKEN_KR`. Miku's song tokens (불/춘/고) are a guess: Fire / Spring / Heaven.
 
-## Synergy model (src/synergy.ts)
+## Synergy model (src/synergy.ts + src/skills.ts)
 1. lufel best partners: +3..5. Units with many partners count less; Tempest Riko lists 11.
 2. Shared lufel recommended teams: +2 each, up to 3.
-3. Element supporter + a dealer of that element: +2.5. The supporter is detected from its mechanics (Burn/Fire AoE → Fire, Windswept → Wind, and so on).
-4. Shared core mechanic (Burn, Freeze, Shock, Windswept, DoT, Down, Highlight, Extra Turn, Theurgy…): +1.5.
+3. Skill reading (`src/skills.ts`): regex rules over each unit's English skill text build a profile of what it GIVES (ailments, DEF down / damage taken, `taken:<El>`, `boost:<El>`, single-ally buffs, crit, Theurgy/Highlight gauge, shields, heals, max HP, Defense, ailment accuracy, extra turns, Down Points, Blessing, Technical Precision, DoT) and WANTS (hits harder on Shocked/Burning/ailing/debuffed foes, scales on Defense or max HP, spends HP, has a Theurgy, bonuses on extra actions, Resonance dealer…). Dealers (Sweeper/Assassin) implicitly want their own element's `taken`/`boost`, single-ally buffs and a Highlight boost. A pair scores +1..2.5 per give→want link, capped at 5, and each reason names both skills. The drawer shows the profile as "From the skills: Brings / Looks for".
+   - Before regexes: markup stripped, numbers collapsed to `N` (decimals broke `[^.]` patterns), own name tokens replaced by `SELF` (so "Increase SELF's Attack" isn't read as an ally buff).
+   - Check a change with a profile dump: bundle a small script with esbuild and print gives/wants per unit.
+3b. Fallback from lufel tags (element supporter + dealer of that element): +1.5, only when the skill reading found no element link.
+4. Shared core mechanic (Burn, Freeze, Shock, Windswept, DoT, Theurgy…): +1.5. Down and Highlight are left out as noise.
 5. Role balance: +1 for a missing sustain or support role, −1.5 for a third damage dealer.
 Team meter 0–100 = average pair score ×6 + role coverage bonus, scaled by how many of the 3 slots are filled.
+Not modelled yet: overall unit strength/meta, awareness (A0–A6), Wonder's persona.
 
 ## Gotchas
 - `.builder` needs `min-width: 0`, otherwise the turn table widens the page on mobile.
