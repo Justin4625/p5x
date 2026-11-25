@@ -33,6 +33,8 @@ Started 2026-11-25. Fan site for Persona 5: The Phantom X, modelled on lufel.net
 - `.github/workflows/deploy-pages.yml` builds with `BASE_PATH=/<repo>/` (vite `base`) and deploys `dist` on every push to main, after each "Update units from lufel.net" run (workflow_run, because bot commits don't trigger push workflows) and by hand.
 - Pages must be enabled once in repo Settings → Pages → Source: GitHub Actions. A private repo needs a paid GitHub plan for Pages.
 - Always build URLs with `import.meta.env.BASE_URL` (cards, nav), never a leading `/`.
+- Live since 2026-11-25 at https://justin4625.github.io/p5x/ (repo made public for this: free plan has no Pages for private repos).
+- Actions are blocked for now ("account is locked due to a billing issue"), so deploy-pages.yml and update-units.yml don't run. Pages is set to deploy from the `gh-pages` branch instead (GitHub's own pages-build-deployment still runs). Manual deploy: `BASE_PATH=/p5x/ npm run build && touch dist/.nojekyll`, then force-push `dist` as the `gh-pages` branch. Once billing is fixed, switch Pages source back to GitHub Actions (`gh api -X PUT repos/Justin4625/p5x/pages -f build_type=workflow`).
 
 ## Auto-update (new units)
 - `.github/workflows/update-units.yml` runs `npm run scrape` daily (04:23 UTC) and on demand (Actions → "Run workflow"), then `npm run build`, and commits `src/data` + `public/cards` to main only if something changed. Commit subject names new units ("Add X from lufel.net").
