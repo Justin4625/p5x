@@ -3,7 +3,8 @@ import tags from './data/tags.json';
 import upcomingRaw from './data/upcoming.json';
 
 export interface Skill { name: string; desc: string; type: string; sp: number | null }
-export interface Rotation { label: string; steps: string[][] }
+/** `with`: the route is for a team that includes this unit id (e.g. Miku as navigator). */
+export interface Rotation { label: string; with?: string; steps: string[][] }
 export interface Weapon { key: string; rarity: number; name: string; effect: string; desc: string }
 /** lufel tier: rank 0 = T0. list 'kr' means the KR server list (used for units not on Global yet). */
 export interface Tier { label: string; rank: number; awareness: number | null; list: 'global' | 'kr' }

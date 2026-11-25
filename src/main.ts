@@ -1,7 +1,7 @@
 import './style.css';
 import {
   UNITS, BY_ID, WONDER, ELEMENTS, ROLES, ELEMENT_COLOR, ELEMENT_SHORT, SCRAPED,
-  parseAction, translateKr, type Unit,
+  parseAction, translateKr, type Unit, type Rotation,
 } from './data';
 import { matchFor, rankTiers, teamScore, unit, type Match } from './synergy';
 import { esc, md, $, code, cardSrc, trim, ransom, pills, navHTML, BG_HTML } from './ui';
@@ -15,7 +15,8 @@ interface State {
   elements: Set<string>;
   roles: Set<string>;
   sort: 'new' | 'name' | 'speed';
-  aw: Record<string, number>;
+  /** Chosen rotation label per unit (e.g. "A2" or "A0 · 2"). */
+  aw: Record<string, string>;
 }
 const state: State = { slots: [null, null, null], navi: null, q: '', elements: new Set(), roles: new Set(), sort: 'new', aw: {} };
 
@@ -247,7 +248,18 @@ function renderTurns() {
     { u: WONDER, kind: 'wonder' },
     ...(navi ? [{ u: navi, kind: 'navi' as const }] : []),
   ];
-  const rot = (u: Unit) => u.rotations[Math.min(state.aw[u.id] ?? 0, u.rotations.length - 1)];
+  // Routes made for a teammate (lufel's Miku routes) replace the standard ones when that unit is in the team.
+  const ids = new Set(lanes.map((l) => l.u.id));
+  const rots = (u: Unit) => {
+    const own = u.rotations.filter((r) => r.with && ids.has(r.with));
+    return own.length ? own : u.rotations.filter((r) => !r.with);
+  };
+  const rot = (u: Unit) => {
+    const list = rots(u);
+    const want = state.aw[u.id];
+    return list.find((r) => r.label === want) ?? list.find((r) => want && r.label.split(' · ')[0] === want.split(' · ')[0]) ?? list[0];
+  };
+  const withTag = (r: Rotation | undefined) => (r?.with ? `<span class="aw-with" title="Route for a team with ${esc(unit(r.with)?.name ?? '')}">${esc(unit(r.with)?.codename ?? '')} team</span>` : '');
   const turns = Math.min(8, Math.max(3, ...lanes.map((l) => rot(l.u)?.steps.length ?? 0)));
 
   const cell = (u: Unit, kind: string, t: number) => {
@@ -263,9 +275,13 @@ function renderTurns() {
     }).join('')}</div>`;
   };
 
-  const awChips = (u: Unit) => (u.rotations.length > 1
-    ? `<label class="aw"><span class="visually-hidden">Awareness for ${esc(u.name)}</span><select data-aw="${esc(u.id)}">${u.rotations.map((r, i) => `<option value="${i}"${(state.aw[u.id] ?? 0) === i ? ' selected' : ''}>${esc(translateKr(r.label))}</option>`).join('')}</select></label>`
-    : u.rotations[0] ? `<span class="aw aw-one">${esc(translateKr(u.rotations[0].label))}</span>` : '');
+  const awChips = (u: Unit) => {
+    const list = rots(u);
+    const cur = rot(u);
+    return list.length > 1
+      ? `<label class="aw"><span class="visually-hidden">Awareness for ${esc(u.name)}</span><select data-aw="${esc(u.id)}">${list.map((r) => `<option value="${esc(r.label)}"${r === cur ? ' selected' : ''}>${esc(translateKr(r.label))}</option>`).join('')}</select></label>${withTag(cur)}`
+      : cur ? `<span class="aw aw-one">${esc(translateKr(cur.label))}</span>${withTag(cur)}` : '';
+  };
 
   const notes = lanes.filter((l) => l.u.rotationNotes.length && l.kind !== 'wonder');
 
@@ -346,7 +362,7 @@ function openDrawer(id: string) {
     ${skills.length ? `<section class="d-sec"><h4>Skills</h4>${skills.map(([k, s]) => `
       <div class="d-skill"><span class="d-sk">${skillLabel(k)}</span><div><b>${esc(s.name)}</b>${s.type ? `<em>${esc(s.type)}${s.sp ? ` · ${s.sp} SP` : ''}</em>` : ''}<p>${esc(s.desc)}</p></div></div>`).join('')}</section>` : ''}
     ${u.rotations.length ? `<section class="d-sec"><h4>Rotations</h4>${u.rotations.map((r) => `
-      <div class="d-rot"><span>${esc(translateKr(r.label))}</span><ol>${r.steps.map((st) => `<li>${st.map((t) => esc(parseAction(u, t).code)).join(' + ')}</li>`).join('')}</ol></div>`).join('')}</section>` : ''}`;
+      <div class="d-rot"><span>${esc(translateKr(r.label))}${r.with ? ` · ${esc(unit(r.with)?.codename ?? '')} team` : ''}</span><ol>${r.steps.map((st) => `<li>${st.map((t) => esc(parseAction(u, t).code)).join(' + ')}</li>`).join('')}</ol></div>`).join('')}</section>` : ''}`;
   drawer.classList.add('open');
   drawer.setAttribute('aria-hidden', 'false');
   body.scrollTop = 0;
@@ -481,7 +497,7 @@ function bind() {
   });
   document.addEventListener('change', (e) => {
     const sel = (e.target as HTMLElement).closest<HTMLSelectElement>('select[data-aw]');
-    if (sel) { state.aw[sel.dataset.aw!] = Number(sel.value); renderTurns(); }
+    if (sel) { state.aw[sel.dataset.aw!] = sel.value; renderTurns(); }
   });
   $<HTMLInputElement>('#q').addEventListener('input', (e) => { state.q = (e.target as HTMLInputElement).value; renderGrid(); });
   document.addEventListener('keydown', (e) => {

@@ -67,7 +67,7 @@ Not modelled yet: overall unit strength/meta, awareness (A0–A6), Wonder's pers
 - Sticky builder and drawer use `overflow: hidden auto` so slam/hover animations don't flash a horizontal scrollbar. iOS gets 16px on the awareness `select` to stop focus zoom.
 - Codenames like `WIND·Tempest` are split: the base is shown big and the variant small (`code()` in main.ts).
 
-- Kotone's operation.js uses a per-turn table (`skills[]` per turn, several routes per awareness, `variant: 'miku'`) instead of `value` strings. `readRotations()` in the scraper reads `basic_en`, trims to the turn count and labels them `A0 · 1`, `A0 Miku · 1`. `Fatigue` turns show as idle FTG cells.
+- Kotone's operation.js uses a per-turn table (`skills[]` per turn, several routes per awareness, `variant: 'miku'`) instead of `value` strings. `readRotations()` in the scraper reads `basic_en`, trims to the turn count and labels them `A0 · 1` (no number when there is only one). Variant routes get `with: <unit id>` (`VARIANT_UNIT`, miku → 미쿠); the turn order shows only the `with` routes when that unit is in the team (Miku as navigator), otherwise only the standard ones, and keeps the chosen awareness when switching. `state.aw` stores the label, not an index. `Fatigue` turns show as idle FTG cells.
 
 ## Open points / next steps
 - More lufel features: tactic library (Firestore), revelations, persona.

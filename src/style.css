@@ -253,6 +253,7 @@ a { color: var(--red-hot); }
   clip-path: polygon(0 0, 100% 0, 94% 100%, 0 100%); padding-right: 10px; cursor: pointer;
 }
 .aw-one { display: inline-block; cursor: default; }
+.aw-with { display: block; margin-top: 2px; font-size: 9px; font-weight: 900; letter-spacing: .04em; color: var(--c, #fff); text-transform: uppercase; }
 /* iOS zooms the page when a select under 16px gets focus. */
 @supports (-webkit-touch-callout: none) { .aw select { font-size: 16px; padding-top: 0; padding-bottom: 0; } }
 

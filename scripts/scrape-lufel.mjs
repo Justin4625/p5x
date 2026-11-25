@@ -92,19 +92,28 @@ function parseRotation(value) {
  * table instead: `{group: 'r0', variant, turns: ['1'..'6',''], skills: ['1', '1+1+3', 'Fatigue', ...]}`,
  * with several routes per awareness. Those are read from the English copy and numbered.
  */
+/** Rotation variants on lufel that belong to a team with a specific unit. */
+const VARIANT_UNIT = { miku: '미쿠' };
+
 function readRotations(O) {
   const list = O?.basic || [];
   if (!list.some((r) => Array.isArray(r.skills))) {
     return list.filter((r) => r.value).map((r) => ({ label: r.label.replace('의식', 'A'), steps: parseRotation(r.value) }));
   }
-  const en = O.basic_en || list;
+  const en = (O.basic_en || list).filter((r) => Array.isArray(r.skills));
+  const key = (r) => `A${String(r.group || '').replace(/^r/, '')}|${r.variant || ''}`;
+  const total = {};
+  for (const r of en) total[key(r)] = (total[key(r)] || 0) + 1;
   const seen = {};
-  return en.filter((r) => Array.isArray(r.skills)).map((r) => {
+  return en.map((r) => {
+    const k = key(r);
+    seen[k] = (seen[k] || 0) + 1;
     const turns = (r.turns || []).filter(Boolean).length || r.skills.filter(Boolean).length;
-    const base = `A${String(r.group || '').replace(/^r/, '')}${r.variant === 'miku' ? ' Miku' : ''}`;
-    seen[base] = (seen[base] || 0) + 1;
     const steps = r.skills.slice(0, turns).map((cell) => String(cell || '·').split('+').map((t) => t.trim()).filter(Boolean));
-    return { label: `${base} · ${seen[base]}`, steps };
+    const label = total[k] > 1 ? `${k.split('|')[0]} · ${seen[k]}` : k.split('|')[0];
+    // Variant routes are meant for a team with that unit (Miku = navigator 미쿠); the UI picks them automatically.
+    const withUnit = VARIANT_UNIT[r.variant];
+    return withUnit ? { label, with: withUnit, steps } : { label, steps };
   });
 }
 
