@@ -56,8 +56,9 @@ const WANT_RULES: [string, RegExp][] = [
   ['ail:spirit', /foe is inflicted with [^.]*spiritual ailment/],
   ['debuff', /foes? with debuffs|foe has a debuff/],
   ['shield', /SELF has a shield/],
-  ['defup', /Deal [^.]*of SELF's [Dd]efense/],
-  ['maxhp', /Deal [^.]*of SELF's max HP/],
+  // Damage itself must scale ("equal to N of SELF's max HP"), not a heal in the same sentence.
+  ['defup', /Deal [^.]*?equal to N of SELF's [Dd]efense/],
+  ['maxhp', /Deal [^.]*?equal to N of SELF's max HP/],
   ['heal', /[Ss]pend N of [^.]*HP|spends HP instead/],
   ['gauge:Theurgy', /Theurgy gauge is at/],
   ['extraturn', /used on an extra action/],
