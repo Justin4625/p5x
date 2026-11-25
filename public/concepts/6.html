@@ -1,0 +1,89 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6 · Hand of Cards · Phantom Roster concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bowlby+One&family=DM+Serif+Display:ital@0;1&family=Noto+Sans:wght@500;700;900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="p5.css"><style>
+body{background:radial-gradient(120% 80% at 50% 0,#3a0008,#0a0a0a 60%)}
+.table{min-height:100vh;display:grid;grid-template-rows:auto 1fr auto;gap:10px;padding:16px 4vw 0}
+.head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.felt{display:grid;grid-template-columns:repeat(5,minmax(0,170px));justify-content:center;gap:clamp(8px,2vw,22px);align-items:end;padding:20px 0}
+.felt .card:nth-child(1){rotate:-6deg}.felt .card:nth-child(2){rotate:-2deg;translate:0 -14px}.felt .card:nth-child(3){rotate:3deg}.felt .card:nth-child(4){rotate:6deg;scale:.85}.felt .card:nth-child(5){rotate:9deg;scale:.85}
+.felt .card.picked>img{filter:none}.felt .stamp{display:none}
+.mid{display:flex;justify-content:center;gap:16px;align-items:center;flex-wrap:wrap}
+.hand{position:sticky;bottom:0;display:flex;justify-content:center;padding:30px 0 0;height:230px;overflow:visible}
+.hand .card{width:130px;margin:0 -34px;transform-origin:50% 140%;rotate:calc((var(--i) - 4) * 6deg);translate:0 calc(abs(var(--i) - 4) * 8px)}
+.hand .card:hover{translate:0 -60px;rotate:0deg;z-index:9}
+@media(max-width:640px){.felt{grid-template-columns:repeat(3,1fr)}.felt .card:nth-child(n+4){display:none}.hand .card{width:96px;margin:0 -30px}}</style></head><body class="c6"><nav class="cnav"><a href="./">◀ All concepts</a><span>6 / 10</span><a href="5.html">Prev</a><a href="7.html">Next ▶</a></nav><div class="table"><div class="head"><span class="ransom big"><span class="rw"><span class="r r-f" style="--rot:-5deg">Y</span><span class="r r-c" style="--rot:-1deg">O</span><span class="r r-d" style="--rot:3deg">U</span><span class="r r-b" style="--rot:-4deg">R</span></span><span class="rg"></span><span class="rw"><span class="r r-e" style="--rot:0deg">T</span><span class="r r-e" style="--rot:4deg">A</span><span class="r r-a" style="--rot:-3deg">B</span><span class="r r-f" style="--rot:1deg">L</span><span class="r r-f" style="--rot:5deg">E</span></span></span><div class="meter"><span class="meter-n">74</span><span class="meter-l">Solid<br>crew</span></div></div>
+<div class="felt"><article class="card t-none picked" style="--c:#ff8484">
+  <img src="../cards/a1a121c16c70.webp" alt="" loading="lazy">
+  
+  <span class="stamp">IN TEAM</span>
+  <div class="card-tx"><b>KOTONE</b><span>Kotone Shiomi</span><div class="pills"><span class="pill" style="--ec:#ff4d2e">FIRE</span><span class="pill pill-role">Strategist</span></div></div>
+</article><article class="card t-none picked" style="--c:#000080">
+  <img src="../cards/202f194396fd.webp" alt="" loading="lazy">
+  
+  <span class="stamp">IN TEAM</span>
+  <div class="card-tx"><b>QUEEN</b><span>Makoto Niijima</span><div class="pills"><span class="pill" style="--ec:#30f0d0">NUKE</span><span class="pill pill-role">Assassin</span></div></div>
+</article><article class="card t-none picked" style="--c:#293bc5">
+  <img src="../cards/cabe12534d6a.webp" alt="" loading="lazy">
+  
+  <span class="stamp">IN TEAM</span>
+  <div class="card-tx"><b>J&amp;C</b><span>Justine &amp; Caroline</span><div class="pills"><span class="pill" style="--ec:#ffffff">ALMT</span><span class="pill pill-role">Virtuoso</span></div></div>
+</article><article class="card t-none picked" style="--c:#a80707">
+  <img src="../cards/360a228442c5.webp" alt="" loading="lazy">
+  
+  <span class="stamp">IN TEAM</span>
+  <div class="card-tx"><b>WONDER</b><span>Wonder</span><div class="pills"><span class="pill pill-role"></span></div></div>
+</article><article class="card t-none picked" style="--c:#39c5bb">
+  <img src="../cards/92db9e6745e8.webp" alt="" loading="lazy">
+  
+  <span class="stamp">IN TEAM</span>
+  <div class="card-tx"><b>MIKU</b><span>Hatsune Miku</span><div class="pills"><span class="pill pill-role">Navigator</span></div></div>
+</article></div>
+<div class="mid"><button class="btn">TURN ORDER</button><button class="btn btn-red">DRAW: BEST FITS</button></div>
+<div class="hand"><article style="--i:0" class="card t-best" style="--c:#f3e966">
+  <img src="../cards/f67bc5b091a8.webp" alt="" loading="lazy">
+  <span class="badge">BEST</span>
+  
+  <div class="card-tx"><b>CHORD</b><span>Ayaka Sakai</span><div class="pills"><span class="pill" style="--ec:#ffe23d">ELEC</span><span class="pill pill-role">Strategist</span></div></div>
+</article><article style="--i:1" class="card t-best" style="--c:#2680a7">
+  <img src="../cards/a224e3897995.webp" alt="" loading="lazy">
+  <span class="badge">BEST</span>
+  
+  <div class="card-tx"><b>VINO</b><span>Chizuko Nagao</span><div class="pills"><span class="pill" style="--ec:#30f0d0">NUKE</span><span class="pill pill-role">Saboteur</span></div></div>
+</article><article style="--i:2" class="card t-best" style="--c:#01dfd7">
+  <img src="../cards/2f4720917929.webp" alt="" loading="lazy">
+  <span class="badge">BEST</span>
+  
+  <div class="card-tx"><b>LEON</b><span>Leo Kamiyama</span><div class="pills"><span class="pill" style="--ec:#30f0d0">NUKE</span><span class="pill pill-role">Strategist</span></div></div>
+</article><article style="--i:3" class="card t-best" style="--c:#f7cd80">
+  <img src="../cards/52d4340814cc.webp" alt="" loading="lazy">
+  <span class="badge">BEST</span>
+  
+  <div class="card-tx"><b>MARIAN<small>Beachflower</small></b><span>Beachflower Minami</span><div class="pills"><span class="pill" style="--ec:#fff3a8">BLESS</span><span class="pill pill-role">Strategist</span></div></div>
+</article><article style="--i:4" class="card t-good" style="--c:#324ea8">
+  <img src="../cards/e1724d5980e3.webp" alt="" loading="lazy">
+  <span class="badge">GOOD</span>
+  
+  <div class="card-tx"><b>TURBO</b><span>Mayumi Hashimoto</span><div class="pills"><span class="pill" style="--ec:#c9b28a">PHYS</span><span class="pill pill-role">Strategist</span></div></div>
+</article><article style="--i:5" class="card t-good" style="--c:#a0ffb7">
+  <img src="../cards/843e56b84630.webp" alt="" loading="lazy">
+  <span class="badge">GOOD</span>
+  
+  <div class="card-tx"><b>WIND<small>Tempest</small></b><span>Tempest Riko</span><div class="pills"><span class="pill" style="--ec:#4ef08f">WIND</span><span class="pill pill-role">Strategist</span></div></div>
+</article><article style="--i:6" class="card t-good" style="--c:#6be1cd">
+  <img src="../cards/9114d675daf8.webp" alt="" loading="lazy">
+  <span class="badge">GOOD</span>
+  
+  <div class="card-tx"><b>BUI<small>Cosmic</small></b><span>Cosmic Yui</span><div class="pills"><span class="pill" style="--ec:#30f0d0">NUKE</span><span class="pill pill-role">Assassin</span></div></div>
+</article><article style="--i:7" class="card t-good" style="--c:#821c00">
+  <img src="../cards/0793a5e9b8d3.webp" alt="" loading="lazy">
+  <span class="badge">GOOD</span>
+  
+  <div class="card-tx"><b>CATTLE</b><span>Lufel</span><div class="pills"><span class="pill" style="--ec:#ff4d2e">FIRE</span><span class="pill pill-role">Medic</span></div></div>
+</article><article style="--i:8" class="card t-good" style="--c:#ffce5b">
+  <img src="../cards/7069f8b43c64.webp" alt="" loading="lazy">
+  <span class="badge">GOOD</span>
+  
+  <div class="card-tx"><b>HOWLER</b><span>Runa Dogenzaka</span><div class="pills"><span class="pill" style="--ec:#ff4d2e">FIRE</span><span class="pill pill-role">Saboteur</span></div></div>
+</article></div></div></body></html>
