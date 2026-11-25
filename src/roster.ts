@@ -36,7 +36,7 @@ function shell() {
         <summary>How is this decided?</summary>
         <p>For each unit on a Global banner or coming soon, the site builds your best 3-thief crew from the units you ticked, with and without it. Crew value is team synergy (lufel partners, recommended teams and skill links) plus how strong the members are on lufel's tier list. On top of that: units of yours it pairs with, a role you're missing, its tier, and whether it's limited. Units already in your roster in the same role at the same or better tier count against it.</p>
         <p>The 5★ weapon is only worth it for a unit you own or should pull. It counts most for a damage dealer in your best crew.</p>
-        <p>Release dates of upcoming units are estimates from lufel's schedule. Tiers for upcoming units come from the KR server, which is ahead of Global.</p>
+        <p>Reruns are banners for units that were already out on Global; a limited rerun counts as a rare chance. Release dates of upcoming units are estimates from lufel's schedule. Tiers for upcoming units come from the KR server, which is ahead of Global.</p>
       </details>
     </section>
     <section class="own-sec" aria-labelledby="own-title">
@@ -66,9 +66,16 @@ function shell() {
 const VERDICT_LABEL = { pull: 'PULL', maybe: 'MAYBE', skip: 'SKIP', owned: 'OWNED', unknown: '?' } as const;
 const WPN_LABEL = { worth: 'WORTH IT', optional: 'OPTIONAL', skip: 'SKIP', owned: 'OWNED' } as const;
 
+const started = (iso: string) => new Date(`${iso.replace(' ', 'T')}Z`).getTime() <= Date.now();
+function bannerWhen(b: NonNullable<Candidate['banner']>, what: string) {
+  const rerun = b.rerun ? '<span class="when when-rerun">Rerun</span> ' : '';
+  return started(b.start)
+    ? `${rerun}<span class="when when-live">${what} · until ${fmtDate(b.end)}</span>`
+    : `${rerun}<span class="when when-soon">${what} · starts ${fmtDate(b.start)}</span>`;
+}
 function when(c: Candidate) {
-  if (c.banner) return `<span class="when when-live">On banner · until ${fmtDate(c.banner.end)}</span>`;
-  if (c.weaponBanner && !c.upcoming) return `<span class="when when-live">Weapon banner · until ${fmtDate(c.weaponBanner.end)}</span>`;
+  if (c.banner) return bannerWhen(c.banner, 'On banner');
+  if (c.weaponBanner && !c.upcoming) return bannerWhen(c.weaponBanner, 'Weapon banner');
   const eta = c.unit.eta;
   return `<span class="when">${eta ? `Coming ~${fmtDate(eta)}${c.unit.etaConfirmed ? '' : ' <small>(estimate)</small>'}` : 'Coming later'}</span>`;
 }
@@ -93,7 +100,7 @@ function pullCard(a: Advice, c: Candidate, best: boolean, i: number) {
         : `<div class="pull-meter" aria-label="Score ${a.score} of 100"><i style="--w:${a.score}%"></i><span>${a.score}</span></div><ul class="pull-why">${why}</ul>`}
       ${w ? `<div class="pull-wpn wpn-${w.verdict}">
         <div class="pull-wpn-head"><span>5★ weapon</span><b>${esc(w.weapon.name)}</b><em>${WPN_LABEL[w.verdict]}</em></div>
-        <p>${esc(w.text)}${c.weaponBanner ? ` On banner until ${fmtDate(c.weaponBanner.end)}.` : ''}</p>
+        <p>${esc(w.text)}${c.weaponBanner ? ` ${c.weaponBanner.rerun ? 'Rerun on' : 'On'} ${started(c.weaponBanner.start) ? `banner until ${fmtDate(c.weaponBanner.end)}` : `banner from ${fmtDate(c.weaponBanner.start)}`}.` : ''}</p>
         ${w.weapon.desc ? `<details><summary>Weapon effect${w.weapon.effect ? `: ${esc(w.weapon.effect)}` : ''}</summary><p>${esc(w.weapon.desc)}</p></details>` : ''}
       </div>` : ''}
     </div>

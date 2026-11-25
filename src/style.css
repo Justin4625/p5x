@@ -548,6 +548,8 @@ a { color: var(--red-hot); }
 .when { display: inline-block; font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
 .when small { font-size: 1em; text-transform: none; letter-spacing: 0; font-weight: 700; }
 .when-live { color: #000; background: var(--paper); padding: 1px 6px; }
+.when-soon { color: var(--paper); outline: 1px solid var(--paper); outline-offset: -1px; padding: 1px 6px; }
+.when-rerun { color: #000; background: var(--red-hot); padding: 1px 6px; }
 .pull h3 { margin: 4px 0 0; font-family: var(--display); font-weight: 400; font-size: 26px; line-height: 1; letter-spacing: .02em; overflow-wrap: anywhere; }
 .pull h3 small { display: block; font-family: var(--body); font-weight: 900; font-size: .42em; letter-spacing: .08em; text-transform: uppercase; color: var(--red-hot); margin-top: 2px; }
 .pull-name { font-size: 11px; color: #cfc9bf; font-weight: 700; margin-bottom: 6px; }

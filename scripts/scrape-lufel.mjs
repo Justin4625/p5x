@@ -142,6 +142,20 @@ function upcomingSchedule(sched, released, krData, today) {
   return out;
 }
 
+/** First Global release date per unit from lufel's schedule (for spotting reruns). */
+function releaseDates(sched) {
+  const out = {};
+  let date = null;
+  let gap = 14;
+  for (const e of [...(sched?.manualReleases || []), ...(sched?.autoGenerateCharacters || [])]) {
+    if (e.schedulePending) continue;
+    date = e.date ? new Date(`${e.date}T00:00:00Z`) : date ? new Date(date.getTime() + gap * 864e5) : null;
+    gap = e.days ?? 14;
+    for (const c of e.characters || []) if (date && !out[c]) out[c] = date.toISOString().slice(0, 10);
+  }
+  return out;
+}
+
 async function main() {
   const prev = await readJson(OUT);
   const prevUp = await readJson(UPCOMING);
@@ -279,6 +293,7 @@ async function main() {
   const units = [];
   for (const id of roster) {
     units.push(await scrapeUnit(id, support.includes(id), {
+      released: releaseDates(sched)[id] ?? null,
       added: prevGlobal.has(id) ? prevById.get(id)?.added ?? null : prev ? today : null,
     }));
   }
@@ -304,13 +319,17 @@ async function main() {
   const byName = new Map([...units, ...upcoming].map((u) => [u.name.replace(/\s*·\s*/g, ' ').toLowerCase(), u.id]));
   const byWeapon = new Map([...units, ...upcoming].flatMap((u) => u.weapons.filter((w) => w.rarity === 5).map((w) => [w.name.toLowerCase(), u.id])));
   const banners = [];
+  const firstRelease = releaseDates(sched);
   for (const kind of ['thief', 'weapon']) {
     for (const b of gacha?.data?.[kind] || []) {
       if (!b?.endTime || new Date(`${b.endTime.replace(' ', 'T')}Z`) < new Date()) continue;
       for (const f of b.fiveStar || []) {
         const unit = kind === 'thief' ? byName.get(String(f.name).toLowerCase()) : byWeapon.get(String(f.name).toLowerCase());
         if (!unit) { warn(`Banner "${b.name}": no ${kind === 'thief' ? 'unit' : 'weapon'} named "${f.name}".`); continue; }
-        const entry = { kind: kind === 'thief' ? 'unit' : 'weapon', unit, name: f.name, title: b.name, start: b.startTime, end: b.endTime };
+        // Rerun: the unit came out on Global more than three weeks before this banner started.
+        const first = firstRelease[unit];
+        const rerun = !!first && new Date(`${b.startTime.replace(' ', 'T')}Z`) - new Date(`${first}T00:00:00Z`) > 21 * 864e5;
+        const entry = { kind: kind === 'thief' ? 'unit' : 'weapon', unit, name: f.name, title: b.name, start: b.startTime, end: b.endTime, rerun };
         if (!banners.some((x) => x.kind === entry.kind && x.unit === entry.unit && x.end === entry.end)) banners.push(entry);
       }
     }
@@ -333,7 +352,7 @@ async function main() {
     ...(prev && added.length ? [`New: ${added.map(label).join(', ')}`] : []),
     ...(removed.length ? [`Removed from Global list: ${removed.map((id) => label(prevById.get(id))).join(', ')}`] : []),
     `Upcoming: ${upcoming.map((u) => `${u.codename || u.name}${u.eta ? ` (~${u.eta})` : ''}`).join(', ') || 'none'}${sameUp ? ' (no changes)' : ''}.`,
-    `Banners: ${banners.map((b) => `${b.name} until ${b.end.slice(0, 10)}`).join(', ') || 'none'}.`,
+    `Banners: ${banners.map((b) => `${b.name}${b.rerun ? ' (rerun)' : ''} until ${b.end.slice(0, 10)}`).join(', ') || 'none'}.`,
     ...warnings.map((w) => `Warning: ${w}`),
   ];
   console.log(`\n${lines.join('\n')}`);

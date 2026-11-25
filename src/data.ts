@@ -7,7 +7,8 @@ export interface Rotation { label: string; steps: string[][] }
 export interface Weapon { key: string; rarity: number; name: string; effect: string; desc: string }
 /** lufel tier: rank 0 = T0. list 'kr' means the KR server list (used for units not on Global yet). */
 export interface Tier { label: string; rank: number; awareness: number | null; list: 'global' | 'kr' }
-export interface Banner { kind: 'unit' | 'weapon'; unit: string; name: string; title: string; start: string; end: string }
+/** rerun = the unit was already out on Global (3+ weeks before this banner). Times are UTC. */
+export interface Banner { kind: 'unit' | 'weapon'; unit: string; name: string; title: string; start: string; end: string; rerun?: boolean }
 export interface Unit {
   id: string;
   name: string;
@@ -37,6 +38,8 @@ export interface Unit {
   weapons: Weapon[];
   tier: Tier | null;
   tierKr: Tier | null;
+  /** First Global release date (from lufel's schedule). */
+  released?: string | null;
   /** Upcoming units only: estimated Global release date from lufel's schedule. */
   eta?: string | null;
   etaConfirmed?: boolean;

@@ -25,7 +25,8 @@ Started 2026-11-25. Fan site for Persona 5: The Phantom X, modelled on lufel.net
 - Weapons: `/data/characters/<KR>/weapon.js` (`enCharacterWeaponData`, keys weapon5-1 = 5★ signature, weapon4-1 = 4★).
 - Tiers: `/apps/tier/global_tier.json` (Global units) and `kr_tier.json` (used for units not on Global yet). Best label per unit; `awareness` = rated at A-n.
 - Upcoming: `/apps/schedule/data.js` (`ReleaseScheduleData`: manualReleases + autoGenerateCharacters; date given or previous date + previous `days`; then KR release_order). Next 8 are scraped like normal units into `src/data/upcoming.json` with `eta` (estimate).
-- Banners: `/data/external/gacha/en.json` (Global, thief + weapon banners, start/end UTC), matched to units by English name and to weapons by 5★ name.
+- Banners: `/data/external/gacha/en.json` (Global, thief + weapon banners, start/end UTC), matched to units by English name and to weapons by 5★ name. Banners that haven't started show "starts <date>".
+- Reruns: a banner is a rerun when the unit's first Global release (walk of lufel's schedule → `released` on each unit) is 3+ weeks before the banner start. lufel's schedule has no future reruns; they appear once lufel's gacha feed lists them.
 - Card art: `/assets/img/character-cards/<KR name>.webp`, resized to 360px wide by sharp into `public/cards/<sha1(KR id) first 12 hex>.webp`. Stable per unit: index-based names broke when a unit was inserted mid-list. Unused card files are deleted on each scrape.
 
 ## Auto-update (new units)

@@ -159,7 +159,9 @@ export function advise(c: Candidate, col: Collection): Advice {
 
   points.push(tierPoint(u));
   points.push(u.limited
-    ? { pts: 8, text: 'Limited: it won\'t join the standard banner later.' }
+    ? c.banner?.rerun
+      ? { pts: 8, text: 'Limited rerun: limited units come back rarely, so this may be your last chance for a while.' }
+      : { pts: 8, text: 'Limited: it won\'t join the standard banner later.' }
     : { pts: -5, text: 'Standard unit: can still come from standard pulls or a gold ticket.' });
 
   const score = Math.max(0, Math.min(100, points.reduce((s, p) => s + p.pts, 0)));

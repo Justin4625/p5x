@@ -1,6 +1,6 @@
 {
  "source": "lufel.net",
- "scraped": "2026-11-25T08:07:14.515Z",
+ "scraped": "2026-11-25T08:26:33.150Z",
  "upcoming": [
   {
    "id": "준페이",
@@ -1585,7 +1585,8 @@
    "name": "Fuuka Yamagishi",
    "title": "All-Seeing Eye",
    "start": "2026-10-29 11:30:00",
-   "end": "2026-11-26 10:59:59"
+   "end": "2026-11-26 10:59:59",
+   "rerun": false
   },
   {
    "kind": "weapon",
@@ -1593,7 +1594,8 @@
    "name": "Rainbow Relay",
    "title": "Silent Pistol",
    "start": "2026-10-29 11:30:00",
-   "end": "2026-11-26 10:59:59"
+   "end": "2026-11-26 10:59:59",
+   "rerun": false
   },
   {
    "kind": "unit",
@@ -1601,7 +1603,8 @@
    "name": "Beachflower Minami",
    "title": "Blossoms in the Sea Breeze",
    "start": "2026-11-19 11:30:00",
-   "end": "2026-12-03 10:59:59"
+   "end": "2026-12-03 10:59:59",
+   "rerun": true
   },
   {
    "kind": "unit",
@@ -1609,7 +1612,8 @@
    "name": "Wavecatcher Miyu",
    "title": "Iridescent Ocean Jewel",
    "start": "2026-11-19 11:30:00",
-   "end": "2026-12-03 10:59:59"
+   "end": "2026-12-03 10:59:59",
+   "rerun": true
   },
   {
    "kind": "weapon",
@@ -1617,7 +1621,8 @@
    "name": "Everlasting Garden",
    "title": "Silent Pistol",
    "start": "2026-11-19 11:30:00",
-   "end": "2026-12-03 10:59:59"
+   "end": "2026-12-03 10:59:59",
+   "rerun": true
   },
   {
    "kind": "weapon",
@@ -1625,7 +1630,8 @@
    "name": "Mermaid Dreamer",
    "title": "Silent Pistol",
    "start": "2026-11-19 11:30:00",
-   "end": "2026-12-03 10:59:59"
+   "end": "2026-12-03 10:59:59",
+   "rerun": true
   },
   {
    "kind": "unit",
@@ -1633,7 +1639,8 @@
    "name": "Tenebre Shoki",
    "title": "To Thine Own Self Be True",
    "start": "2026-11-12 11:30:00",
-   "end": "2026-12-10 10:59:59"
+   "end": "2026-12-10 10:59:59",
+   "rerun": false
   },
   {
    "kind": "unit",
@@ -1641,7 +1648,8 @@
    "name": "Gunslinger Shun",
    "title": "Locked 'n' Loaded",
    "start": "2026-11-12 11:30:00",
-   "end": "2026-12-10 10:59:59"
+   "end": "2026-12-10 10:59:59",
+   "rerun": false
   },
   {
    "kind": "weapon",
@@ -1649,7 +1657,8 @@
    "name": "Spada della Vita",
    "title": "Silent Pistol",
    "start": "2026-11-12 11:30:00",
-   "end": "2026-12-10 10:59:59"
+   "end": "2026-12-10 10:59:59",
+   "rerun": false
   },
   {
    "kind": "weapon",
@@ -1657,7 +1666,8 @@
    "name": "Frontier Justice",
    "title": "Silent Pistol",
    "start": "2026-11-12 11:30:00",
-   "end": "2026-12-10 10:59:59"
+   "end": "2026-12-10 10:59:59",
+   "rerun": false
   },
   {
    "kind": "unit",
@@ -1665,7 +1675,8 @@
    "name": "Makoto Yuki",
    "title": "When Moon Reaches Stars",
    "start": "2026-09-15 12:00:00",
-   "end": "2027-06-26 10:59:59"
+   "end": "2027-06-26 10:59:59",
+   "rerun": true
   },
   {
    "kind": "weapon",
@@ -1673,7 +1684,8 @@
    "name": "Deus Xiphos",
    "title": "Silent Pistol",
    "start": "2026-09-15 12:00:00",
-   "end": "2027-06-26 10:59:59"
+   "end": "2027-06-26 10:59:59",
+   "rerun": true
   }
  ]
 }
