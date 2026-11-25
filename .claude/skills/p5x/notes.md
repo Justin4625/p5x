@@ -30,7 +30,10 @@ Team meter 0–100 = average pair score ×6 + role coverage bonus, scaled by how
 
 ## Gotchas
 - `.builder` needs `min-width: 0`, otherwise the turn table widens the page on mobile.
-- Card stamps (scale 2.4 while hidden) overflow, so `.roster` has `overflow-x: clip`.
+- Horizontal overflow is clipped on `html`/`body` (`overflow-x: clip`, `hidden` as fallback), not on `.roster`: clipping the roster cut off the left column's card text on hover. Card stamps (scale 2.4 while hidden) still overflow, harmlessly.
+- Hover lifts (cards, slots, moves, chips, partners) sit in `@media (hover: hover)`; keyboard focus uses `:has(:focus-visible)`. Otherwise a tapped card stays lifted on touch.
+- The pick "fly" only flies when the target slot is on screen; otherwise the art pops in place and a toast confirms (phone: builder is above the roster).
+- Sticky builder and drawer use `overflow: hidden auto` so slam/hover animations don't flash a horizontal scrollbar. iOS gets 16px on the awareness `select` to stop focus zoom.
 - Codenames like `WIND·Tempest` are split: the base is shown big and the variant small (`code()` in main.ts).
 
 ## Open points / next steps

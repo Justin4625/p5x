@@ -395,10 +395,20 @@ function fly(fromEl: Element | null, slotSel: string) {
   if (!img || !target) return;
   const a = img.getBoundingClientRect();
   const b = target.getBoundingClientRect();
+  // Slot off screen (phone: builder sits above the roster): pop in place instead of flying out of view.
+  const visible = b.bottom > 0 && b.top < innerHeight;
   const ghost = img.cloneNode() as HTMLImageElement;
   ghost.className = 'ghost';
   Object.assign(ghost.style, { left: `${a.left}px`, top: `${a.top}px`, width: `${a.width}px`, height: `${a.height}px` });
   document.body.appendChild(ghost);
+  if (!visible) {
+    ghost.animate([
+      { transform: 'scale(1) rotate(0)', opacity: 1 },
+      { transform: 'scale(1.12) rotate(-6deg)', opacity: 1, offset: 0.4 },
+      { transform: 'scale(.6) rotate(8deg)', opacity: 0 },
+    ], { duration: 480, easing: 'cubic-bezier(.2,1.4,.35,1)' }).onfinish = () => ghost.remove();
+    return;
+  }
   const dx = b.left + b.width / 2 - (a.left + a.width / 2);
   const dy = b.top + b.height / 2 - (a.top + a.height / 2);
   const s = Math.min(b.width / a.width, b.height / a.height);
@@ -425,6 +435,12 @@ function pick(id: string) {
     if (free === -1) { toast('Crew is full. Remove a thief first.'); return; }
     state.slots[free] = id;
     flash = free;
+  }
+  if (flash !== undefined) {
+    const slot = $(`.slot[data-slot="${flash}"]`).getBoundingClientRect();
+    if (slot.bottom < 0 || slot.top > innerHeight) {
+      toast(flash === 'navi' ? `${u.codename} is your navigator` : `${u.codename} joins · ${state.slots.filter(Boolean).length}/3`);
+    }
   }
   update(flash);
   if (flash !== undefined) fly(card, `.slot[data-slot="${flash}"]`);
