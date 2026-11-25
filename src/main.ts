@@ -1,10 +1,11 @@
 import './style.css';
+import './looks.css';
 import {
   UNITS, BY_ID, WONDER, ELEMENTS, ROLES, ELEMENT_COLOR, ELEMENT_SHORT, SCRAPED,
   parseAction, translateKr, type Unit, type Rotation,
 } from './data';
 import { matchFor, rankTiers, teamScore, unit, type Match } from './synergy';
-import { esc, md, $, code, cardSrc, trim, ransom, pills, navHTML, BG_HTML } from './ui';
+import { esc, md, $, code, cardSrc, trim, ransom, pills, navHTML, BG_HTML, mountLooks } from './ui';
 import { profileLabels } from './skills';
 import { loadCollection, type Collection } from './collection';
 
@@ -589,3 +590,4 @@ function refreshCollection() {
 }
 addEventListener('storage', (e) => { if (e.key === 'p5x-collection') refreshCollection(); });
 addEventListener('pageshow', (e) => { if (e.persisted) refreshCollection(); });
+mountLooks();

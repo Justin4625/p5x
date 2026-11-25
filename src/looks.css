@@ -1,0 +1,168 @@
+/*
+ * Look preview: ten complete styles on the same markup, picked with the LOOK switcher
+ * (bottom left, or ?look=<id>). Each look only sets the tokens from style.css :root plus
+ * a few overrides. Once Justin picks one, it becomes the default and the rest go.
+ */
+
+/* ---------- shared: flat looks (no ransom letters, no hard offset shadows, no slants) ---------- */
+:root:is([data-look='velvet'], [data-look='minimal'], [data-look='clean'], [data-look='newsprint'], [data-look='leblanc']) {
+  --slant: none;
+  --tilt: 0;
+}
+:is([data-look='velvet'], [data-look='minimal'], [data-look='clean'], [data-look='newsprint'], [data-look='leblanc']) {
+  & .r { background: none; color: var(--text); border: 0; font-family: var(--display); font-style: normal; font-size: 1em; padding: 0; clip-path: none; }
+  & .r-c, & .r-f { color: var(--red); }
+  & .ransom { gap: 0; }
+  & .r-word { gap: 0; }
+  & .hero-sub { background: none; color: var(--text-2); padding: 0; font-style: normal; font-weight: 600; clip-path: none; }
+  & .hero-tag { background: none; color: var(--muted); padding: 0; letter-spacing: .2em; }
+  & .sect span { background: none; color: var(--red); padding: 0; clip-path: none; }
+  & .panel { box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .45); border-width: 1px; border-color: var(--line); background: var(--surface); }
+  & .card-text, & .meter-num, & .own-name, & .ghost { box-shadow: none; }
+  & .bg-rays, & .bg-dots, & .bg-slash { display: none; }
+  & .nav-link { border-width: 1px; }
+  & .search input { border-width: 1px; border-color: var(--line); }
+  & .card[data-tier='best']::after, & .card[data-tier='good']::after { inset: -3px; }
+}
+
+/* ---------- 2 · Calling Card: light paper, black ink, red stamps ---------- */
+:root[data-look='calling'] {
+  --bg: #ece6da; --surface: #f8f4ec; --surface-2: #ddd5c6; --plate: #fffdf8;
+  --text: #141414; --text-2: #3d3a35; --muted: #6c665d; --line: rgba(0, 0, 0, .16);
+  --paper: #141414; --paper-2: #3a3734; --on-paper: #f8f4ec; --on-accent: #fff; --hi: #000;
+  --red: #d6001c; --red-hot: #ff1f35;
+  color-scheme: light;
+}
+[data-look='calling'] .bg-rays { opacity: .6; }
+[data-look='calling'] .has-team .card[data-tier='none'] { filter: grayscale(1) brightness(.9) opacity(.55); }
+
+/* ---------- 3 · Velvet Room: midnight blue, gold, serif ---------- */
+:root[data-look='velvet'] {
+  --bg: #0a0f24; --surface: #111936; --surface-2: #1c2650; --plate: #0b1129;
+  --text: #ece6d3; --text-2: #bdb7a5; --muted: #8a90ad; --line: rgba(236, 230, 211, .14);
+  --red: #c9a227; --red-hot: #e8c65c; --red-deep: #6e5410; --paper: #ece6d3; --paper-2: #cfc7ae; --on-paper: #0a0f24; --on-accent: #0a0f24;
+  --display: 'Cormorant Garamond', serif;
+}
+[data-look='velvet'] body { background: radial-gradient(120% 70% at 50% -10%, #1d2a66 0, transparent 60%), var(--bg); }
+[data-look='velvet'] :is(.sect, .hero h1, .card-text b, .slot-name b, .tt-id b, .act b, .pull h3, .meter-num) { font-weight: 700; letter-spacing: .01em; }
+[data-look='velvet'] .panel { border-radius: 4px; outline: 1px solid color-mix(in srgb, var(--red) 40%, transparent); outline-offset: -6px; }
+
+/* ---------- 4 · Dark Hour: deep teal night, cyan accent ---------- */
+:root[data-look='darkhour'] {
+  --bg: #03121b; --surface: #072231; --surface-2: #0d3346; --plate: #021019;
+  --text: #e4f5fd; --text-2: #a7c9d8; --muted: #6c95a7; --line: rgba(228, 245, 253, .15);
+  --red: #17c0ff; --red-hot: #74dcff; --red-deep: #05628a; --paper: #e4f5fd; --paper-2: #b8d8e6; --on-paper: #03121b; --on-accent: #001521;
+  --display: 'Oswald', sans-serif; --tilt: .4;
+}
+[data-look='darkhour'] body { background: radial-gradient(40vmax 40vmax at 85% 8%, rgba(160, 255, 200, .10), transparent 70%), var(--bg); }
+[data-look='darkhour'] .bg-slash.s1 { background: linear-gradient(90deg, #0b4d6b, #17c0ff 60%, #0b4d6b); opacity: .55; }
+[data-look='darkhour'] :is(.sect, .card-text b, .slot-name b, .tt-id b, .act b, .pull h3) { font-weight: 600; letter-spacing: .03em; }
+
+/* ---------- 5 · Midnight Channel: black and TV yellow ---------- */
+:root[data-look='midnight'] {
+  --bg: #0c0c0c; --surface: #151515; --surface-2: #252525; --plate: #000;
+  --text: #fdfbef; --text-2: #d6d2bd; --muted: #9b977f;
+  --red: #ffd400; --red-hot: #ffe45a; --red-deep: #8a7200; --paper: #fdfbef; --on-accent: #111;
+  --tilt: .6;
+}
+[data-look='midnight'] .bg-rays { display: none; }
+[data-look='midnight'] .bg-dots { background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, .05) 0 1px, transparent 1px 3px); background-size: auto; mask-image: none; }
+[data-look='midnight'] .bg-slash.s1 { background: repeating-linear-gradient(-55deg, #ffd400 0 26px, #111 26px 52px); opacity: 1; }
+
+/* ---------- 6 · Minimal: graphite tool, red only where it matters ---------- */
+:root[data-look='minimal'] {
+  --bg: #121212; --surface: #1a1a1a; --surface-2: #262626; --plate: #1a1a1a;
+  --text: #ededed; --text-2: #bdbdbd; --muted: #8b8b8b; --line: rgba(255, 255, 255, .1);
+  --paper: #ededed; --paper-2: #cfcfcf;
+  --display: 'Inter', system-ui, sans-serif; --body: 'Inter', system-ui, sans-serif;
+}
+[data-look='minimal'] :is(.sect, .hero h1, .card-text b, .slot-name b, .tt-id b, .act b, .pull h3, .meter-num, .nav-link, .slot-label, .tt-t, .tt-pos) { font-weight: 800; letter-spacing: -.02em; }
+[data-look='minimal'] :is(.panel, .chip, .sort, .sort-btn, .search input, .nav-link, .card-art, .slot, .act, .pull, .own-art, .btn-ghost, .meter-num) { border-radius: 6px; }
+[data-look='minimal'] .card-text { left: 6px; right: 6px; bottom: 8px; background: rgba(18, 18, 18, .88); backdrop-filter: blur(6px); border-radius: 4px; }
+
+/* ---------- 7 · Clean Light: bright app UI, soft depth ---------- */
+:root[data-look='clean'] {
+  --bg: #f4f4f5; --surface: #fff; --surface-2: #e8e8eb; --plate: #fff;
+  --text: #18181b; --text-2: #3f3f46; --muted: #71717a; --line: rgba(24, 24, 27, .12);
+  --paper: #18181b; --paper-2: #3f3f46; --on-paper: #fff; --on-accent: #fff; --hi: #000;
+  --red: #e11d2e; --red-hot: #f43f50;
+  --display: 'Inter', system-ui, sans-serif; --body: 'Inter', system-ui, sans-serif;
+  color-scheme: light;
+}
+[data-look='clean'] :is(.sect, .hero h1, .card-text b, .slot-name b, .tt-id b, .act b, .pull h3, .meter-num, .nav-link, .slot-label, .tt-t, .tt-pos) { font-weight: 800; letter-spacing: -.02em; }
+[data-look='clean'] :is(.panel, .pull) { border-radius: 14px; box-shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 12px 32px -12px rgba(0, 0, 0, .18); }
+[data-look='clean'] :is(.chip, .sort, .sort-btn, .search input, .nav-link, .btn-ghost, .act, .meter-num) { border-radius: 8px; }
+[data-look='clean'] :is(.card-art, .slot, .own-art) { border-radius: 10px; }
+[data-look='clean'] .card-text { left: 6px; right: 6px; bottom: 8px; background: rgba(255, 255, 255, .92); border-radius: 6px; }
+[data-look='clean'] .tt-who { border-radius: 8px; }
+[data-look='clean'] .has-team .card[data-tier='none'] { filter: grayscale(1) opacity(.45); }
+
+/* ---------- 8 · Newsprint: cream paper, serif headlines, halftone ---------- */
+:root[data-look='newsprint'] {
+  --bg: #f1ecdf; --surface: #f8f4ea; --surface-2: #e2dbcb; --plate: #f8f4ea;
+  --text: #1a1a1a; --text-2: #34322d; --muted: #6d675b; --line: rgba(26, 26, 26, .22);
+  --paper: #1a1a1a; --paper-2: #3a3833; --on-paper: #f8f4ea; --on-accent: #fff; --hi: #000;
+  --red: #b5121b; --red-hot: #d6252e;
+  --display: 'Playfair Display', serif; --body: 'Source Serif 4', Georgia, serif;
+  color-scheme: light;
+}
+[data-look='newsprint'] body { background: radial-gradient(rgba(0, 0, 0, .07) 1px, transparent 1.4px) 0 0 / 6px 6px, var(--bg); }
+[data-look='newsprint'] :is(.sect, .hero h1, .pull h3) { font-weight: 900; letter-spacing: -.01em; }
+[data-look='newsprint'] .hero h1 { border-bottom: 3px double var(--text); padding-bottom: 6px; }
+[data-look='newsprint'] .panel { box-shadow: none; border: 1px solid var(--text); }
+[data-look='newsprint'] .card-art img, [data-look='newsprint'] .slot-art img { filter: contrast(1.05) saturate(.85); }
+
+/* ---------- 9 · Mementos: violet depths, magenta accent, full P5 shapes ---------- */
+:root[data-look='mementos'] {
+  --bg: #11061a; --surface: #1c0a28; --surface-2: #2b113f; --plate: #0d0414;
+  --text: #f6eaff; --text-2: #cfb6de; --muted: #9b80ae; --line: rgba(246, 234, 255, .14);
+  --red: #ff2e88; --red-hot: #ff6fb0; --red-deep: #8a0f4a; --paper: #f6eaff; --paper-2: #d9c2ea; --on-paper: #11061a; --on-accent: #12051a;
+}
+[data-look='mementos'] body { background: radial-gradient(90% 60% at 50% 110%, #3a0f5c 0, transparent 60%), var(--bg); }
+[data-look='mementos'] .bg-slash.s1 { background: linear-gradient(100deg, #ff2e88, #7b2cff); }
+
+/* ---------- 10 · Leblanc: warm café, amber, serif display ---------- */
+:root[data-look='leblanc'] {
+  --bg: #1a130e; --surface: #231912; --surface-2: #34261c; --plate: #150f0a;
+  --text: #f3e6d0; --text-2: #cdba9d; --muted: #9a856d; --line: rgba(243, 230, 208, .13);
+  --red: #d9822b; --red-hot: #f0a04b; --red-deep: #7a420d; --paper: #f3e6d0; --paper-2: #d8c4a3; --on-paper: #1a130e; --on-accent: #1a130e;
+  --display: 'DM Serif Display', serif;
+}
+[data-look='leblanc'] body { background: radial-gradient(80% 50% at 20% 0, rgba(217, 130, 43, .14), transparent 70%), var(--bg); }
+[data-look='leblanc'] :is(.panel, .chip, .sort, .search input, .nav-link, .card-art, .slot, .act, .pull, .own-art, .btn-ghost) { border-radius: 4px; }
+
+/* ---------- the switcher ---------- */
+.looks { position: fixed; left: 12px; bottom: 12px; z-index: 95; font-family: 'Noto Sans', system-ui, sans-serif; }
+.looks-btn {
+  display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--text);
+  padding: 8px 12px; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px;
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, .5);
+}
+.looks-btn i { width: 12px; height: 12px; border-radius: 50%; background: var(--red); }
+.looks-list {
+  position: absolute; left: 0; bottom: calc(100% + 8px); width: min(300px, calc(100vw - 24px)); max-height: min(70vh, 560px); overflow: auto;
+  background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 12px; padding: 6px;
+  box-shadow: 0 18px 40px -12px rgba(0, 0, 0, .55);
+}
+.looks-list[hidden] { display: none; }
+.looks-list button {
+  display: grid; grid-template-columns: 54px 1fr; gap: 10px; align-items: center; width: 100%; text-align: left;
+  border: 0; background: transparent; color: inherit; padding: 8px; border-radius: 8px;
+}
+.looks-list button:hover, .looks-list button[aria-current='true'] { background: var(--surface-2); }
+.looks-list b { display: block; font-size: 13px; }
+.looks-list small { display: block; font-size: 11px; color: var(--muted); font-weight: 600; line-height: 1.3; }
+.looks-sw { display: flex; height: 26px; border-radius: 6px; overflow: hidden; border: 1px solid rgba(127, 127, 127, .3); }
+.looks-sw span { flex: 1; }
+
+/* ---------- fixes shared by the light looks ---------- */
+:is([data-look='calling'], [data-look='clean'], [data-look='newsprint']) {
+  /* Element colours are tuned for dark ground; darken them on paper. */
+  & .chip[data-el]:not(.on) { color: color-mix(in srgb, var(--ec) 55%, #000); }
+  /* Text on card art sits on a dark gradient, whatever the page colour. */
+  & .slot-name, & .slot-name span { color: #fff; }
+}
+/* Wider display faces: keep long names on one line in the slots. */
+:is([data-look='velvet'], [data-look='minimal'], [data-look='clean'], [data-look='newsprint'], [data-look='leblanc']) .slot-name b { font-size: clamp(13px, 1.15vw, 17px); overflow-wrap: normal; }
+/* Element colours are all light-to-mid tones: text on them is always dark, in every look. */
+.pill-el, .chip.on[data-el] { color: #111; }

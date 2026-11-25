@@ -7,9 +7,18 @@
     <meta name="theme-color" content="#0a0a0a" />
     <title>My Roster · Should I Pull? · Phantom Roster</title>
     <meta name="description" content="Tick the P5X Global units and weapons you own and get should-I-pull advice for current banners and upcoming units." />
+    <script>
+      // Apply the chosen look before first paint (?look=<id> or the saved one).
+      try {
+        var q = new URLSearchParams(location.search).get('look');
+        var l = q || localStorage.getItem('p5x-look');
+        if (q) localStorage.setItem('p5x-look', q);
+        if (l && l !== 'phantom') document.documentElement.dataset.look = l;
+      } catch (e) {}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bowlby+One&family=DM+Serif+Display&family=Noto+Sans:wght@500;700;900&family=Rubik+Mono+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bowlby+One&family=DM+Serif+Display&family=Noto+Sans:wght@500;700;900&family=Rubik+Mono+One&family=Inter:wght@400;600;800&family=Oswald:wght@500;600;700&family=Cormorant+Garamond:wght@600;700&family=Playfair+Display:wght@800;900&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="app"></div>

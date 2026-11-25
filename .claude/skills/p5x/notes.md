@@ -64,6 +64,11 @@ Not modelled yet: overall unit strength/meta, awareness (A0–A6), Wonder's pers
 - An owned unit's turn order starts at your awareness, or the highest route at or below it (A3 owned, routes A0/A6 -> A0), until you pick one by hand.
 - The builder re-reads the collection on the `storage` event (other tab) and on `pageshow` from the back/forward cache.
 
+## Look preview (2026-11-25, open)
+- Justin asked for 10 versions to choose from. All colours, tilts and slants in style.css are tokens (`--bg --surface --surface-2 --plate --text --text-2 --paper --on-paper --on-accent --hi --tilt`, `clip-path: var(--slant, polygon(…))`); `--red` is the accent in every look.
+- `src/looks.css` holds 10 looks keyed on `html[data-look]`: phantom (default), calling, velvet, darkhour, midnight, minimal, clean, newsprint, mementos, leblanc. Switcher bottom left (`mountLooks()` in ui.ts), `?look=<id>`, saved in localStorage `p5x-look`; an inline script in both HTML heads applies it before paint.
+- When Justin picks one: fold its tokens into `:root`, delete looks.css + the switcher + unused Google fonts.
+
 ## Gotchas
 - Calmer look (2026-11-25, Justin found it too busy): background is static and only behind the header (no spinning rays, drifting dots or bottom slash), smaller header, intro wipe once per session (`sessionStorage p5x-intro`), BEST badge/ring don't animate, gentler card entrance, role chips behind a "Role" button (opens by itself when a role is active), plain hint text. Don't add constant background motion back.
 - Pull advice: upcoming 4★ units without a banner are skipped (story/standard units, e.g. Anri). With no collection the cards drop the repeated "tick your units" lines; the 5★ weapon block is a collapsed `<details>` (open when WORTH IT).

@@ -1,6 +1,7 @@
 import './style.css';
+import './looks.css';
 import { UNITS, WONDER, SCRAPED, type Unit } from './data';
-import { esc, $, code, cardSrc, ransom, pills, navHTML, BG_HTML } from './ui';
+import { esc, $, code, cardSrc, ransom, pills, navHTML, BG_HTML, mountLooks } from './ui';
 import { advise, candidates, type Advice, type Candidate } from './advice';
 import { loadCollection, saveCollection, encodeCollection, decodeCollection, type Collection } from './collection';
 
@@ -237,3 +238,4 @@ shell();
 bind();
 renderOwn();
 renderPulls();
+mountLooks();
