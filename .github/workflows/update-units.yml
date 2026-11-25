@@ -1,0 +1,49 @@
+# Checks lufel.net every day and commits new or changed Global units to main.
+# Run it by hand from the Actions tab ("Run workflow") right after a new unit drops.
+name: Update units from lufel.net
+
+on:
+  schedule:
+    - cron: '23 4 * * *' # daily, 04:23 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-units
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Scrape lufel.net
+        id: scrape
+        run: npm run scrape
+
+      # tsc + vite build: never commit data the site can't build with.
+      - name: Build check
+        run: npm run build
+
+      - name: Commit changes
+        run: |
+          if [ -z "$(git status --porcelain -- src/data public/cards)" ]; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data public/cards
+          git commit -m "${{ steps.scrape.outputs.subject }}"
+          git push

@@ -1,7 +1,7 @@
 import './style.css';
 import {
   UNITS, BY_ID, WONDER, ELEMENTS, ROLES, ELEMENT_COLOR, ELEMENT_SHORT, SCRAPED,
-  parseAction, translateKr, type Unit,
+  parseAction, translateKr, isNew, type Unit,
 } from './data';
 import { matchFor, rankTiers, teamScore, unit, type Match } from './synergy';
 import { profileLabels } from './skills';
@@ -136,8 +136,8 @@ function visibleUnits(): Unit[] {
 }
 
 function pills(u: Unit) {
-  const el = u.elements.map((e) => `<span class="pill pill-el" style="--ec:${ELEMENT_COLOR[e]}">${ELEMENT_SHORT[e]}</span>`).join('');
-  return `${el}<span class="pill pill-role">${u.role || 'Flex'}</span>`;
+  const el = u.elements.map((e) => `<span class="pill pill-el" style="--ec:${ELEMENT_COLOR[e] ?? '#ddd'}">${ELEMENT_SHORT[e] ?? esc(e.slice(0, 5).toUpperCase())}</span>`).join('');
+  return `${isNew(u) ? '<span class="pill pill-new">NEW</span>' : ''}${el}<span class="pill pill-role">${esc(u.role || 'Flex')}</span>`;
 }
 
 function renderGrid() {

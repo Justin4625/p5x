@@ -1,4 +1,5 @@
 import raw from './data/units.json';
+import tags from './data/tags.json';
 
 export interface Skill { name: string; desc: string; type: string; sp: number | null }
 export interface Rotation { label: string; steps: string[][] }
@@ -26,28 +27,15 @@ export interface Unit {
   friends: { id: string; comment: string }[];
   skillPriority: string;
   card: string | null;
+  /** ISO date this unit first appeared in our data (null for the original roster). */
+  added?: string | null;
   /** English mechanic keywords, derived from tagsKr */
   mechanics: string[];
 }
 
-// lufel.net tags are Korean; translate the mechanic keywords we use.
-const TAG_EN: Record<string, string> = {
-  '추가 턴': 'Extra Turn', '추가 효과': 'Follow-up', '총공격': 'All-out Attack', '화상': 'Burn', '동결': 'Freeze',
-  '감전': 'Shock', '풍습': 'Windswept', '망각': 'Forget', '수면': 'Sleep', '원소 이상': 'Ailments',
-  '지속 대미지': 'DoT', '다운': 'Down', 'HIGHLIGHT': 'Highlight', '테우르기아': 'Theurgy', '테우르기아 충전': 'Theurgy Charge',
-  'HP 소모': 'HP Cost', '실드': 'Shield', '치료': 'Heal', '회복': 'Heal', '지속 회복': 'Regen', '부활': 'Revive',
-  '방어력 감소': 'DEF Down', '받는 대미지 증가': 'Vulnerable', '공격력': 'ATK Up', '대미지보너스': 'DMG Bonus',
-  '대미지 보너스': 'DMG Bonus', '크리티컬 효과': 'Crit DMG', '크리티컬 확률': 'Crit Rate', '크리티컬': 'Crit',
-  '관통': 'Pierce', 'TECHNICAL': 'Technical', '변신': 'Transform', '폼 체인지': 'Form Change', '스킬마스터': 'Skill Master',
-  '아이템': 'Items', '차지': 'Charge', '반격': 'Counter', '최대 생명': 'Max HP', '최대 생명 증가': 'Max HP',
-  '공격받을 확률 증가': 'Taunt', '디버프 제거': 'Cleanse', '원소 이상 제거': 'Cleanse', 'SP 회복': 'SP Regen',
-  '효과 명중': 'Effect Hit', '대미지 축적': 'DMG Stack', '스킬 계수 증가': 'Skill Mult', '공격력 감소': 'ATK Down',
-  '방어력': 'DEF Up', '효과 저항': 'Effect RES', '아군 교체': 'Ally Swap', '해명의 힘': 'Elucidation',
-  '적합성 저하': 'Affinity Down', '버추얼 라이브': 'Virtual Live', '원더 페르소나 강화': 'Wonder Boost',
-  '직업 선택': 'Role Select', '총기': 'Gun', '총격': 'Gun', '축복': 'Bless', '주원': 'Curse',
-  '화염 광역': 'Fire AoE', '추가효과 단일': 'Follow-up', '빙결 속성 TECHNICAL': 'Ice Technical',
-  '화염 속성 TECHNICAL': 'Fire Technical', '전격 대미지보너스': 'Elec DMG Bonus', '복합 속성': 'Multi-element', '흡수': 'Drain',
-};
+// lufel.net tags are Korean; src/data/tags.json maps the mechanic keywords we use to English.
+// The scraper warns about tags missing from that file.
+const TAG_EN: Record<string, string> = tags;
 
 function mechanicsOf(tagsKr: string): string[] {
   const out = new Set<string>();
@@ -66,7 +54,11 @@ export const WONDER = BY_ID.get('원더')!;
 export const SCRAPED = raw.scraped;
 
 export const ELEMENTS = ['Physical', 'Gun', 'Fire', 'Ice', 'Electric', 'Wind', 'Psychokinesis', 'Nuclear', 'Bless', 'Curse', 'Almighty'];
-export const ROLES = ['Sweeper', 'Assassin', 'Strategist', 'Saboteur', 'Guardian', 'Medic', 'Virtuoso', 'Navigator'];
+const KNOWN_ROLES = ['Sweeper', 'Assassin', 'Strategist', 'Saboteur', 'Guardian', 'Medic', 'Virtuoso', 'Navigator'];
+/** Known roles first, then any role a future unit brings (so it still gets a filter chip). */
+export const ROLES = [...KNOWN_ROLES, ...new Set(UNITS.map((u) => u.role).filter((r) => r && !KNOWN_ROLES.includes(r)))];
+/** Units added to the roster in the last 30 days get a NEW label. */
+export const isNew = (u: Unit) => !!u.added && Date.now() - Date.parse(u.added) < 30 * 864e5;
 
 export const ELEMENT_COLOR: Record<string, string> = {
   Physical: '#c9b28a', Gun: '#9aa3ad', Fire: '#ff4d2e', Ice: '#5fd3ff', Electric: '#ffe23d', Wind: '#4ef08f',

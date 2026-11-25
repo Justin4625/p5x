@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "scrape": "node scripts/scrape-lufel.mjs"
   },
   "devDependencies": {
     "sharp": "^0.35.5",

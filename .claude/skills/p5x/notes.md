@@ -15,7 +15,15 @@ Started 2026-11-25. Fan site for Persona 5: The Phantom X, modelled on lufel.net
   - party.js `party[].members` = 3 thieves + navigator (Wonder is never listed). `friends[]` = best partners with `comment_en`.
   - operation.js `basic[]` = `{label: '의식 N', value: '1 › 2↺+3 › …'}` (↺ = auto, HL = highlight, TH = theurgy, ⓘA = item, `·` = hold).
   - skill.js has `enCharacterSkillsData`.
-- Card art: `/assets/img/character-cards/<KR name>.webp`, resized to 360px wide by sharp into `public/cards/<index>.webp`.
+- Card art: `/assets/img/character-cards/<KR name>.webp`, resized to 360px wide by sharp into `public/cards/<sha1(KR id) first 12 hex>.webp`. Stable per unit: index-based names broke when a unit was inserted mid-list. Unused card files are deleted on each scrape.
+
+## Auto-update (new units)
+- `.github/workflows/update-units.yml` runs `npm run scrape` daily (04:23 UTC) and on demand (Actions → "Run workflow"), then `npm run build`, and commits `src/data` + `public/cards` to main only if something changed. Commit subject names new units ("Add X from lufel.net").
+- Scraper safety: per-unit load failure keeps the previous data; an empty/unknown roster or a drop below 80% of the previous count writes nothing and exits 1. Unchanged data keeps the old `scraped` timestamp so the daily run doesn't commit noise.
+- Warnings (unknown role/element, Korean tag missing from `src/data/tags.json`, no English codename/skills yet, no card art) print to the log, the run page (`::warning::`) and the job summary. Fix them in the tables, never in units.json.
+- `added` (ISO date) is set when a unit first shows up; the original roster has `null`. `isNew()` shows a NEW pill for 30 days. Roles not in the known list still get a filter chip.
+- Korean tag → English mechanic table lives in `src/data/tags.json` (shared by data.ts and the scraper).
+- In a cloud session: lufel.net is only reachable in the "p5x" environment, and Node's fetch needs `NODE_USE_ENV_PROXY=1` to use the proxy.
 - The scraper runs lufel's JS in a `vm` context with a null-prototype global and only reads back JSON strings.
 - Position → role map: 지배 Sweeper, 반항 Assassin, 우월 Strategist, 굴복 Saboteur, 방위 Guardian, 구원 Medic, 해명 Elucidator (navigators), 자율 Virtuoso (J&C).
 - Korean tags are translated to English mechanics in `src/data.ts` (`TAG_EN`). Rotation tokens use `TOKEN_KR`. Miku's song tokens (불/춘/고) are a guess: Fire / Spring / Heaven.

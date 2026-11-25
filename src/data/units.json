@@ -1,6 +1,6 @@
 {
  "source": "lufel.net",
- "scraped": "2026-11-25T06:53:15.620Z",
+ "scraped": "2026-11-25T07:58:46.379Z",
  "units": [
   {
    "id": "YUI·스텔라",
@@ -166,7 +166,8 @@
     }
    ],
    "skillPriority": "3>1>2>4",
-   "card": "cards/0.webp"
+   "added": null,
+   "card": "cards/9114d675daf8.webp"
   },
   {
    "id": "렌",
@@ -338,7 +339,8 @@
     }
    ],
    "skillPriority": "3>4>1>2",
-   "card": "cards/1.webp"
+   "added": null,
+   "card": "cards/2bb7c695cf23.webp"
   },
   {
    "id": "루페르",
@@ -414,7 +416,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>1>4>2",
-   "card": "cards/2.webp"
+   "added": null,
+   "card": "cards/0793a5e9b8d3.webp"
   },
   {
    "id": "레오",
@@ -486,7 +489,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>4>1>2",
-   "card": "cards/3.webp"
+   "added": null,
+   "card": "cards/2f4720917929.webp"
   },
   {
    "id": "루우나",
@@ -657,7 +661,8 @@
     }
    ],
    "skillPriority": "3>1>2>4",
-   "card": "cards/4.webp"
+   "added": null,
+   "card": "cards/7069f8b43c64.webp"
   },
   {
    "id": "류지",
@@ -748,7 +753,8 @@
     }
    ],
    "skillPriority": "3>4>1>2",
-   "card": "cards/5.webp"
+   "added": null,
+   "card": "cards/b84713d98faa.webp"
   },
   {
    "id": "리코·매화",
@@ -999,7 +1005,8 @@
     }
    ],
    "skillPriority": "3>2>1>4",
-   "card": "cards/6.webp"
+   "added": null,
+   "card": "cards/843e56b84630.webp"
   },
   {
    "id": "마코토",
@@ -1195,7 +1202,8 @@
     }
    ],
    "skillPriority": "3>4>1>2",
-   "card": "cards/7.webp"
+   "added": null,
+   "card": "cards/202f194396fd.webp"
   },
   {
    "id": "마사키",
@@ -1280,7 +1288,8 @@
     }
    ],
    "skillPriority": "3>2>1>4",
-   "card": "cards/8.webp"
+   "added": null,
+   "card": "cards/b653a2ad7c54.webp"
   },
   {
    "id": "모르가나",
@@ -1379,7 +1388,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "1>3>2>4",
-   "card": "cards/9.webp"
+   "added": null,
+   "card": "cards/43d183e22d66.webp"
   },
   {
    "id": "마유미",
@@ -1566,7 +1576,8 @@
     }
    ],
    "skillPriority": "3>1>2>4",
-   "card": "cards/10.webp"
+   "added": null,
+   "card": "cards/e1724d5980e3.webp"
   },
   {
    "id": "모토하",
@@ -1636,7 +1647,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "1>2>4>3",
-   "card": "cards/11.webp"
+   "added": null,
+   "card": "cards/3e202a4c32e6.webp"
   },
   {
    "id": "모토하·여름",
@@ -1780,7 +1792,8 @@
     }
    ],
    "skillPriority": "3>1>4>2",
-   "card": "cards/12.webp"
+   "added": null,
+   "card": "cards/de665870d2b5.webp"
   },
   {
    "id": "몽타뉴",
@@ -1856,7 +1869,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "2>3>4>1",
-   "card": "cards/13.webp"
+   "added": null,
+   "card": "cards/357440f109e3.webp"
   },
   {
    "id": "몽타뉴·백조",
@@ -2009,7 +2023,8 @@
     }
    ],
    "skillPriority": "3>1>4>2",
-   "card": "cards/14.webp"
+   "added": null,
+   "card": "cards/7895a9f01e21.webp"
   },
   {
    "id": "미나미",
@@ -2079,7 +2094,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>2>1>4",
-   "card": "cards/15.webp"
+   "added": null,
+   "card": "cards/a47c36800d92.webp"
   },
   {
    "id": "미나미·여름",
@@ -2252,7 +2268,8 @@
     }
    ],
    "skillPriority": "3>2>1>4",
-   "card": "cards/16.webp"
+   "added": null,
+   "card": "cards/52d4340814cc.webp"
   },
   {
    "id": "미유·여름",
@@ -2440,7 +2457,8 @@
     }
    ],
    "skillPriority": "3>2>1>4",
-   "card": "cards/17.webp"
+   "added": null,
+   "card": "cards/91d2382dbcff.webp"
   },
   {
    "id": "미오",
@@ -2570,7 +2588,8 @@
     }
    ],
    "skillPriority": "3>1>4>2",
-   "card": "cards/18.webp"
+   "added": null,
+   "card": "cards/e8da9974fd26.webp"
   },
   {
    "id": "미츠루",
@@ -2678,7 +2697,8 @@
     }
    ],
    "skillPriority": "4>2>3>1",
-   "card": "cards/19.webp"
+   "added": null,
+   "card": "cards/868c8c267e04.webp"
   },
   {
    "id": "사나다",
@@ -2827,7 +2847,8 @@
     }
    ],
    "skillPriority": "3>1>4>2",
-   "card": "cards/20.webp"
+   "added": null,
+   "card": "cards/30d4a93d187e.webp"
   },
   {
    "id": "슌",
@@ -2897,7 +2918,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "2>3>4>1",
-   "card": "cards/21.webp"
+   "added": null,
+   "card": "cards/726a08c38661.webp"
   },
   {
    "id": "쇼키",
@@ -2969,7 +2991,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>1>4>2",
-   "card": "cards/22.webp"
+   "added": null,
+   "card": "cards/7d6e3a57783f.webp"
   },
   {
    "id": "슌·프론티어",
@@ -3128,7 +3151,8 @@
     }
    ],
    "skillPriority": "3>2>4>1",
-   "card": "cards/23.webp"
+   "added": null,
+   "card": "cards/d337963da7cc.webp"
   },
   {
    "id": "쇼키·암야",
@@ -3319,7 +3343,8 @@
     }
    ],
    "skillPriority": "3>1>2>4",
-   "card": "cards/24.webp"
+   "added": null,
+   "card": "cards/8cfc79ed506b.webp"
   },
   {
    "id": "세이지",
@@ -3418,7 +3443,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>4>1>2",
-   "card": "cards/25.webp"
+   "added": null,
+   "card": "cards/96e300499162.webp"
   },
   {
    "id": "아야카",
@@ -3645,7 +3671,8 @@
     }
    ],
    "skillPriority": "3>2>4>1",
-   "card": "cards/26.webp"
+   "added": null,
+   "card": "cards/f67bc5b091a8.webp"
   },
   {
    "id": "안",
@@ -3773,7 +3800,8 @@
     }
    ],
    "skillPriority": "3>1>4>2",
-   "card": "cards/27.webp"
+   "added": null,
+   "card": "cards/c01bb55b8907.webp"
   },
   {
    "id": "아케치",
@@ -3913,7 +3941,8 @@
     }
    ],
    "skillPriority": "3>2>1>4",
-   "card": "cards/28.webp"
+   "added": null,
+   "card": "cards/f3acd53ffc9c.webp"
   },
   {
    "id": "야오링",
@@ -4014,7 +4043,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>1>4>2",
-   "card": "cards/29.webp"
+   "added": null,
+   "card": "cards/aa7c5b9b8798.webp"
   },
   {
    "id": "야오링·사자무",
@@ -4216,7 +4246,8 @@
     }
    ],
    "skillPriority": "3>1>4>2",
-   "card": "cards/30.webp"
+   "added": null,
+   "card": "cards/125e7aebfb7b.webp"
   },
   {
    "id": "유키 마코토",
@@ -4374,7 +4405,8 @@
     }
    ],
    "skillPriority": "3>1>4>2",
-   "card": "cards/31.webp"
+   "added": null,
+   "card": "cards/83c8d6fbd045.webp"
   },
   {
    "id": "원더",
@@ -4406,7 +4438,8 @@
    ],
    "friends": [],
    "skillPriority": "",
-   "card": "cards/32.webp"
+   "added": null,
+   "card": "cards/360a228442c5.webp"
   },
   {
    "id": "유스케",
@@ -4545,7 +4578,8 @@
     }
    ],
    "skillPriority": "3>2>4>1",
-   "card": "cards/33.webp"
+   "added": null,
+   "card": "cards/f4b725a109c0.webp"
   },
   {
    "id": "유카리",
@@ -4697,7 +4731,8 @@
     }
    ],
    "skillPriority": "3>2>4>1",
-   "card": "cards/34.webp"
+   "added": null,
+   "card": "cards/3a08692fb866.webp"
   },
   {
    "id": "유키미",
@@ -4797,7 +4832,8 @@
     }
    ],
    "skillPriority": "2>3>4>1",
-   "card": "cards/35.webp"
+   "added": null,
+   "card": "cards/156b1b99010a.webp"
   },
   {
    "id": "이치고",
@@ -4969,7 +5005,8 @@
     }
    ],
    "skillPriority": "3>4>1>2",
-   "card": "cards/36.webp"
+   "added": null,
+   "card": "cards/064939ff4edb.webp"
   },
   {
    "id": "YUI",
@@ -5080,7 +5117,8 @@
     }
    ],
    "skillPriority": "3>1>4>2",
-   "card": "cards/37.webp"
+   "added": null,
+   "card": "cards/03edde21ada7.webp"
   },
   {
    "id": "카스미",
@@ -5253,7 +5291,8 @@
     }
    ],
    "skillPriority": "4>3>2>1",
-   "card": "cards/38.webp"
+   "added": null,
+   "card": "cards/1b7fba973d5a.webp"
   },
   {
    "id": "카타야마",
@@ -5407,7 +5446,8 @@
     }
    ],
    "skillPriority": "3>2>1>4",
-   "card": "cards/39.webp"
+   "added": null,
+   "card": "cards/065a764d8328.webp"
   },
   {
    "id": "코토네",
@@ -5486,7 +5526,8 @@
     }
    ],
    "skillPriority": "1>3>4>2",
-   "card": "cards/40.webp"
+   "added": null,
+   "card": "cards/a1a121c16c70.webp"
   },
   {
    "id": "키요시",
@@ -5573,7 +5614,8 @@
     }
    ],
    "skillPriority": "2>1>4>3",
-   "card": "cards/41.webp"
+   "added": null,
+   "card": "cards/ff461383ae73.webp"
   },
   {
    "id": "키라",
@@ -5746,7 +5788,8 @@
     }
    ],
    "skillPriority": "2>1>3>4",
-   "card": "cards/42.webp"
+   "added": null,
+   "card": "cards/84786f0f38d1.webp"
   },
   {
    "id": "치즈코",
@@ -5826,7 +5869,8 @@
    ],
    "friends": [],
    "skillPriority": "1>3>4>2",
-   "card": "cards/43.webp"
+   "added": null,
+   "card": "cards/a224e3897995.webp"
   },
   {
    "id": "토모코",
@@ -5902,7 +5946,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "2>3>1>4",
-   "card": "cards/44.webp"
+   "added": null,
+   "card": "cards/dd23421d75d0.webp"
   },
   {
    "id": "토모코·여름",
@@ -5972,7 +6017,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "2>3>1>4",
-   "card": "cards/45.webp"
+   "added": null,
+   "card": "cards/f520f372eb77.webp"
   },
   {
    "id": "토시야",
@@ -6080,7 +6126,8 @@
     }
    ],
    "skillPriority": "1>4>2>3",
-   "card": "cards/46.webp"
+   "added": null,
+   "card": "cards/b7585bffd743.webp"
   },
   {
    "id": "하루",
@@ -6228,7 +6275,8 @@
     }
    ],
    "skillPriority": "3>4>1>2",
-   "card": "cards/47.webp"
+   "added": null,
+   "card": "cards/c3537d9aee0d.webp"
   },
   {
    "id": "하루나",
@@ -6304,7 +6352,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>4>1>2",
-   "card": "cards/48.webp"
+   "added": null,
+   "card": "cards/c8357895026a.webp"
   },
   {
    "id": "J&C",
@@ -6463,7 +6512,8 @@
     }
    ],
    "skillPriority": "3>2>1>4",
-   "card": "cards/49.webp"
+   "added": null,
+   "card": "cards/cabe12534d6a.webp"
   },
   {
    "id": "유우미",
@@ -6583,7 +6633,8 @@
    ],
    "friends": [],
    "skillPriority": "3>1>2",
-   "card": "cards/50.webp"
+   "added": null,
+   "card": "cards/31694048fad9.webp"
   },
   {
    "id": "리코",
@@ -6682,7 +6733,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>1>2",
-   "card": "cards/51.webp"
+   "added": null,
+   "card": "cards/fe372d2ebfdc.webp"
   },
   {
    "id": "마나카",
@@ -6864,7 +6916,8 @@
     }
    ],
    "skillPriority": "3>1>2",
-   "card": "cards/52.webp"
+   "added": null,
+   "card": "cards/fa35bc2c46e3.webp"
   },
   {
    "id": "미유",
@@ -6944,7 +6997,8 @@
     }
    ],
    "skillPriority": "3>1>2",
-   "card": "cards/53.webp"
+   "added": null,
+   "card": "cards/e0986b548edb.webp"
   },
   {
    "id": "카요",
@@ -7040,7 +7094,8 @@
     }
    ],
    "skillPriority": "3>1>2",
-   "card": "cards/54.webp"
+   "added": null,
+   "card": "cards/80e109ed1178.webp"
   },
   {
    "id": "후타바",
@@ -7145,7 +7200,8 @@
    ],
    "friends": [],
    "skillPriority": "3>1>2",
-   "card": "cards/55.webp"
+   "added": null,
+   "card": "cards/d5c76d8c5f04.webp"
   },
   {
    "id": "후카",
@@ -7317,7 +7373,8 @@
     }
    ],
    "skillPriority": "3>1>2",
-   "card": "cards/56.webp"
+   "added": null,
+   "card": "cards/91cd9f34ee9e.webp"
   },
   {
    "id": "미쿠",
@@ -7478,7 +7535,8 @@
    "parties": [],
    "friends": [],
    "skillPriority": "3>1>2",
-   "card": "cards/57.webp"
+   "added": null,
+   "card": "cards/92db9e6745e8.webp"
   }
  ]
 }
