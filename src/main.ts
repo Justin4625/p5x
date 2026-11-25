@@ -257,7 +257,10 @@ function renderTurns() {
   const rot = (u: Unit) => {
     const list = rots(u);
     const want = state.aw[u.id];
-    return list.find((r) => r.label === want) ?? list.find((r) => want && r.label.split(' · ')[0] === want.split(' · ')[0]) ?? list[0];
+    // Keep the same awareness when the list switches (A6 with Chizuko -> "A 6(단일)" without).
+    const aw = (l?: string) => l?.match(/A\s*([\d/]+)/)?.[1].split('/');
+    const w = aw(want);
+    return list.find((r) => r.label === want) ?? (w && list.find((r) => aw(r.label)?.some((n) => w.includes(n)))) ?? list[0];
   };
   const withTag = (r: Rotation | undefined) => (r?.with ? `<span class="aw-with" title="Route for a team with ${esc(unit(r.with)?.name ?? '')}">${esc(unit(r.with)?.codename ?? '')} team</span>` : '');
   const turns = Math.min(8, Math.max(3, ...lanes.map((l) => rot(l.u)?.steps.length ?? 0)));

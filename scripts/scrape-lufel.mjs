@@ -117,6 +117,24 @@ function readRotations(O) {
   });
 }
 
+/**
+ * Routes labelled with a teammate's codename, e.g. Makoto "의식 0(VINO)" (with Chizuko) or
+ * Miyu "의식 0/1 (ANGE)" (with Manaka as navigator), get `with: <unit id>` and lose the tag,
+ * so the team builder can pick them when that unit is in the team.
+ */
+function linkTeamRoutes(units) {
+  const byCode = new Map(units.filter((u) => u.codename).map((u) => [u.codename.toUpperCase(), u.id]));
+  for (const u of units) {
+    for (const r of u.rotations) {
+      const m = r.label.match(/\s*\(([^)]+)\)\s*$/);
+      const id = m && byCode.get(m[1].trim().toUpperCase());
+      if (!id || id === u.id || r.with) continue;
+      r.label = r.label.slice(0, m.index).trim();
+      r.with = id;
+    }
+  }
+}
+
 async function readJson(file) {
   try { return JSON.parse(await fs.readFile(file, 'utf8')); } catch { return null; }
 }
@@ -324,6 +342,7 @@ async function main() {
       added: prevGlobal.has(id) ? prevById.get(id)?.added ?? null : prev ? today : null,
     }));
   }
+  linkTeamRoutes(units);
 
   // Upcoming Global units (next 8 on lufel's schedule), scraped the same way.
   const released = new Set(roster);

@@ -107,7 +107,8 @@ function pullCard(a: Advice, c: Candidate, best: boolean, i: number) {
   </article>`;
 }
 
-function renderPulls() {
+/** animate=false re-renders without the entrance animation (used after each tick, so the list doesn't replay). */
+function renderPulls(animate = true) {
   const cs = candidates();
   const list = cs.map((c) => ({ c, a: advise(c, col) }));
   const open = list.filter((x) => x.a.verdict !== 'owned' && x.a.verdict !== 'unknown');
@@ -118,6 +119,7 @@ function renderPulls() {
     : 'Tick the units you own below; the advice updates as you go.';
   // Banners first (they end soonest), then upcoming by date; units you already have go last.
   const ordered = [...list.filter((x) => x.a.verdict !== 'owned'), ...list.filter((x) => x.a.verdict === 'owned')];
+  $('#pull-list').classList.toggle('calm', !animate);
   $('#pull-list').innerHTML = ordered.map(({ c, a }, i) => pullCard(a, c, a === top?.a, i)).join('');
 }
 
@@ -138,7 +140,7 @@ function ownTile(u: Unit, i: number) {
   </div>`;
 }
 
-function renderOwn() {
+function renderOwn(animate = true, flash?: string) {
   const q = view.q.trim().toLowerCase();
   const list = POOL.filter((u) => {
     if (view.show === 'owned' && !col.has(u.id)) return false;
@@ -146,7 +148,14 @@ function renderOwn() {
     return !q || `${u.name} ${u.codename}`.toLowerCase().includes(q);
   });
   $('#own-count').textContent = `${POOL.filter((u) => col.has(u.id)).length}/${POOL.length}`;
-  $('#own-grid').innerHTML = list.length ? list.map(ownTile).join('') : '<p class="empty">Nothing here.</p>';
+  // Keep keyboard focus on the same control across the re-render.
+  const act = document.activeElement as HTMLElement | null;
+  const key = act && (['own', 'aw', 'wpn'] as const).find((k) => act.dataset?.[k] !== undefined);
+  const grid = $('#own-grid');
+  grid.classList.toggle('calm', !animate);
+  grid.innerHTML = list.length ? list.map(ownTile).join('') : '<p class="empty">Nothing here.</p>';
+  if (key) grid.querySelector<HTMLElement>(`[data-${key}="${CSS.escape(act!.dataset[key]!)}"]`)?.focus();
+  if (flash) grid.querySelector(`[data-own="${CSS.escape(flash)}"]`)?.closest('.own')?.classList.add('own-flash');
 }
 
 // ---------- actions ----------
@@ -162,12 +171,12 @@ function toast(msg: string) {
 }
 
 let pullTimer = 0;
-function changed() {
+function changed(flash?: string) {
   saveCollection(col);
-  renderOwn();
+  renderOwn(false, flash);
   // The crew search is the slow part; let taps feel instant.
   clearTimeout(pullTimer);
-  pullTimer = window.setTimeout(renderPulls, reduceMotion ? 0 : 120);
+  pullTimer = window.setTimeout(() => renderPulls(false), reduceMotion ? 0 : 120);
 }
 
 function bind() {
@@ -177,7 +186,7 @@ function bind() {
     if (own) {
       const id = own.dataset.own!;
       if (col.has(id)) col.delete(id); else col.set(id, { a: 0, w: false });
-      changed();
+      changed(id);
       return;
     }
     const wpn = t.closest<HTMLElement>('[data-wpn]');
@@ -205,7 +214,7 @@ function bind() {
     const o = sel && col.get(sel.dataset.aw!);
     if (o) { o.a = Number(sel.value); changed(); }
   });
-  $<HTMLInputElement>('#q').addEventListener('input', (e) => { view.q = (e.target as HTMLInputElement).value; renderOwn(); });
+  $<HTMLInputElement>('#q').addEventListener('input', (e) => { view.q = (e.target as HTMLInputElement).value; renderOwn(false); });
 }
 
 /** Opening a share link loads that roster (asks first if this browser already has one). */
