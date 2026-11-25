@@ -42,5 +42,5 @@ export function navHTML(active: 'builder' | 'roster') {
 /** Intro wipe + background shared by both pages. */
 export const BG_HTML = `<div class="bg" aria-hidden="true">
     <div class="bg-rays"></div><div class="bg-dots"></div>
-    <div class="bg-slash s1"></div><div class="bg-slash s2"></div><div class="bg-slash s3"></div>
+    <div class="bg-slash s1"></div>
   </div>`;

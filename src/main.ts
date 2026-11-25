@@ -88,11 +88,12 @@ function shell() {
         <label class="search"><span class="visually-hidden">Search units</span>
           <input id="q" type="search" placeholder="Search name, codename, persona…" autocomplete="off" /></label>
         <div class="chips" id="f-el">${ELEMENTS.map((e) => `<button type="button" class="chip" data-el="${e}" style="--ec:${ELEMENT_COLOR[e]}">${ELEMENT_SHORT[e]}</button>`).join('')}</div>
-        <div class="chips" id="f-role">${ROLES.map((r) => `<button type="button" class="chip chip-role" data-role="${r}">${r}</button>`).join('')}</div>
+        <div class="chips" id="f-role" hidden>${ROLES.map((r) => `<button type="button" class="chip chip-role" data-role="${r}">${r}</button>`).join('')}</div>
         <div class="sort sort-mine" role="group" aria-label="Which units">
           <button type="button" class="sort-btn${state.mine ? '' : ' on'}" data-mine="0" aria-pressed="${!state.mine}">All units</button>
           <button type="button" class="sort-btn${state.mine ? ' on' : ''}" data-mine="1" aria-pressed="${state.mine}">My units <em id="mine-n">${col.size || ''}</em></button>
         </div>
+        <button type="button" class="sort-btn sort-solo" id="role-btn" aria-expanded="false" aria-controls="f-role">Role <em id="role-n"></em></button>
         <div class="sort" role="group" aria-label="Sort">
           ${(['new', 'name', 'speed'] as const).map((s) => `<button type="button" class="sort-btn${s === 'new' ? ' on' : ''}" data-sort="${s}">${{ new: 'Newest', name: 'A–Z', speed: 'Speed' }[s]}</button>`).join('')}
         </div>
@@ -105,7 +106,10 @@ function shell() {
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <div class="skillpop" id="skillpop" role="dialog" aria-label="Skill details"></div>`;
 
-  if (!reduceMotion) document.body.classList.add('intro-on');
+  // The full-screen wipe is a hello, not a toll: once per browser session.
+  let seen = false;
+  try { seen = sessionStorage.getItem('p5x-intro') === '1'; sessionStorage.setItem('p5x-intro', '1'); } catch { /* private mode */ }
+  if (!reduceMotion && !seen) document.body.classList.add('intro-on');
   setTimeout(() => document.body.classList.remove('intro-on'), 1500);
 }
 
@@ -527,6 +531,7 @@ function bind() {
       return;
     }
     if (t.closest('[data-pop-close]')) { hideSkill(); return; }
+    if (t.closest('#role-btn')) { showRoles(document.getElementById('f-role')!.hasAttribute('hidden')); return; }
     if (t.closest('#clear')) { state.slots = [null, null, null]; state.navi = null; update(); }
   });
   document.addEventListener('change', (e) => {
@@ -556,6 +561,13 @@ function toggle(set: Set<string>, v: string) { if (set.has(v)) set.delete(v); el
 function syncChips() {
   document.querySelectorAll<HTMLElement>('[data-el]').forEach((b) => b.classList.toggle('on', state.elements.has(b.dataset.el!)));
   document.querySelectorAll<HTMLElement>('[data-role]').forEach((b) => b.classList.toggle('on', state.roles.has(b.dataset.role!)));
+  $('#role-n').textContent = state.roles.size ? String(state.roles.size) : '';
+  if (state.roles.size) showRoles(true);
+}
+function showRoles(open: boolean) {
+  $('#f-role').hidden = !open;
+  $('#role-btn').setAttribute('aria-expanded', String(open));
+  $('#role-btn').classList.toggle('on', open);
 }
 
 // ---------- boot ----------

@@ -55,7 +55,8 @@ export function candidates(): Candidate[] {
     if (b.kind === 'unit') c.banner ??= b; else c.weaponBanner ??= b;
     out.set(unit.id, c);
   }
-  for (const unit of UPCOMING) if (!out.has(unit.id)) out.set(unit.id, { unit, upcoming: true });
+  // 4★ units come free (story, events) or from the standard pool, so there's nothing to save pulls for.
+  for (const unit of UPCOMING) if (!out.has(unit.id) && Number(unit.rarity) >= 5) out.set(unit.id, { unit, upcoming: true });
   return [...out.values()];
 }
 

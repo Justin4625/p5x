@@ -84,7 +84,9 @@ function pullCard(a: Advice, c: Candidate, best: boolean, i: number) {
   const u = a.unit;
   const t = u.tier;
   const w = a.weapon;
-  const why = a.points.map((p) => `<li class="${p.pts > 0 ? 'up' : p.pts < 0 ? 'down' : 'flat'}"><b>${p.pts > 0 ? `+${p.pts}` : p.pts < 0 ? p.pts : '·'}</b><span>${esc(p.text)}</span></li>`).join('');
+  // With no collection yet, every card would repeat the same "tick your units" line; the intro says it once.
+  const points = a.verdict === 'unknown' ? a.points.filter((p) => p.pts !== 0) : a.points;
+  const why = points.map((p) => `<li class="${p.pts > 0 ? 'up' : p.pts < 0 ? 'down' : 'flat'}"><b>${p.pts > 0 ? `+${p.pts}` : p.pts < 0 ? p.pts : '·'}</b><span>${esc(p.text)}</span></li>`).join('');
   return `<article class="pull pull-${a.verdict}${best ? ' pull-best' : ''}" style="--c:${u.color};--i:${i}">
     <div class="pull-art">${u.card ? `<img src="${cardSrc(u)}" alt="" loading="lazy" />` : ''}
       <span class="pull-stamp">${VERDICT_LABEL[a.verdict]}</span>
@@ -96,13 +98,13 @@ function pullCard(a: Advice, c: Candidate, best: boolean, i: number) {
       <div class="pull-name">${esc(u.name)}</div>
       <div class="card-pills">${pills(u)}${t ? `<span class="pill pill-tier" title="lufel ${t.list === 'kr' ? 'KR' : 'Global'} tier list">${esc(t.label)}${t.list === 'kr' ? ' KR' : ''}</span>` : ''}${u.limited ? '<span class="pill pill-lim">Limited</span>' : ''}</div>
       ${a.verdict === 'owned' ? `<p class="pull-owned">You have ${esc(u.codename)}${col.get(u.id)?.a ? ` at A${col.get(u.id)!.a}` : ''}.</p>`
-        : a.verdict === 'unknown' ? `<p class="pull-owned">Tick the units you own below to get advice.</p><ul class="pull-why">${why}</ul>`
+        : a.verdict === 'unknown' ? `<ul class="pull-why">${why}</ul>`
         : `<div class="pull-meter" aria-label="Score ${a.score} of 100"><i style="--w:${a.score}%"></i><span>${a.score}</span></div><ul class="pull-why">${why}</ul>`}
-      ${w ? `<div class="pull-wpn wpn-${w.verdict}">
-        <div class="pull-wpn-head"><span>5★ weapon</span><b>${esc(w.weapon.name)}</b><em>${WPN_LABEL[w.verdict]}</em></div>
+      ${w ? `<details class="pull-wpn wpn-${w.verdict}"${w.verdict === 'worth' ? ' open' : ''}>
+        <summary class="pull-wpn-head"><span>5★ weapon</span><b>${esc(w.weapon.name)}</b><em>${WPN_LABEL[w.verdict]}</em></summary>
         <p>${esc(w.text)}${c.weaponBanner ? ` ${c.weaponBanner.rerun ? 'Rerun on' : 'On'} ${started(c.weaponBanner.start) ? `banner until ${fmtDate(c.weaponBanner.end)}` : `banner from ${fmtDate(c.weaponBanner.start)}`}.` : ''}</p>
         ${w.weapon.desc ? `<details><summary>Weapon effect${w.weapon.effect ? `: ${esc(w.weapon.effect)}` : ''}</summary><p>${esc(w.weapon.desc)}</p></details>` : ''}
-      </div>` : ''}
+      </details>` : ''}
     </div>
   </article>`;
 }

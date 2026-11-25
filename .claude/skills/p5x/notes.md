@@ -65,6 +65,8 @@ Not modelled yet: overall unit strength/meta, awareness (A0–A6), Wonder's pers
 - The builder re-reads the collection on the `storage` event (other tab) and on `pageshow` from the back/forward cache.
 
 ## Gotchas
+- Calmer look (2026-11-25, Justin found it too busy): background is static and only behind the header (no spinning rays, drifting dots or bottom slash), smaller header, intro wipe once per session (`sessionStorage p5x-intro`), BEST badge/ring don't animate, gentler card entrance, role chips behind a "Role" button (opens by itself when a role is active), plain hint text. Don't add constant background motion back.
+- Pull advice: upcoming 4★ units without a banner are skipped (story/standard units, e.g. Anri). With no collection the cards drop the repeated "tick your units" lines; the 5★ weapon block is a collapsed `<details>` (open when WORTH IT).
 - `.builder` needs `min-width: 0`, otherwise the turn table widens the page on mobile.
 - Horizontal overflow is clipped on `html`/`body` (`overflow-x: clip`, `hidden` as fallback), not on `.roster`: clipping the roster cut off the left column's card text on hover. Card stamps (scale 2.4 while hidden) still overflow, harmlessly.
 - Hover lifts (cards, slots, moves, chips, partners) sit in `@media (hover: hover)`; keyboard focus uses `:has(:focus-visible)`. Otherwise a tapped card stays lifted on touch.
