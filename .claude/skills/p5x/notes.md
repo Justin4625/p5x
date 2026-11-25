@@ -59,6 +59,11 @@ Started 2026-11-25. Fan site for Persona 5: The Phantom X, modelled on lufel.net
 Team meter 0–100 = average pair score ×6 + role coverage bonus, scaled by how many of the 3 slots are filled.
 Not modelled yet: overall unit strength/meta, awareness (A0–A6), Wonder's persona.
 
+## Team builder × collection
+- "All units / My units" toggle (state `mine`, saved in localStorage `p5x-mine`). My units shows only units ticked on My roster, and BEST/GOOD are ranked among those only. Empty collection shows a link to roster.html.
+- An owned unit's turn order starts at your awareness, or the highest route at or below it (A3 owned, routes A0/A6 -> A0), until you pick one by hand.
+- The builder re-reads the collection on the `storage` event (other tab) and on `pageshow` from the back/forward cache.
+
 ## Gotchas
 - `.builder` needs `min-width: 0`, otherwise the turn table widens the page on mobile.
 - Horizontal overflow is clipped on `html`/`body` (`overflow-x: clip`, `hidden` as fallback), not on `.roster`: clipping the roster cut off the left column's card text on hover. Card stamps (scale 2.4 while hidden) still overflow, harmlessly.
@@ -74,7 +79,6 @@ Not modelled yet: overall unit strength/meta, awareness (A0–A6), Wonder's pers
 ## Open points / next steps
 - More lufel features: tactic library (Firestore), revelations, persona.
 - Pull advice ignores currency/pity and dupes (awareness) value; could add a "tickets on hand" input.
-- Team builder could offer "only my units" using the collection.
 - Wonder's persona choice in the team (buff/debuff persona per element).
 - Real action order uses gear speed. A user-editable speed per slot would make the turn order exact.
 - Check the Miku token translation.

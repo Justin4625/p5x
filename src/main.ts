@@ -6,6 +6,7 @@ import {
 import { matchFor, rankTiers, teamScore, unit, type Match } from './synergy';
 import { esc, md, $, code, cardSrc, trim, ransom, pills, navHTML, BG_HTML } from './ui';
 import { profileLabels } from './skills';
+import { loadCollection, type Collection } from './collection';
 
 // ---------- state ----------
 interface State {
@@ -15,10 +16,17 @@ interface State {
   elements: Set<string>;
   roles: Set<string>;
   sort: 'new' | 'name' | 'speed';
+  /** Only show (and rank) units ticked on My roster. */
+  mine: boolean;
   /** Chosen rotation label per unit (e.g. "A2" or "A0 · 2"). */
   aw: Record<string, string>;
 }
-const state: State = { slots: [null, null, null], navi: null, q: '', elements: new Set(), roles: new Set(), sort: 'new', aw: {} };
+const state: State = { slots: [null, null, null], navi: null, q: '', elements: new Set(), roles: new Set(), sort: 'new', mine: false, aw: {} };
+
+// Units you own (My roster page). Re-read when you come back from that page or another tab.
+let col: Collection = loadCollection();
+const readMine = () => { try { return localStorage.getItem('p5x-mine') === '1'; } catch { return false; } };
+state.mine = readMine() && col.size > 0;
 
 const POOL = UNITS.filter((u) => u.id !== WONDER.id);
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -81,6 +89,10 @@ function shell() {
           <input id="q" type="search" placeholder="Search name, codename, persona…" autocomplete="off" /></label>
         <div class="chips" id="f-el">${ELEMENTS.map((e) => `<button type="button" class="chip" data-el="${e}" style="--ec:${ELEMENT_COLOR[e]}">${ELEMENT_SHORT[e]}</button>`).join('')}</div>
         <div class="chips" id="f-role">${ROLES.map((r) => `<button type="button" class="chip chip-role" data-role="${r}">${r}</button>`).join('')}</div>
+        <div class="sort sort-mine" role="group" aria-label="Which units">
+          <button type="button" class="sort-btn${state.mine ? '' : ' on'}" data-mine="0" aria-pressed="${!state.mine}">All units</button>
+          <button type="button" class="sort-btn${state.mine ? ' on' : ''}" data-mine="1" aria-pressed="${state.mine}">My units <em id="mine-n">${col.size || ''}</em></button>
+        </div>
         <div class="sort" role="group" aria-label="Sort">
           ${(['new', 'name', 'speed'] as const).map((s) => `<button type="button" class="sort-btn${s === 'new' ? ' on' : ''}" data-sort="${s}">${{ new: 'Newest', name: 'A–Z', speed: 'Speed' }[s]}</button>`).join('')}
         </div>
@@ -101,6 +113,7 @@ function shell() {
 function visibleUnits(): Unit[] {
   const q = state.q.trim().toLowerCase();
   let list = POOL.filter((u) => {
+    if (state.mine && !col.has(u.id)) return false;
     if (state.elements.size && !u.elements.some((e) => state.elements.has(e))) return false;
     if (state.roles.size && !state.roles.has(u.role)) return false;
     if (q && !`${u.name} ${u.codename} ${u.persona} ${u.mechanics.join(' ')}`.toLowerCase().includes(q)) return false;
@@ -116,6 +129,7 @@ function visibleUnits(): Unit[] {
 function renderGrid() {
   const list = visibleUnits();
   $('#count').textContent = String(list.length);
+  $('#roster-title span').textContent = state.mine ? 'MY' : 'GLOBAL';
   const grid = $('#grid');
   grid.innerHTML = list.length ? list.map((u, i) => `
     <article class="card" data-id="${esc(u.id)}" style="--c:${u.color};--i:${Math.min(i, 24)}">
@@ -130,7 +144,9 @@ function renderGrid() {
       </div>
       <div class="card-why" aria-hidden="true"></div>
       <button type="button" class="card-info" data-info="${esc(u.id)}" aria-label="Details for ${esc(u.name)}">i</button>
-    </article>`).join('') : `<p class="empty">No thief matches that filter.</p>`;
+    </article>`).join('') : state.mine && !col.size
+    ? `<p class="empty">You haven't ticked any units yet. <a href="${import.meta.env.BASE_URL}roster.html">Tick the ones you own on My roster</a>.</p>`
+    : `<p class="empty">No thief matches that filter.</p>`;
   applyHighlights();
 }
 
@@ -145,6 +161,8 @@ function applyHighlights() {
   const matches = new Map<string, Match>();
   for (const u of POOL) {
     if (inTeam(u.id)) continue;
+    // With "My units" on, BEST/GOOD are picked from what you own.
+    if (state.mine && !col.has(u.id)) continue;
     // Navigators are judged against the fighters; fighters against the whole crew.
     matches.set(u.id, matchFor(u, u.navigator ? fighters : t));
   }
@@ -256,11 +274,16 @@ function renderTurns() {
   };
   const rot = (u: Unit) => {
     const list = rots(u);
+    const owned = col.get(u.id);
     const want = state.aw[u.id];
     // Keep the same awareness when the list switches (A6 with Chizuko -> "A 6(단일)" without).
     const aw = (l?: string) => l?.match(/A\s*([\d/]+)/)?.[1].split('/');
     const w = aw(want);
-    return list.find((r) => r.label === want) ?? (w && list.find((r) => aw(r.label)?.some((n) => w.includes(n)))) ?? list[0];
+    const picked = list.find((r) => r.label === want) ?? (w && list.find((r) => aw(r.label)?.some((n) => w.includes(n))));
+    if (picked || !owned) return picked ?? list[0];
+    // No choice made yet: start at your own awareness, or the highest route below it (A3 owned -> A2 or A0).
+    const best = list.map((r) => ({ r, n: Math.max(...(aw(r.label) ?? ['0']).map(Number)) })).filter((x) => x.n <= owned.a).sort((a, b) => b.n - a.n)[0];
+    return best?.r ?? list[0];
   };
   const withTag = (r: Rotation | undefined) => (r?.with ? `<span class="aw-with" title="Route for a team with ${esc(unit(r.with)?.name ?? '')}">${esc(unit(r.with)?.codename ?? '')} team</span>` : '');
   const turns = Math.min(8, Math.max(3, ...lanes.map((l) => rot(l.u)?.steps.length ?? 0)));
@@ -488,6 +511,14 @@ function bind() {
     if (el) { toggle(state.elements, el.dataset.el!); syncChips(); renderGrid(); return; }
     const role = t.closest<HTMLElement>('[data-role]');
     if (role) { toggle(state.roles, role.dataset.role!); syncChips(); renderGrid(); return; }
+    const mine = t.closest<HTMLElement>('[data-mine]');
+    if (mine) {
+      state.mine = mine.dataset.mine === '1';
+      try { localStorage.setItem('p5x-mine', state.mine ? '1' : '0'); } catch { /* private mode */ }
+      document.querySelectorAll<HTMLElement>('[data-mine]').forEach((b) => { b.classList.toggle('on', b === mine); b.setAttribute('aria-pressed', String(b === mine)); });
+      renderGrid();
+      return;
+    }
     const sort = t.closest<HTMLElement>('[data-sort]');
     if (sort) {
       state.sort = sort.dataset.sort as State['sort'];
@@ -536,3 +567,13 @@ renderMeter();
 renderTurns();
 renderGrid();
 save();
+
+// Ticked units on My roster (other tab, or back/forward cache) show up here without a reload.
+function refreshCollection() {
+  col = loadCollection();
+  $('#mine-n').textContent = col.size ? String(col.size) : '';
+  renderGrid();
+  renderTurns();
+}
+addEventListener('storage', (e) => { if (e.key === 'p5x-collection') refreshCollection(); });
+addEventListener('pageshow', (e) => { if (e.persisted) refreshCollection(); });
