@@ -116,6 +116,7 @@ export function parseAction(unit: Unit, token: string): Action {
   const auto = token.includes('↺');
   const t = translateKr(token.replace('↺', '').trim());
   if (t === '·' || t === '-' || t === '') return { code: '—', label: 'Hold', auto, idle: true };
+  if (/^fatigue$/i.test(t)) return { code: 'FTG', label: 'Fatigue (no action)', auto, idle: true };
   if (t === 'HL') return { code: 'HL', label: unit.skills.skill_highlight?.name || 'Highlight', skill: unit.skills.skill_highlight, auto, idle: false };
   if (t === 'TH') return { code: 'TH', label: 'Theurgy', auto, idle: false };
   if (t.startsWith('ⓘ')) return { code: `IT${t.slice(1)}`, label: `Item ${t.slice(1)}`, auto, idle: false };

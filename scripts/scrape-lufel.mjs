@@ -87,6 +87,27 @@ function parseRotation(value) {
   return value.split('›').map((step) => step.trim().split('+').map((s) => s.trim()).filter(Boolean));
 }
 
+/**
+ * Most units list rotations as `{label, value: '1 › 2↺+3'}`. Some (Kotone) use a per-turn
+ * table instead: `{group: 'r0', variant, turns: ['1'..'6',''], skills: ['1', '1+1+3', 'Fatigue', ...]}`,
+ * with several routes per awareness. Those are read from the English copy and numbered.
+ */
+function readRotations(O) {
+  const list = O?.basic || [];
+  if (!list.some((r) => Array.isArray(r.skills))) {
+    return list.filter((r) => r.value).map((r) => ({ label: r.label.replace('의식', 'A'), steps: parseRotation(r.value) }));
+  }
+  const en = O.basic_en || list;
+  const seen = {};
+  return en.filter((r) => Array.isArray(r.skills)).map((r) => {
+    const turns = (r.turns || []).filter(Boolean).length || r.skills.filter(Boolean).length;
+    const base = `A${String(r.group || '').replace(/^r/, '')}${r.variant === 'miku' ? ' Miku' : ''}`;
+    seen[base] = (seen[base] || 0) + 1;
+    const steps = r.skills.slice(0, turns).map((cell) => String(cell || '·').split('+').map((t) => t.trim()).filter(Boolean));
+    return { label: `${base} · ${seen[base]}`, steps };
+  });
+}
+
 async function readJson(file) {
   try { return JSON.parse(await fs.readFile(file, 'utf8')); } catch { return null; }
 }
@@ -247,10 +268,7 @@ async function main() {
       tagsKr: info.tag || '',
       review: R?.review_en || '',
       skills,
-      rotations: (O?.basic || []).filter((r) => r.value).map((r) => ({
-        label: r.label.replace('의식', 'A'),
-        steps: parseRotation(r.value),
-      })),
+      rotations: readRotations(O),
       rotationNotes: (O?.note_en || O?.note || []).filter(Boolean),
       parties: (P?.party || []).map((p) => ({
         members: (p.members || []).filter(Boolean),
