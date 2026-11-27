@@ -1,608 +1,7 @@
 {
  "source": "lufel.net",
- "scraped": "2026-11-25T08:26:33.150Z",
+ "scraped": "2026-11-27T13:59:23.479Z",
  "upcoming": [
-  {
-   "id": "준페이",
-   "name": "Junpei Iori",
-   "codename": "JUNPEI",
-   "persona": "Hermes",
-   "rarity": 5,
-   "limited": true,
-   "elements": [
-    "Fire"
-   ],
-   "role": "Guardian",
-   "color": "#3b68d0",
-   "navigator": false,
-   "order": 40,
-   "speed": 103,
-   "roleDesc": "",
-   "tags": "",
-   "tagsKr": "도발, 크리티컬 효과, 공격력, 방어력 감소, 대미지 보너스, 화상",
-   "review": "An original P3 character, he’s a tank who supports Fire-attribute DPS units.\n\nHis standout trait is that he sacrifices general-purpose utility and, **specifically for Fire teams, provides extremely powerful buffs that push past the usual limits of a Defense-role character**.\n\nSkill 2 exists mainly for flexibility, but it’s generally a weaker version of Skill 1. In most cases, the standard play becomes a 2-turn cycle that repeatedly uses Skill 3, Skill 1, and Theurgy.\n\n",
-   "skills": {
-    "skill1": {
-     "name": "Blazing Strike",
-     "desc": "Deal Fire damage to 1 foe equal to 77.1%/85.0%/81.8%/89.7% of Junpei's max HP.\nDetonate the target's [Fever Pitch] and deal bonus Fire damage to all foes equal to 38.6%/42.5%/40.9%/44.9% of Junpei's max HP. Also decrease all foes' Defense by 7.8%/8.6%/8.3%/9.1% (based on Junpei's max HP, up to 31.2%/34.4%/33.2%/36.4% bonus Defense Down at 19520/21520/20720/22720 max HP) and increase party's Fire damage dealt by 15.6%/17.2%/16.6%/18.2% (based on Junpei's max HP, up to 62.5%/68.9%/66.3%/72.7% bonus Fire damage dealt at 19520/21520/20720/22720 max HP). Lasts for 2 turns.",
-     "type": "Single target",
-     "sp": 23
-    },
-    "skill2": {
-     "name": "Sunder Strike",
-     "desc": "Deal Physical damage to 1 for equal to 41.9%/46.2%/44.4%/48.7% of Junpei's max HP.\nDetonate the target's [Fever Pitch] and make this damage guaranteed to be a critical hit. Also decrease target's Defense by 7.8%/8.6%/8.3%/9.1% (based on Junpei's max HP, up to 31.2%/34.4%/33.2%/36.4% bonus Defense Down at 19520/21520/20720/22720 max HP) and increase party's damage dealt by 7.8%/8.6%/8.3%/9.1% (based on Junpei's max HP, up to 31.2%/34.4%/33.2%/36.4% bonus damage dealt at 19520/21520/20720/22720 max HP). Lasts for 2 turns.",
-     "type": "Single target",
-     "sp": null
-    },
-    "skill3": {
-     "name": "Hero Focus",
-     "desc": "Junpei gains [Center Stage] and taunts all foes for 2 turns.\nIncrease party's critical damage by 5.9%/6.5%/6.2%/6.8% (based on Junpei's max HP, up to 23.4%/25.8%/24.9%/27.3% bonus critical damage at 19520/21520/20720/22720 max HP) and increase Fire Assassins or Sweepers' critical damage by 11.7%/12.9%/12.4%/13.6% more (based on Junpei's max HP, up to 46.8%/51.6%/49.7%/54.5% bonus critical damage at 19520/21520/20720/22720 max HP). Lasts for 2 turns.\n[Center Stage]: Junpei takes 40% damage for all allies, only take a certain percentage of damage when taking non Damage Over Time damage (when taking damage for 1/2/3/4 times, the damage multiplier is 75%/55%/45%/40% respectively).\nJunpei gains Null Down and Null Mental Ailments. When taking non Damage Over Time damage, 100% chance to inflict the attacker with Burn.\nIf Junpei didn't take non Damage Over Time damage for 1 turn and has Charge, activate [Power Swing].",
-     "type": "",
-     "sp": 26
-    },
-    "skill_highlight": {
-     "name": "Theurgy - Heck 'n Blast",
-     "desc": "Use condition: 140 Theurgy Energy\nDeal Physical damage to 1 foe equal to 138.3%/152.5%/146.8%/161.0% of Junpei's max HP. Ignore all affinities and decrease Down Points by 4, after knocking down the target, spread the Down Points damage left to other foes.\nGrant the party [Fired Up]: Increase Attack (based on Junpei's max HP, up to 19.5%/21.5%/20.7%/22.7% Attack at 19520/21520/20720/22720 max HP) and critical damage (based on Junpei's max HP, up to 14.6%/16.1%/15.5%/17.0% critical damage at 19520/21520/20720/22720 max HP). Lasts for 4 turns. Stacks up to 2 times.\nAt the start of battle, if there is a Fire Assassin or Sweeper on the field, double Junpei's base Theurgy.",
-     "type": "Single target",
-     "sp": null
-    }
-   },
-   "rotations": [
-    {
-     "label": "A 0",
-     "steps": [
-      [
-       "3"
-      ],
-      [
-       "TH",
-       "1"
-      ],
-      [
-       "3"
-      ],
-      [
-       "TH",
-       "1"
-      ],
-      [
-       "3"
-      ],
-      [
-       "TH",
-       "1"
-      ]
-     ]
-    },
-    {
-     "label": "A 6",
-     "steps": [
-      [
-       "3"
-      ],
-      [
-       "TH",
-       "근접",
-       "1"
-      ],
-      [
-       "3"
-      ],
-      [
-       "TH",
-       "근접",
-       "1"
-      ],
-      [
-       "3"
-      ],
-      [
-       "TH",
-       "근접",
-       "1"
-      ]
-     ]
-    }
-   ],
-   "rotationNotes": [],
-   "parties": [
-    {
-     "members": [
-      "준페이",
-      "미츠루",
-      "유키 마코토",
-      "마나카"
-     ],
-     "comment": ""
-    },
-    {
-     "members": [
-      "준페이",
-      "미나미·여름",
-      "유키 마코토",
-      "마나카"
-     ],
-     "comment": ""
-    },
-    {
-     "members": [
-      "준페이",
-      "미나미·여름",
-      "야오링·사자무",
-      "마나카"
-     ],
-     "comment": ""
-    },
-    {
-     "members": [
-      "준페이",
-      "슌·프론티어",
-      "야오링·사자무",
-      "마나카"
-     ],
-     "comment": ""
-    }
-   ],
-   "friends": [
-    {
-     "id": "유키 마코토",
-     "comment": "Junpei Iori’s value increases significantly when a Fire attribute DPS is present."
-    },
-    {
-     "id": "미츠루",
-     "comment": "Junpei Iori’s buff is always conducted on all allies, and Mitsuru can perform Fire attribute attacks by copying the attribute of his allies."
-    },
-    {
-     "id": "야오링·사자무",
-     "comment": "Junpei Iori’s value increases significantly when a Fire attribute DPS is present. Additionally, Junpei Iori can inflict Burn on enemies by using Skill 3."
-    },
-    {
-     "id": "안",
-     "comment": "Junpei Iori’s value increases significantly when a Fire attribute DPS is present. Additionally, Junpei Iori can inflict Burn on enemies by using Skill 3."
-    }
-   ],
-   "skillPriority": "3>1>4>2",
-   "weapons": [
-    {
-     "key": "weapon5-1",
-     "rarity": 5,
-     "name": "Balmung",
-     "effect": "Hero's Sword",
-     "desc": "Increase max HP by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%.\nAfter activating [Hero Focus], increase user's damage down by 12.0%/15.6%/15.6%/19.2%/19.2%/22.8%/22.8%. Lasts for 2 turns.\nAfter activating [Power Swing], increase party's critical damage by 30.6%/39.8%/39.8%/49.0%/49.0%/58.2%/58.2%. Lasts for 2 turns."
-    },
-    {
-     "key": "weapon4-1",
-     "rarity": 4,
-     "name": "Buster Blade",
-     "effect": "Oath of Protection",
-     "desc": "Increase max HP by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nAfter user deals damage, increase user's max HP by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0%. Lasts for 2 turns."
-    }
-   ],
-   "tier": {
-    "label": "T0.5",
-    "rank": 1,
-    "awareness": null,
-    "list": "kr"
-   },
-   "tierKr": {
-    "label": "T0.5",
-    "rank": 1,
-    "awareness": null,
-    "list": "kr"
-   },
-   "eta": "2026-11-26",
-   "etaConfirmed": false,
-   "added": null,
-   "card": "cards/50690938d3dd.webp"
-  },
-  {
-   "id": "나루미",
-   "name": "Narumi Nashimoto",
-   "codename": "PINKY",
-   "persona": "Asterope",
-   "rarity": 5,
-   "limited": true,
-   "elements": [
-    "Psychokinesis"
-   ],
-   "role": "Assassin",
-   "color": "#ffa6a6",
-   "navigator": false,
-   "order": 41,
-   "speed": 95,
-   "roleDesc": "",
-   "tags": "",
-   "tagsKr": "추가 턴",
-   "review": "She is a P5X original character and a **Psy single-target dealer capable of gaining an additional turn** every 2 turns.\n\nThrough **WONDER's support**, which has a 1-turn cooldown, Narumi can **gain an additional turn**. This enables an explosive playstyle where she can unleash all three of her skills in a 1-2-3 sequence within just 2 turns.\n\nTo maximize Skill 3, she needs 10 [Shiny Points] stacks. Her kit is designed so that this is achieved naturally as long as the player follows the correct skill rotation, requiring no extra setup.\n\n<br>\n\nWhile she **performs at full capacity even at Awareness 0**, her efficiency at Awareness 1 (granting WONDER an extra turn) and Awareness 2 (dramatically boosting Skill 3's power) makes her **breakthrough efficiency exceptional**.\n\nSince her HIGHLIGHT gauge and cooldown progress regardless of extra turns, she can **use HIGHLIGHT much more frequently** than other dealers, and her damage multipliers are impressively high.\n\nAt Awareness 6, she gains yet another extra turn, pairing perfectly with ANGE for turn-reset tactics. In a full Awareness 6 party, it's possible to take up to 9 actions in a single turn.\n\nBecause she has no independent multiplier bucket, pairing her with Katayama, who can provide one through Fuka and Down, is highly efficient. As a result, both Elucidator Thieves can be utilized effectively.\n\nFrom Awareness 2, the [Shiny Points] stack cap increases to 16. To reach this, WONDER's extra turn special skill [Attend My Handshake Event ❤︎] must be used before Skill 1.",
-   "skills": {
-    "skill1": {
-     "name": "100% Sugar ❤",
-     "desc": "Deal Psy damage to 1 foe equal to 292.8%/322.8%/310.8%/340.8% of Attack. Gain 3 [Shiny Points] and enter [Idol Business] mode for 2 turns.\n[Idol Business]: Increase critical rate by 14.6%/16.1%/15.5%/17.0% and damage by 29.3%/32.3%/31.1%/34.1%. At the start of turn, gain 1 [Shiny Points].",
-     "type": "Single target",
-     "sp": 21
-    },
-    "skill2": {
-     "name": "Cake BOOM!",
-     "desc": "Deal Psy damage to all foes equal to 404.0%/445.4%/428.8%/470.2% of Attack, distribute this damage between all foes.\nAfter using this skill in [Idol Business] mode: Double Narumi's [Shiny Points].",
-     "type": "AoE",
-     "sp": 23
-    },
-    "skill3": {
-     "name": "LIVE of LOVE ♪",
-     "desc": "Deal Psy damage to 1 foe equal to 349.8%/385.6%/371.3%/407.1% of Attack.\nWhen [Naruru ♪ Naruru ♫] is active: Deal bonus Psy damage equal to 10.1%/11.1%/10.7%/11.7% of Attack for every [Shiny Points] stacks.\nWhen [Shiny Points] stacks reach 10, deal bonus Psy damage equal to 100.5%/110.8%/106.7%/117.0% of Attack. Also gain 50% damage when activating this skill.",
-     "type": "Single target",
-     "sp": 25
-    }
-   },
-   "rotations": [
-    {
-     "label": "A 0",
-     "steps": [
-      [
-       "1"
-      ],
-      [
-       "2",
-       "3"
-      ],
-      [
-       "1"
-      ],
-      [
-       "2",
-       "3"
-      ],
-      [
-       "1"
-      ],
-      [
-       "2",
-       "3"
-      ]
-     ]
-    },
-    {
-     "label": "A 6",
-     "steps": [
-      [
-       "1"
-      ],
-      [
-       "2",
-       "3",
-       "3"
-      ],
-      [
-       "1"
-      ],
-      [
-       "2",
-       "3",
-       "3"
-      ],
-      [
-       "1"
-      ],
-      [
-       "2",
-       "3",
-       "3"
-      ]
-     ]
-    }
-   ],
-   "rotationNotes": [
-    "1 › 2 › 3+3 is also possible, but you need to give up some buffs such as Revelation set effects."
-   ],
-   "parties": [
-    {
-     "members": [
-      "나루미",
-      "J&C",
-      "미츠루",
-      "마나카"
-     ],
-     "comment": ""
-    },
-    {
-     "members": [
-      "나루미",
-      "J&C",
-      "마유미",
-      "마나카"
-     ],
-     "comment": ""
-    },
-    {
-     "members": [
-      "나루미",
-      "J&C",
-      "미츠루",
-      "후카",
-      "카타야마"
-     ],
-     "comment": ""
-    },
-    {
-     "members": [
-      "나루미",
-      "J&C",
-      "마유미",
-      "후카",
-      "카타야마"
-     ],
-     "comment": ""
-    }
-   ],
-   "friends": [
-    {
-     "id": "마나카",
-     "comment": "By rewinding turns, she can activate additional turns again when the stacks have been accumulated."
-    },
-    {
-     "id": "미츠루",
-     "comment": "Mitsuru provides high Defense Reduction and deals additional Damage on every Additional Turn of Narumi."
-    },
-    {
-     "id": "마유미",
-     "comment": "Provides high Pierce Rate and various Buffs. If Mayumi's Awareness is high and Mitsuru's Awareness is low, she can show better performance than Mitsuru."
-    },
-    {
-     "id": "후카",
-     "comment": "Increases the frequency of backup character switch-ins through Additional Turns. If Narumi is Awareness 1 or higher, she can activate Skill 2 twice or more."
-    },
-    {
-     "id": "카타야마",
-     "comment": "Kumi inflicts Down and reduces Defense on enemies. She improves total Damage by enhancing Downed damage, a separate multiplier that Narumi lacks."
-    }
-   ],
-   "skillPriority": "3>1>2>4",
-   "weapons": [
-    {
-     "key": "weapon5-1",
-     "rarity": 5,
-     "name": "Sugar Encore",
-     "effect": "Strawberry Frosting's Kiss",
-     "desc": "Increase critical rate by 18.1%/18.1%/23.5%/23.5%/28.9%/28.9%/34.3%. \nWhen Narumi gains [Naruru ♪ Naruru ♫], increase critical damage by 32.8%/42.8%/42.8%/52.8%/52.8%/62.8%/62.8% for 2 turns.\nIncrease Attack by 42.5%/55.0%/55.0%/67.5%/67.5%/80.0%/80.0% on Extra Action [Spotlight Unleashed]."
-    },
-    {
-     "key": "weapon4-1",
-     "rarity": 4,
-     "name": "Shining Rhythm",
-     "effect": "Lethal Allure",
-     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. \nWhen Narumi gains [Shiny Points], increase damage by 8.8%/10.2%/10.2%/11.6%/11.6%/13.0%/13.0% for 2 turns. Stacks up to 2 times."
-    }
-   ],
-   "tier": {
-    "label": "T0.5",
-    "rank": 1,
-    "awareness": null,
-    "list": "kr"
-   },
-   "tierKr": {
-    "label": "T0.5",
-    "rank": 1,
-    "awareness": null,
-    "list": "kr"
-   },
-   "eta": "2026-12-10",
-   "etaConfirmed": false,
-   "added": null,
-   "card": "cards/e341860573a5.webp"
-  },
-  {
-   "id": "코로마루",
-   "name": "Koromaru",
-   "codename": "KOROMARU",
-   "persona": "Cerberus",
-   "rarity": 5,
-   "limited": true,
-   "elements": [
-    "Curse"
-   ],
-   "role": "Saboteur",
-   "color": "#e1e2ee",
-   "navigator": false,
-   "order": 42,
-   "speed": 104,
-   "roleDesc": "",
-   "tags": "",
-   "tagsKr": "적합성 저하, 화상, 감전, 동결, 방어력 감소, 지속 대미지",
-   "review": "An original P3 character, Koromaru is a debuffer who **enhances Fire, Elec, and Ice weaknesses**.\n\nUsing the same mechanism as Futaba, he changes enemy affinity so that **Resist (0.5x) becomes Normal (1.0x), Normal becomes Weak (1.2x), and Weak becomes Enhanced Weakness (1.45x).**\n\nUnless an enemy dies and a new one appears, the weakness enhancement effect can be **maintained throughout his cycle almost constantly**. He reduces Down Points by 2 on turn 1 and by 4 on turn 2, allowing him to force an enemy Down every 2 turns.\n\n<br>\n\nHe has a unique system: after selecting one [Master], he acts during that [Master]'s turn and no longer has a separate personal turn.\n\nThe three skills are identical except for which of Fire, Elec, or Ice damage taken they amplify, so in practice he is played by repeatedly using one skill that matches the ally's attribute.\n\n<br>\n\nHe also has a passive that increases allies' Attack based on his Ailment Accuracy. Since there is no cap, **it is best to stack as much Ailment Accuracy as possible**.\n\nWhen Koromaru enters as Fuuka's Shift Member, that passive and Revelation set effects tied to \"during battle\" do not activate, so you effectively need to prepare at least two Revelation loadouts.\nSets such as [Defeat] + [Freedom] or [Departure] + [Prosperity], which help fill out Ailment Accuracy, are also valid options, so it is recommended to choose based on the party setup.\n",
-   "skills": {
-    "skill1": {
-     "name": "Black Inferno",
-     "desc": "Deal Curse damage to all foes equal to 115.1%/126.9%/122.1%/133.9% of Attack. Increase foes' damage taken by 3.9%/4.3%/4.1%/4.5% for 2 turns (for every 100% of Koromaru's ailment accuracy, increase damage taken by 9.14% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy, this effect from Koromaru's other Persona skills do not stack), increase Fire damage taken by 3.9%/4.3%/4.1%/4.5% (for every 100% of Koromaru's ailment accuracy, increase Fire damage taken by 9.14% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy). Then, there is a 97.6%/97.6%/103.6%/103.6% base chance to inflict Burn.\nIf targets have [Attribute Downgrade], ignore all affinities and decrease Down Points by 2. If targets have Fire [Attribute Downgrade], increase Skill Damage by 100%, then ignore all affinities and decrease Down Points by 2 more.",
-     "type": "AoE",
-     "sp": 22
-    },
-    "skill2": {
-     "name": "Scarlet Flash",
-     "desc": "Deal Curse damage to all foes equal to 115.1%/126.9%/122.1%/133.9% of Attack. Increase foes' damage taken by 3.9%/4.3%/4.1%/4.5% for 2 turns (for every 100% of Koromaru's ailment accuracy, increase damage taken by 9.14% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy, this effect from Koromaru's other Persona skills do not stack), increase Electric damage taken by 3.9%/4.3%/4.1%/4.5% (for every 100% of Koromaru's ailment accuracy, increase Electric damage taken by 9.14% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy). Then, there is a 97.6%/97.6%/103.6%/103.6% base chance to inflict Shock.\nIf targets have [Attribute Downgrade], ignore all affinities and decrease Down Points by 2. If targets have Electric [Attribute Downgrade], increase Skill Damage by 100%, then ignore all affinities and decrease Down Points by 2 more.",
-     "type": "AoE",
-     "sp": 22
-    },
-    "skill3": {
-     "name": "Silver Frost",
-     "desc": "Deal Curse damage to all foes equal to 115.1%/126.9%/122.1%/133.9% of Attack. Increase foes' damage taken by 3.9%/4.3%/4.1%/4.5% for 2 turns (for every 100% of Koromaru's ailment accuracy, increase damage taken by 9.14% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy, this effect from Koromaru's other Persona skills do not stack), increase Ice damage taken by 3.9%/4.3%/4.1%/4.5% (for every 100% of Koromaru's ailment accuracy, increase Ice damage taken by 9.14% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy). Then, there is a 97.6%/97.6%/103.6%/103.6% base chance to inflict Freeze.\nIf targets have [Attribute Downgrade], ignore all affinities and decrease Down Points by 2. If targets have Ice [Attribute Downgrade], increase Skill Damage by 100%, then ignore all affinities and decrease Down Points by 2 more.",
-     "type": "AoE",
-     "sp": 22
-    },
-    "skill_highlight": {
-     "name": "Hound of Hades",
-     "desc": "Use condition: 70 Theurgy Energy\nDeal Curse damage to all foes equal to 206.9%/228.1%/219.6%/240.8% of Attack, inflict [Soul Hunt], then decrease target's Defense by 15.6%/17.2%/16.6%/18.2% for 2 turns (for every 100% of Koromaru's ailment accuracy, decrease Defense by 36.5% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy).",
-     "type": "AoE",
-     "sp": null
-    }
-   },
-   "rotations": [
-    {
-     "label": "A 0",
-     "steps": [
-      [
-       "TH",
-       "1"
-      ],
-      [
-       "1"
-      ],
-      [
-       "TH",
-       "1"
-      ],
-      [
-       "1"
-      ],
-      [
-       "TH",
-       "1"
-      ],
-      [
-       "1"
-      ]
-     ]
-    },
-    {
-     "label": "A 0",
-     "steps": [
-      [
-       "TH",
-       "2"
-      ],
-      [
-       "2"
-      ],
-      [
-       "TH",
-       "2"
-      ],
-      [
-       "2"
-      ],
-      [
-       "TH",
-       "2"
-      ],
-      [
-       "2"
-      ]
-     ]
-    },
-    {
-     "label": "A 0",
-     "steps": [
-      [
-       "TH",
-       "3"
-      ],
-      [
-       "3"
-      ],
-      [
-       "TH",
-       "3"
-      ],
-      [
-       "3"
-      ],
-      [
-       "TH",
-       "3"
-      ],
-      [
-       "3"
-      ]
-     ]
-    }
-   ],
-   "rotationNotes": [],
-   "parties": [
-    {
-     "members": [
-      "유키 마코토",
-      "미츠루",
-      "준페이",
-      "후카",
-      "코로마루"
-     ],
-     "comment": ""
-    },
-    {
-     "members": [
-      "코로마루",
-      "미유·여름",
-      "미나미·여름",
-      "마나카"
-     ],
-     "comment": ""
-    },
-    {
-     "members": [
-      "J&C",
-      "아야카",
-      "모토하·청광",
-      "후카",
-      "코로마루"
-     ],
-     "comment": ""
-    }
-   ],
-   "friends": [
-    {
-     "id": "후카",
-     "comment": "Even when Koromaru enters as Fuuka's Shift Member, he can use all of his effects except for 1 passive, making Fuuka one of his best options."
-    },
-    {
-     "id": "미유·여름",
-     "comment": "Koromaru can enhance all enemies' Ice weakness and increase the entire party's damage."
-    },
-    {
-     "id": "야오링·사자무",
-     "comment": "Koromaru can enhance all enemies' Fire weakness, inflict Burn, and increase the entire party's damage."
-    },
-    {
-     "id": "유키 마코토",
-     "comment": "Koromaru can enhance all enemies' Fire weakness and increase the entire party's damage."
-    },
-    {
-     "id": "사나다",
-     "comment": "Koromaru can enhance all enemies' Elec weakness, inflict Shock, and increase the entire party's damage."
-    }
-   ],
-   "skillPriority": "4>1>2>3",
-   "weapons": [
-    {
-     "key": "weapon5-1",
-     "rarity": 5,
-     "name": "Howl",
-     "effect": "All-Out Chomp",
-     "desc": "Increase ailment accuracy by 36.0%/36.0%/47.0%/47.0%/58.0%/58.0%/69.0%. After using [Hound's Hunt], or after Koromaru manually uses a Persona skill, permanently increase all allies' Attack by 11.3%/14.7%/14.7%/18.1%/18.1%/21.5%/21.5%. Stacks up to 2 times. \nWhen inflicting [Attribute Downgrade], increase all allies' critical damage by 18.1%/23.5%/23.5%/28.9%/28.9%/34.3%/34.3%. Lasts for 2 turns."
-    },
-    {
-     "key": "weapon4-1",
-     "rarity": 4,
-     "name": "Dagger of Protection",
-     "effect": "Guard Dog Assault",
-     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. \nWhen attacking a foe with an elemental ailment, increase damage by 17.6%/23.2%/23.2%/28.8%/28.8%/34.4%/34.4%."
-    }
-   ],
-   "tier": {
-    "label": "T0.5",
-    "rank": 1,
-    "awareness": null,
-    "list": "kr"
-   },
-   "tierKr": {
-    "label": "T0.5",
-    "rank": 1,
-    "awareness": null,
-    "list": "kr"
-   },
-   "eta": "2026-12-24",
-   "etaConfirmed": false,
-   "added": null,
-   "card": "cards/3940e9037920.webp"
-  },
   {
    "id": "모토하·청광",
    "name": "Radiance Motoha",
@@ -878,18 +277,18 @@
     }
    ],
    "tier": {
-    "label": "T0",
-    "rank": 0,
+    "label": "T0.5",
+    "rank": 1,
     "awareness": null,
     "list": "kr"
    },
    "tierKr": {
-    "label": "T0",
-    "rank": 0,
+    "label": "T0.5",
+    "rank": 1,
     "awareness": null,
     "list": "kr"
    },
-   "eta": "2027-01-07",
+   "eta": "2026-12-10",
    "etaConfirmed": false,
    "added": null,
    "card": "cards/d31b05b683c3.webp"
@@ -1007,10 +406,418 @@
     "awareness": 6,
     "list": "kr"
    },
-   "eta": "2027-01-07",
+   "eta": "2026-12-10",
    "etaConfirmed": false,
    "added": null,
    "card": "cards/f8f20f8c4ca9.webp"
+  },
+  {
+   "id": "나루미",
+   "name": "Narumi Nashimoto",
+   "codename": "PINKY",
+   "persona": "Asterope",
+   "rarity": 5,
+   "limited": true,
+   "elements": [
+    "Psychokinesis"
+   ],
+   "role": "Assassin",
+   "color": "#ffa6a6",
+   "navigator": false,
+   "order": 41,
+   "speed": 95,
+   "roleDesc": "",
+   "tags": "",
+   "tagsKr": "추가 턴",
+   "review": "She is a P5X original character and a **Psy single-target dealer capable of gaining an additional turn** every 2 turns.\n\nThrough **WONDER's support**, which has a 1-turn cooldown, Narumi can **gain an additional turn**. This enables an explosive playstyle where she can unleash all three of her skills in a 1-2-3 sequence within just 2 turns.\n\nTo maximize Skill 3, she needs 10 [Shiny Points] stacks. Her kit is designed so that this is achieved naturally as long as the player follows the correct skill rotation, requiring no extra setup.\n\n<br>\n\nWhile she **performs at full capacity even at Awareness 0**, her efficiency at Awareness 1 (granting WONDER an extra turn) and Awareness 2 (dramatically boosting Skill 3's power) makes her **breakthrough efficiency exceptional**.\n\nSince her HIGHLIGHT gauge and cooldown progress regardless of extra turns, she can **use HIGHLIGHT much more frequently** than other dealers, and her damage multipliers are impressively high.\n\nAt Awareness 6, she gains yet another extra turn, pairing perfectly with ANGE for turn-reset tactics. In a full Awareness 6 party, it's possible to take up to 9 actions in a single turn.\n\nBecause she has no independent multiplier bucket, pairing her with Katayama, who can provide one through Fuka and Down, is highly efficient. As a result, both Elucidator Thieves can be utilized effectively.\n\nFrom Awareness 2, the [Shiny Points] stack cap increases to 16. To reach this, WONDER's extra turn special skill [Attend My Handshake Event ❤︎] must be used before Skill 1.",
+   "skills": {
+    "skill1": {
+     "name": "100% Sugar ❤",
+     "desc": "Deal Psy damage to 1 foe equal to 292.8%/322.8%/310.8%/340.8% of Attack. Gain 3 [Shiny Points] and enter [Idol Business] mode for 2 turns.\n[Idol Business]: Increase critical rate by 14.6%/16.1%/15.5%/17.0% and damage by 29.3%/32.3%/31.1%/34.1%. At the start of turn, gain 1 [Shiny Points].",
+     "type": "Single target",
+     "sp": 21
+    },
+    "skill2": {
+     "name": "Cake BOOM!",
+     "desc": "Deal Psy damage to all foes equal to 404.0%/445.4%/428.8%/470.2% of Attack, distribute this damage between all foes.\nAfter using this skill in [Idol Business] mode: Double Narumi's [Shiny Points].",
+     "type": "AoE",
+     "sp": 23
+    },
+    "skill3": {
+     "name": "LIVE of LOVE ♪",
+     "desc": "Deal Psy damage to 1 foe equal to 349.8%/385.6%/371.3%/407.1% of Attack.\nWhen [Naruru ♪ Naruru ♫] is active: Deal bonus Psy damage equal to 10.1%/11.1%/10.7%/11.7% of Attack for every [Shiny Points] stacks.\nWhen [Shiny Points] stacks reach 10, deal bonus Psy damage equal to 100.5%/110.8%/106.7%/117.0% of Attack. Also gain 50% damage when activating this skill.",
+     "type": "Single target",
+     "sp": 25
+    }
+   },
+   "rotations": [
+    {
+     "label": "A 0",
+     "steps": [
+      [
+       "1"
+      ],
+      [
+       "2",
+       "3"
+      ],
+      [
+       "1"
+      ],
+      [
+       "2",
+       "3"
+      ],
+      [
+       "1"
+      ],
+      [
+       "2",
+       "3"
+      ]
+     ]
+    },
+    {
+     "label": "A 6",
+     "steps": [
+      [
+       "1"
+      ],
+      [
+       "2",
+       "3",
+       "3"
+      ],
+      [
+       "1"
+      ],
+      [
+       "2",
+       "3",
+       "3"
+      ],
+      [
+       "1"
+      ],
+      [
+       "2",
+       "3",
+       "3"
+      ]
+     ]
+    }
+   ],
+   "rotationNotes": [
+    "1 › 2 › 3+3 is also possible, but you need to give up some buffs such as Revelation set effects."
+   ],
+   "parties": [
+    {
+     "members": [
+      "나루미",
+      "J&C",
+      "미츠루",
+      "마나카"
+     ],
+     "comment": ""
+    },
+    {
+     "members": [
+      "나루미",
+      "J&C",
+      "마유미",
+      "마나카"
+     ],
+     "comment": ""
+    },
+    {
+     "members": [
+      "나루미",
+      "J&C",
+      "미츠루",
+      "후카",
+      "카타야마"
+     ],
+     "comment": ""
+    },
+    {
+     "members": [
+      "나루미",
+      "J&C",
+      "마유미",
+      "후카",
+      "카타야마"
+     ],
+     "comment": ""
+    }
+   ],
+   "friends": [
+    {
+     "id": "마나카",
+     "comment": "By rewinding turns, she can activate additional turns again when the stacks have been accumulated."
+    },
+    {
+     "id": "미츠루",
+     "comment": "Mitsuru provides high Defense Reduction and deals additional Damage on every Additional Turn of Narumi."
+    },
+    {
+     "id": "마유미",
+     "comment": "Provides high Pierce Rate and various Buffs. If Mayumi's Awareness is high and Mitsuru's Awareness is low, she can show better performance than Mitsuru."
+    },
+    {
+     "id": "후카",
+     "comment": "Increases the frequency of backup character switch-ins through Additional Turns. If Narumi is Awareness 1 or higher, she can activate Skill 2 twice or more."
+    },
+    {
+     "id": "카타야마",
+     "comment": "Kumi inflicts Down and reduces Defense on enemies. She improves total Damage by enhancing Downed damage, a separate multiplier that Narumi lacks."
+    }
+   ],
+   "skillPriority": "3>1>2>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Sugar Encore",
+     "effect": "Strawberry Frosting's Kiss",
+     "desc": "Increase critical rate by 18.1%/18.1%/23.5%/23.5%/28.9%/28.9%/34.3%. \nWhen Narumi gains [Naruru ♪ Naruru ♫], increase critical damage by 32.8%/42.8%/42.8%/52.8%/52.8%/62.8%/62.8% for 2 turns.\nIncrease Attack by 42.5%/55.0%/55.0%/67.5%/67.5%/80.0%/80.0% on Extra Action [Spotlight Unleashed]."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Shining Rhythm",
+     "effect": "Lethal Allure",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. \nWhen Narumi gains [Shiny Points], increase damage by 8.8%/10.2%/10.2%/11.6%/11.6%/13.0%/13.0% for 2 turns. Stacks up to 2 times."
+    }
+   ],
+   "tier": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "kr"
+   },
+   "tierKr": {
+    "label": "T1",
+    "rank": 2,
+    "awareness": null,
+    "list": "kr"
+   },
+   "eta": "2027-01-07",
+   "etaConfirmed": false,
+   "added": null,
+   "card": "cards/e341860573a5.webp"
+  },
+  {
+   "id": "코로마루",
+   "name": "Koromaru",
+   "codename": "KOROMARU",
+   "persona": "Cerberus",
+   "rarity": 5,
+   "limited": true,
+   "elements": [
+    "Curse"
+   ],
+   "role": "Saboteur",
+   "color": "#e1e2ee",
+   "navigator": false,
+   "order": 42,
+   "speed": 104,
+   "roleDesc": "",
+   "tags": "",
+   "tagsKr": "적합성 저하, 화상, 감전, 동결, 방어력 감소, 지속 대미지",
+   "review": "An original P3 character, Koromaru is a debuffer who **enhances Fire, Elec, and Ice weaknesses**.\n\nUsing the same mechanism as Futaba, he changes enemy affinity so that **Resist (0.5x) becomes Normal (1.0x), Normal becomes Weak (1.2x), and Weak becomes Enhanced Weakness (1.45x).**\n\nUnless an enemy dies and a new one appears, the weakness enhancement effect can be **maintained throughout his cycle almost constantly**. He reduces Down Points by 2 on turn 1 and by 4 on turn 2, allowing him to force an enemy Down every 2 turns.\n\n<br>\n\nHe has a unique system: after selecting one [Master], he acts during that [Master]'s turn and no longer has a separate personal turn.\n\nThe three skills are identical except for which of Fire, Elec, or Ice damage taken they amplify, so in practice he is played by repeatedly using one skill that matches the ally's attribute.\n\n<br>\n\nHe also has a passive that increases allies' Attack based on his Ailment Accuracy. Since there is no cap, **it is best to stack as much Ailment Accuracy as possible**.\n\nWhen Koromaru enters as Fuuka's Shift Member, that passive and Revelation set effects tied to \"during battle\" do not activate, so you effectively need to prepare at least two Revelation loadouts.\nSets such as [Defeat] + [Freedom] or [Departure] + [Prosperity], which help fill out Ailment Accuracy, are also valid options, so it is recommended to choose based on the party setup.\n",
+   "skills": {
+    "skill1": {
+     "name": "Black Inferno",
+     "desc": "Deal Curse damage to all foes equal to 115.1%/126.9%/122.1%/133.9% of Attack. Increase foes' damage taken by 3.9%/4.3%/4.1%/4.5% for 2 turns (for every 100% of Koromaru's ailment accuracy, increase damage taken by 9.14% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy, this effect from Koromaru's other Persona skills do not stack), increase Fire damage taken by 3.9%/4.3%/4.1%/4.5% (for every 100% of Koromaru's ailment accuracy, increase Fire damage taken by 9.14% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy). Then, there is a 97.6%/97.6%/103.6%/103.6% base chance to inflict Burn.\nIf targets have [Attribute Downgrade], ignore all affinities and decrease Down Points by 2. If targets have Fire [Attribute Downgrade], increase Skill Damage by 100%, then ignore all affinities and decrease Down Points by 2 more.",
+     "type": "AoE",
+     "sp": 22
+    },
+    "skill2": {
+     "name": "Scarlet Flash",
+     "desc": "Deal Curse damage to all foes equal to 115.1%/126.9%/122.1%/133.9% of Attack. Increase foes' damage taken by 3.9%/4.3%/4.1%/4.5% for 2 turns (for every 100% of Koromaru's ailment accuracy, increase damage taken by 9.14% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy, this effect from Koromaru's other Persona skills do not stack), increase Electric damage taken by 3.9%/4.3%/4.1%/4.5% (for every 100% of Koromaru's ailment accuracy, increase Electric damage taken by 9.14% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy). Then, there is a 97.6%/97.6%/103.6%/103.6% base chance to inflict Shock.\nIf targets have [Attribute Downgrade], ignore all affinities and decrease Down Points by 2. If targets have Electric [Attribute Downgrade], increase Skill Damage by 100%, then ignore all affinities and decrease Down Points by 2 more.",
+     "type": "AoE",
+     "sp": 22
+    },
+    "skill3": {
+     "name": "Silver Frost",
+     "desc": "Deal Curse damage to all foes equal to 115.1%/126.9%/122.1%/133.9% of Attack. Increase foes' damage taken by 3.9%/4.3%/4.1%/4.5% for 2 turns (for every 100% of Koromaru's ailment accuracy, increase damage taken by 9.14% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy, this effect from Koromaru's other Persona skills do not stack), increase Ice damage taken by 3.9%/4.3%/4.1%/4.5% (for every 100% of Koromaru's ailment accuracy, increase Ice damage taken by 9.14% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy). Then, there is a 97.6%/97.6%/103.6%/103.6% base chance to inflict Freeze.\nIf targets have [Attribute Downgrade], ignore all affinities and decrease Down Points by 2. If targets have Ice [Attribute Downgrade], increase Skill Damage by 100%, then ignore all affinities and decrease Down Points by 2 more.",
+     "type": "AoE",
+     "sp": 22
+    },
+    "skill_highlight": {
+     "name": "Hound of Hades",
+     "desc": "Use condition: 70 Theurgy Energy\nDeal Curse damage to all foes equal to 206.9%/228.1%/219.6%/240.8% of Attack, inflict [Soul Hunt], then decrease target's Defense by 15.6%/17.2%/16.6%/18.2% for 2 turns (for every 100% of Koromaru's ailment accuracy, decrease Defense by 36.5% more, up to a maximum of 170.8%/188.3%/181.3%/198.8% ailment accuracy).",
+     "type": "AoE",
+     "sp": null
+    }
+   },
+   "rotations": [
+    {
+     "label": "A 0",
+     "steps": [
+      [
+       "TH",
+       "1"
+      ],
+      [
+       "1"
+      ],
+      [
+       "TH",
+       "1"
+      ],
+      [
+       "1"
+      ],
+      [
+       "TH",
+       "1"
+      ],
+      [
+       "1"
+      ]
+     ]
+    },
+    {
+     "label": "A 0",
+     "steps": [
+      [
+       "TH",
+       "2"
+      ],
+      [
+       "2"
+      ],
+      [
+       "TH",
+       "2"
+      ],
+      [
+       "2"
+      ],
+      [
+       "TH",
+       "2"
+      ],
+      [
+       "2"
+      ]
+     ]
+    },
+    {
+     "label": "A 0",
+     "steps": [
+      [
+       "TH",
+       "3"
+      ],
+      [
+       "3"
+      ],
+      [
+       "TH",
+       "3"
+      ],
+      [
+       "3"
+      ],
+      [
+       "TH",
+       "3"
+      ],
+      [
+       "3"
+      ]
+     ]
+    }
+   ],
+   "rotationNotes": [],
+   "parties": [
+    {
+     "members": [
+      "유키 마코토",
+      "미츠루",
+      "준페이",
+      "후카",
+      "코로마루"
+     ],
+     "comment": ""
+    },
+    {
+     "members": [
+      "코로마루",
+      "미유·여름",
+      "미나미·여름",
+      "마나카"
+     ],
+     "comment": ""
+    },
+    {
+     "members": [
+      "J&C",
+      "아야카",
+      "모토하·청광",
+      "후카",
+      "코로마루"
+     ],
+     "comment": ""
+    }
+   ],
+   "friends": [
+    {
+     "id": "후카",
+     "comment": "Even when Koromaru enters as Fuuka's Shift Member, he can use all of his effects except for 1 passive, making Fuuka one of his best options."
+    },
+    {
+     "id": "미유·여름",
+     "comment": "Koromaru can enhance all enemies' Ice weakness and increase the entire party's damage."
+    },
+    {
+     "id": "야오링·사자무",
+     "comment": "Koromaru can enhance all enemies' Fire weakness, inflict Burn, and increase the entire party's damage."
+    },
+    {
+     "id": "유키 마코토",
+     "comment": "Koromaru can enhance all enemies' Fire weakness and increase the entire party's damage."
+    },
+    {
+     "id": "사나다",
+     "comment": "Koromaru can enhance all enemies' Elec weakness, inflict Shock, and increase the entire party's damage."
+    }
+   ],
+   "skillPriority": "4>1>2>3",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Howl",
+     "effect": "All-Out Chomp",
+     "desc": "Increase ailment accuracy by 36.0%/36.0%/47.0%/47.0%/58.0%/58.0%/69.0%. After using [Hound's Hunt], or after Koromaru manually uses a Persona skill, permanently increase all allies' Attack by 11.3%/14.7%/14.7%/18.1%/18.1%/21.5%/21.5%. Stacks up to 2 times. \nWhen inflicting [Attribute Downgrade], increase all allies' critical damage by 18.1%/23.5%/23.5%/28.9%/28.9%/34.3%/34.3%. Lasts for 2 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Dagger of Protection",
+     "effect": "Guard Dog Assault",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. \nWhen attacking a foe with an elemental ailment, increase damage by 17.6%/23.2%/23.2%/28.8%/28.8%/34.4%/34.4%."
+    }
+   ],
+   "tier": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "kr"
+   },
+   "tierKr": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "kr"
+   },
+   "eta": "2027-01-21",
+   "etaConfirmed": false,
+   "added": null,
+   "card": "cards/3940e9037920.webp"
   },
   {
    "id": "아이기스",
@@ -1193,7 +1000,7 @@
     "awareness": null,
     "list": "kr"
    },
-   "eta": "2027-01-21",
+   "eta": "2027-02-04",
    "etaConfirmed": false,
    "added": null,
    "card": "cards/faec4d495554.webp"
@@ -1380,7 +1187,7 @@
     "awareness": null,
     "list": "kr"
    },
-   "eta": "2027-02-04",
+   "eta": "2027-02-18",
    "etaConfirmed": false,
    "added": null,
    "card": "cards/3718e743b30f.webp"
@@ -1572,31 +1379,367 @@
     "awareness": null,
     "list": "kr"
    },
-   "eta": "2027-02-18",
+   "eta": "2027-03-04",
    "etaConfirmed": false,
    "added": null,
    "card": "cards/a4c08446f6b5.webp"
+  },
+  {
+   "id": "안·댄싱 스타",
+   "name": "Ann Takamaki · Starlight",
+   "codename": "PANTHER·Starlight",
+   "persona": "Hecate",
+   "rarity": 5,
+   "limited": true,
+   "elements": [
+    "Fire"
+   ],
+   "role": "Assassin",
+   "color": "#ff2c2c",
+   "navigator": false,
+   "order": 50,
+   "speed": 95,
+   "roleDesc": "",
+   "tags": "",
+   "tagsKr": "화상, 치료 감소",
+   "review": "\nThe third P5D collab character, and a single-target Fire DPS who combines several skills into one Persona skill.\n\nSP is basically used as the gauge for her skill combo, and her Max SP is increased to 300. Outside of the 100 SP restored each turn by her Awareness effect (125 at A1+), she cannot restore SP.\n\n**Her basic play pattern is to combine Skills 1 and 2 to build stacks, then spend those stacks to use Skill 3 heavily in one turn.** Each skill has its own SP cost and stack gain or consumption.\n\n- Skill 1: 25 SP / +1 stack\n- Skill 2: 50 SP / +2 stacks\n- Skill 3: 50 SP / -4 stacks\n\n> Example: Skill 2 + Skill 1 + Skill 1 = spends 100 SP, gains 4 stacks\n\nSkill 1 grants a damage bonus that lasts 3 turns and stacks up to 6 times, while Skill 2 enhances the next two skills used afterward.\n\nBecause she needs to be piloted with this structure in mind to reach her highest damage, her execution difficulty is high. However, **because her sequence can be built freely, she is not locked into a fixed cycle like more typical DPS characters**.\n",
+   "skills": {
+    "skill1": {
+     "name": "Fever Step",
+     "desc": "Deal Fire damage to 1 foe equal to 83.8%/92.2%/93.9%/102.2% of Attack.\nIncrease Ann's damage by 15.0%/16.5%/16.8%/18.3% for 3 turns. Stacks up to 6 times.\nAnn gains 1 [Cheer] stack.",
+     "type": "Single target",
+     "sp": 25
+    },
+    "skill2": {
+     "name": "Pyro Vortex",
+     "desc": "Deal Fire damage to 1 foe equal to 132.3%/145.5%/148.2%/161.4% of Attack.\nIn this [Heat Score], increase the next 2 [Step]'s Skill Damage by 50%. This effect does not stack.\nAnn gains 2 [Cheer] stacks.",
+     "type": "Single target",
+     "sp": 50
+    },
+    "skill3": {
+     "name": "Flaming Finale",
+     "desc": "Spend 4 [Cheer] stacks to activate 1 [Flaming Finale].\nDeal Fire damage to 1 foe equal to 411.1%/452.2%/460.4%/501.5% of Attack.\nWhen activating [Heat Score], increase Pierce Rate by 15.0%/16.5%/16.8%/18.3%.",
+     "type": "Single target",
+     "sp": 50
+    },
+    "skill_highlight": {
+     "name": "HIGHLIGHT",
+     "desc": "Deal Fire damage to 1 foe equal to 545.1%/600.9%/578.6%/634.5% of Attack.\nIncrease [Charm]'s effect by 100%. Lasts for 4 turns.",
+     "type": "Single target",
+     "sp": null
+    }
+   },
+   "rotations": [
+    {
+     "label": "A 0(2T)",
+     "steps": [
+      [
+       "1111"
+      ],
+      [
+       "211"
+      ],
+      [
+       "211"
+      ],
+      [
+       "2311"
+      ],
+      [
+       "11"
+      ],
+      [
+       "233233"
+      ]
+     ]
+    },
+    {
+     "label": "A 0(3T)",
+     "steps": [
+      [
+       "1111"
+      ],
+      [
+       "211"
+      ],
+      [
+       "2311"
+      ],
+      [
+       "11"
+      ],
+      [
+       "211"
+      ],
+      [
+       "233233"
+      ]
+     ]
+    },
+    {
+     "label": "A 0(MIKU)",
+     "steps": [
+      [
+       "1111"
+      ],
+      [
+       "211"
+      ],
+      [
+       "211"
+      ],
+      [
+       "2311"
+      ],
+      [
+       "11"
+      ],
+      [
+       "233233"
+      ],
+      [
+       "1111"
+      ],
+      [
+       "23"
+      ]
+     ]
+    },
+    {
+     "label": "A 1(2T)",
+     "steps": [
+      [
+       "1111"
+      ],
+      [
+       "213"
+      ],
+      [
+       "1111"
+      ],
+      [
+       "213"
+      ],
+      [
+       "211"
+      ],
+      [
+       "211233233"
+      ]
+     ]
+    },
+    {
+     "label": "A 1(3T)",
+     "steps": [
+      [
+       "1111"
+      ],
+      [
+       "211"
+      ],
+      [
+       "233"
+      ],
+      [
+       "1111"
+      ],
+      [
+       "211"
+      ],
+      [
+       "211233233"
+      ]
+     ]
+    },
+    {
+     "label": "A 1(MIKU)",
+     "steps": [
+      [
+       "1111"
+      ],
+      [
+       "213"
+      ],
+      [
+       "1111"
+      ],
+      [
+       "213"
+      ],
+      [
+       "211"
+      ],
+      [
+       "211233233"
+      ],
+      [
+       "211"
+      ],
+      [
+       "233"
+      ]
+     ]
+    },
+    {
+     "label": "A 2(2T)",
+     "steps": [
+      [
+       "1111"
+      ],
+      [
+       "213"
+      ],
+      [
+       "1111"
+      ],
+      [
+       "213"
+      ],
+      [
+       "1111"
+      ],
+      [
+       "2211113333"
+      ]
+     ]
+    },
+    {
+     "label": "A 2(3T)",
+     "steps": [
+      [
+       "1111"
+      ],
+      [
+       "211"
+      ],
+      [
+       "233"
+      ],
+      [
+       "1111"
+      ],
+      [
+       "211"
+      ],
+      [
+       "2211113333"
+      ]
+     ]
+    },
+    {
+     "label": "A 2(MIKU)",
+     "steps": [
+      [
+       "1111"
+      ],
+      [
+       "211"
+      ],
+      [
+       "1111"
+      ],
+      [
+       "233"
+      ],
+      [
+       "211"
+      ],
+      [
+       "2211113333"
+      ],
+      [
+       "211"
+      ],
+      [
+       "233"
+      ]
+     ]
+    }
+   ],
+   "rotationNotes": [
+    "· Initial release; this may change at any time.",
+    "· 2T is strong on even-numbered turns, while 3T hits hard every 3 turns.",
+    "· For 2T, you can switch to a pattern that concentrates the Skill 3 uses from turns 2 and 4 into a single turn."
+   ],
+   "parties": [
+    {
+     "members": [
+      "안·댄싱 스타",
+      "준페이",
+      "렌·댄싱 스타",
+      "미쿠"
+     ],
+     "comment": ""
+    },
+    {
+     "members": [
+      "안·댄싱 스타",
+      "코로마루",
+      "렌·댄싱 스타",
+      "미쿠"
+     ],
+     "comment": ""
+    },
+    {
+     "members": [
+      "안·댄싱 스타",
+      "J&C",
+      "렌·댄싱 스타",
+      "미쿠"
+     ],
+     "comment": ""
+    }
+   ],
+   "friends": [
+    {
+     "id": "마나카",
+     "comment": "Both the stacks and SP needed for Skill 3 are restored when the turn cycles back, allowing repeated powerful attacks that spend all SP."
+    },
+    {
+     "id": "준페이",
+     "comment": "Junpei provides strong buffs for Fire damage and debuffs against enemies."
+    },
+    {
+     "id": "코로마루",
+     "comment": "Koromaru strengthens enemies' Fire weakness and increases the damage they take."
+    }
+   ],
+   "skillPriority": "3>1>2>4",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Fatal Finish",
+     "effect": "Blazing Rhapsody",
+     "desc": "Increase critical rate by 18.1%/18.1%/23.5%/23.5%/28.9%/28.9%/34.3%.\nFor every 100 SP gained, permanently increase user's damage by 8.5%/11.0%/11.0%/13.5%/13.5%/16.0%/16.0%. Stacks up to 4 times.\nFor every 100 SP spent, permanently increase user's critical damage by 16.4%/21.4%/21.4%/26.4%/26.4%/31.4%/31.4%. Stacks up to 2 times."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Fear of Pain",
+     "effect": "Fevered Fury",
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nAfter gaining [Cheers], increase user's damage by 8.8%/11.6%/11.6%/14.4%/14.4%/17.2%/17.2% for 2 turns. Stacks up to 2 times."
+    }
+   ],
+   "tier": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "kr"
+   },
+   "tierKr": {
+    "label": "T0",
+    "rank": 0,
+    "awareness": null,
+    "list": "kr"
+   },
+   "eta": "2027-03-18",
+   "etaConfirmed": false,
+   "added": null,
+   "card": "cards/20f626509145.webp"
   }
  ],
  "banners": [
-  {
-   "kind": "unit",
-   "unit": "후카",
-   "name": "Fuuka Yamagishi",
-   "title": "All-Seeing Eye",
-   "start": "2026-10-29 11:30:00",
-   "end": "2026-11-26 10:59:59",
-   "rerun": false
-  },
-  {
-   "kind": "weapon",
-   "unit": "후카",
-   "name": "Rainbow Relay",
-   "title": "Silent Pistol",
-   "start": "2026-10-29 11:30:00",
-   "end": "2026-11-26 10:59:59",
-   "rerun": false
-  },
   {
    "kind": "unit",
    "unit": "미나미·여름",
@@ -1652,6 +1795,42 @@
    "rerun": false
   },
   {
+   "kind": "unit",
+   "unit": "준페이",
+   "name": "Junpei Iori",
+   "title": "Bring the Heat",
+   "start": "2026-11-26 11:30:00",
+   "end": "2026-12-10 10:59:59",
+   "rerun": false
+  },
+  {
+   "kind": "unit",
+   "unit": "J&C",
+   "name": "Justine & Caroline",
+   "title": "Road to Rehabilitation",
+   "start": "2026-11-26 11:30:00",
+   "end": "2026-12-10 10:59:59",
+   "rerun": true
+  },
+  {
+   "kind": "unit",
+   "unit": "토모코·여름",
+   "name": "Seaside Tomoko",
+   "title": "Summer Breeze",
+   "start": "2026-11-26 11:30:00",
+   "end": "2026-12-10 10:59:59",
+   "rerun": true
+  },
+  {
+   "kind": "unit",
+   "unit": "유스케",
+   "name": "Yusuke Kitagawa",
+   "title": "Art of the Fox",
+   "start": "2026-11-26 11:30:00",
+   "end": "2026-12-10 10:59:59",
+   "rerun": true
+  },
+  {
    "kind": "weapon",
    "unit": "쇼키·암야",
    "name": "Spada della Vita",
@@ -1668,6 +1847,42 @@
    "start": "2026-11-12 11:30:00",
    "end": "2026-12-10 10:59:59",
    "rerun": false
+  },
+  {
+   "kind": "weapon",
+   "unit": "준페이",
+   "name": "Balmung",
+   "title": "Silent Pistol",
+   "start": "2026-11-26 11:30:00",
+   "end": "2026-12-10 10:59:59",
+   "rerun": false
+  },
+  {
+   "kind": "weapon",
+   "unit": "J&C",
+   "name": "Warden's Judgement",
+   "title": "Silent Pistol",
+   "start": "2026-11-26 11:30:00",
+   "end": "2026-12-10 10:59:59",
+   "rerun": true
+  },
+  {
+   "kind": "weapon",
+   "unit": "토모코·여름",
+   "name": "Bubble Babies",
+   "title": "Silent Pistol",
+   "start": "2026-11-26 11:30:00",
+   "end": "2026-12-10 10:59:59",
+   "rerun": true
+  },
+  {
+   "kind": "weapon",
+   "unit": "유스케",
+   "name": "Shadowkiller",
+   "title": "Silent Pistol",
+   "start": "2026-11-26 11:30:00",
+   "end": "2026-12-10 10:59:59",
+   "rerun": true
   },
   {
    "kind": "unit",

@@ -1,6 +1,6 @@
 {
  "source": "lufel.net",
- "scraped": "2026-11-25T08:47:42.322Z",
+ "scraped": "2026-11-27T13:59:23.471Z",
  "units": [
   {
    "id": "YUI·스텔라",
@@ -24,7 +24,7 @@
    "skills": {
     "skill1": {
      "name": "Harvest Fest",
-     "desc": "Deal Nuclear damage to 1 foe equal to 120.8%/133.2%/128.3%/140.6% of Attack, gain 3 Veggie Energy stacks, and enter Huge Harvest state until the end of her next turn.\nIf Potato Knight is present when this skill is used, automatically change to <span style='color:#C7BE5A;'><span style='color:#C7BE5A;'>Potato Yellow</span></span> at the end of the turn.\nHuge Harvest: At the end of Cosmic Yui's action, activate the Resonance Harvest Havoc, dealing Nuclear damage to 1 random foe equal to 93.5%/103.1%/99.2%/108.8% of Attack. Also, based on the current state, activate the following effects.\n<span style='color:rgb(184, 33, 214);'><span style='color:rgb(184, 33, 214);'>Eggplant Purple</span></span>: Gain 1 Veggie Energy.\n<span style='color:#C7BE5A;'><span style='color:#C7BE5A;'>Potato Yellow</span></span>: Gain Potato Power, and increase All-Out Attack damage by 14.6%/16.1%/15.5%/17.0% for 3 turns.\n<span style='color:rgb(254, 149, 244);'><span style='color:rgb(254, 149, 244);'>Mushroom Red</span></span>: Inflict Shroom Spores on the target, and increase damage taken by 19.5%/21.5%/20.7%/22.7% for 2 turns.\n<span style='color:rgb(11, 190, 11);'><span style='color:rgb(11, 190, 11);'>Asparagus Green</span></span>: Restore 976/1076/1036/1136 HP to the ally with the lowest remaining HP.",
+     "desc": "Deal Nuclear damage to 1 foe equal to 120.8%/133.2%/128.3%/140.6% of Attack, gain 3 Veggie Energy stacks, and enter Huge Harvest state until the end of her next turn.\nIf Potato Knight is present when this skill is used, automatically change to <span style='color:#C7BE5A;'>Potato Yellow</span> at the end of the turn.\nHuge Harvest: At the end of Cosmic Yui's action, activate the Resonance Harvest Havoc, dealing Nuclear damage to 1 random foe equal to 93.5%/103.1%/99.2%/108.8% of Attack. Also, based on the current state, activate the following effects.\n<span style='color:rgb(184, 33, 214);'>Eggplant Purple</span>: Gain 1 Veggie Energy.\n<span style='color:#C7BE5A;'>Potato Yellow</span>: Gain Potato Power, and increase All-Out Attack damage by 14.6%/16.1%/15.5%/17.0% for 3 turns.\n<span style='color:rgb(254, 149, 244);'>Mushroom Red</span>: Inflict Shroom Spores on the target, and increase damage taken by 19.5%/21.5%/20.7%/22.7% for 2 turns.\n<span style='color:rgb(11, 190, 11);'>Asparagus Green</span>: Restore 976/1076/1036/1136 HP to the ally with the lowest remaining HP.",
      "type": "Single target",
      "sp": 22
     },
@@ -36,7 +36,7 @@
     },
     "skill3": {
      "name": "Veg-Out Attack",
-     "desc": "Deal Nuclear damage to 1 foe equal to 130.2%/143.5%/138.2%/151.5% of Attack, and for each Veggie Knight present, deal 1 more hit of Nuclear damage equal to 29.3%/32.3%/31.1%/34.1% of Attack. Also, if 2 or more Potato Knights are present, spend all but 1 Potato Knight, and for each Potato Knight spent, deal 1 more hit of Nuclear damage equal to 24.4%/26.9%/25.9%/28.4% of Attack. This skill's damage is counted as an All-Out Attack.\nWhen this skill is selected and used, gain 2 Veggie Energy stacks.\nIf Eggplant Knight is present after activating this skill, automatically change to <span style='color:rgb(184, 33, 214);'><span style='color:rgb(184, 33, 214);'>Eggplant Purple</span></span> state at the end of the turn.\nPassive: At 7 Veggie Energy stacks, able to spend all Veggie Energy stacks to activate damage effect of Veg-Out Attack. Damage is distributed equally among all foes. This is not treated as normal skill damage.",
+     "desc": "Deal Nuclear damage to 1 foe equal to 130.2%/143.5%/138.2%/151.5% of Attack, and for each Veggie Knight present, deal 1 more hit of Nuclear damage equal to 29.3%/32.3%/31.1%/34.1% of Attack. Also, if 2 or more Potato Knights are present, spend all but 1 Potato Knight, and for each Potato Knight spent, deal 1 more hit of Nuclear damage equal to 24.4%/26.9%/25.9%/28.4% of Attack. This skill's damage is counted as an All-Out Attack.\nWhen this skill is selected and used, gain 2 Veggie Energy stacks.\nIf Eggplant Knight is present after activating this skill, automatically change to <span style='color:rgb(184, 33, 214);'>Eggplant Purple</span> state at the end of the turn.\nPassive: At 7 Veggie Energy stacks, able to spend all Veggie Energy stacks to activate damage effect of Veg-Out Attack. Damage is distributed equally among all foes. This is not treated as normal skill damage.",
      "type": "Single target",
      "sp": 23
     }
@@ -172,14 +172,14 @@
      "rarity": 5,
      "name": "Starlight Decimators",
      "effect": "",
-     "desc": "Increase critical rate by 18.1%/18.1%/23.5%/23.5%/28.9%/28.9%/34.3%. When Veggie Knights are summoned, increase Cosmic Yui's Attack by 10.7%/13.8%/13.8%/16.9%/16.9%/20.0%/20.0%. This effect is permanent and stacks up to 4 times.\nWhen using [Veg-Out Attack], increase critical damage by 32.8%/42.8%/42.8%/52.8%/52.8%/62.8%/62.8%."
+     "desc": "Increase critical rate by 18.1%/18.1%/23.5%/23.5%/28.9%/28.9%/34.3%. When Veggie Knights are summoned, increase Cosmic Yui's Attack by 10.7%/13.8%/13.8%/16.9%/16.9%/20.0%/20.0%. This effect is permanent and stacks up to 4 times.\nWhen using Veg-Out Attack, increase critical damage by 32.8%/42.8%/42.8%/52.8%/52.8%/62.8%/62.8%."
     },
     {
      "key": "weapon4-1",
      "rarity": 4,
      "name": "Sprouting Voyagers",
      "effect": "",
-     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. After activating a Resonance, increase Attack when using [Veg-Out Attack] by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0% for 2 turns."
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. After activating a Resonance, increase Attack when using Veg-Out Attack by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0% for 2 turns."
     }
    ],
    "tier": {
@@ -385,8 +385,8 @@
     }
    ],
    "tier": {
-    "label": "T2",
-    "rank": 3,
+    "label": "T3",
+    "rank": 4,
     "awareness": null,
     "list": "global"
    },
@@ -493,7 +493,7 @@
    "tier": {
     "label": "T4",
     "rank": 5,
-    "awareness": 6,
+    "awareness": null,
     "list": "global"
    },
    "tierKr": {
@@ -593,9 +593,9 @@
     }
    ],
    "tier": {
-    "label": "T3",
-    "rank": 4,
-    "awareness": 6,
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
     "list": "global"
    },
    "tierKr": {
@@ -794,8 +794,8 @@
     }
    ],
    "tier": {
-    "label": "T1",
-    "rank": 2,
+    "label": "T2",
+    "rank": 3,
     "awareness": null,
     "list": "global"
    },
@@ -915,8 +915,8 @@
     }
    ],
    "tier": {
-    "label": "T3",
-    "rank": 4,
+    "label": "T4",
+    "rank": 5,
     "awareness": null,
     "list": "global"
    },
@@ -1424,14 +1424,14 @@
     }
    ],
    "tier": {
-    "label": "T1",
-    "rank": 2,
+    "label": "T2",
+    "rank": 3,
     "awareness": null,
     "list": "global"
    },
    "tierKr": {
-    "label": "T0.5",
-    "rank": 1,
+    "label": "T1",
+    "rank": 2,
     "awareness": null,
     "list": "kr"
    },
@@ -1539,8 +1539,8 @@
     }
    ],
    "tier": {
-    "label": "T0",
-    "rank": 0,
+    "label": "T1",
+    "rank": 2,
     "awareness": null,
     "list": "global"
    },
@@ -1892,14 +1892,14 @@
     }
    ],
    "tier": {
-    "label": "T0.5",
-    "rank": 1,
+    "label": "T1",
+    "rank": 2,
     "awareness": null,
     "list": "global"
    },
    "tierKr": {
-    "label": "T2",
-    "rank": 3,
+    "label": "T3",
+    "rank": 4,
     "awareness": null,
     "list": "kr"
    },
@@ -1994,7 +1994,7 @@
    "tier": {
     "label": "T4",
     "rank": 5,
-    "awareness": 6,
+    "awareness": null,
     "list": "global"
    },
    "tierKr": {
@@ -2166,14 +2166,14 @@
     }
    ],
    "tier": {
-    "label": "T2",
-    "rank": 3,
+    "label": "T3",
+    "rank": 4,
     "awareness": null,
     "list": "global"
    },
    "tierKr": {
-    "label": "T0.5",
-    "rank": 1,
+    "label": "T1",
+    "rank": 2,
     "awareness": null,
     "list": "kr"
    },
@@ -2274,7 +2274,7 @@
    "tier": {
     "label": "T4",
     "rank": 5,
-    "awareness": 6,
+    "awareness": null,
     "list": "global"
    },
    "tierKr": {
@@ -2455,14 +2455,14 @@
     }
    ],
    "tier": {
-    "label": "T0.5",
-    "rank": 1,
+    "label": "T1",
+    "rank": 2,
     "awareness": null,
     "list": "global"
    },
    "tierKr": {
-    "label": "T0",
-    "rank": 0,
+    "label": "T0.5",
+    "rank": 1,
     "awareness": null,
     "list": "kr"
    },
@@ -2557,12 +2557,12 @@
    "tier": {
     "label": "T3",
     "rank": 4,
-    "awareness": 1,
+    "awareness": null,
     "list": "global"
    },
    "tierKr": {
-    "label": "T4",
-    "rank": 5,
+    "label": "T1",
+    "rank": 2,
     "awareness": null,
     "list": "kr"
    },
@@ -2758,14 +2758,14 @@
     }
    ],
    "tier": {
-    "label": "T0",
-    "rank": 0,
+    "label": "T0.5",
+    "rank": 1,
     "awareness": null,
     "list": "global"
    },
    "tierKr": {
-    "label": "T1",
-    "rank": 2,
+    "label": "T2",
+    "rank": 3,
     "awareness": null,
     "list": "kr"
    },
@@ -2983,8 +2983,8 @@
     }
    ],
    "tier": {
-    "label": "T0",
-    "rank": 0,
+    "label": "T0.5",
+    "rank": 1,
     "awareness": null,
     "list": "global"
    },
@@ -3143,8 +3143,8 @@
     }
    ],
    "tier": {
-    "label": "T0.5",
-    "rank": 1,
+    "label": "T1",
+    "rank": 2,
     "awareness": null,
     "list": "global"
    },
@@ -3285,14 +3285,14 @@
     }
    ],
    "tier": {
-    "label": "T0",
-    "rank": 0,
+    "label": "T0.5",
+    "rank": 1,
     "awareness": null,
     "list": "global"
    },
    "tierKr": {
-    "label": "T1",
-    "rank": 2,
+    "label": "T2",
+    "rank": 3,
     "awareness": null,
     "list": "kr"
    },
@@ -3468,8 +3468,8 @@
     }
    ],
    "tier": {
-    "label": "T0",
-    "rank": 0,
+    "label": "T1",
+    "rank": 2,
     "awareness": null,
     "list": "global"
    },
@@ -3511,7 +3511,7 @@
     },
     "skill2": {
      "name": "Smash Hit",
-     "desc": "Deal Physical damage to 1 foe equal to 56.9%/62.7%/59.2%/65.1% of Shun's max HP. Decrease Defense by 30.0%/30.0%/31.2%/31.2% for 2 turns.When Desperado is active, increase effect by 59.9%/59.9%/62.4%/62.4%.",
+     "desc": "Deal Physical damage to 1 foe equal to 56.9%/62.7%/59.2%/65.1% of Shun's max HP. Decrease Defense by 30.0%/30.0%/31.2%/31.2% for 2 turns. When Desperado is active, increase effect by 59.9%/59.9%/62.4%/62.4%.",
      "type": "Single target",
      "sp": null
     },
@@ -3568,8 +3568,8 @@
     }
    ],
    "tier": {
-    "label": "T2",
-    "rank": 3,
+    "label": "T3",
+    "rank": 4,
     "awareness": 6,
     "list": "global"
    },
@@ -3862,14 +3862,14 @@
      "rarity": 4,
      "name": "Desperado's Toothpick",
      "effect": "Combat Axe",
-     "desc": "Increase shield by 8.8%/8.8%/11.4%/11.4%/14.0%/14.0%/16.6%.When Shun gains a shield, increase user's max HP by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0% for 2 turns."
+     "desc": "Increase shield by 8.8%/8.8%/11.4%/11.4%/14.0%/14.0%/16.6%. When Gunslinger Shun grants a shield to himself, increase max HP by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0% for 2 turns."
     }
    ],
    "tier": {
     "label": "T0.5",
     "rank": 1,
     "awareness": null,
-    "list": "kr"
+    "list": "global"
    },
    "tierKr": {
     "label": "T0.5",
@@ -4083,18 +4083,18 @@
      "rarity": 4,
      "name": "Spada Vendetta",
      "effect": "Blessed Blade",
-     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.When user gains [Night's Blessing], increase user's damage by 3.5%/4.5%/4.5%/5.5%/5.5%/6.5%/6.5% for 2 turns. Stacks up to 5 times."
+     "desc": "Increase Attack by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%. When gaining Nocturnal Blessing, increase Tenebre Shoki's damage by 3.5%/4.5%/4.5%/5.5%/5.5%/6.5%/6.5% for 2 turns. Stacks up to 5 times."
     }
    ],
    "tier": {
-    "label": "T1",
-    "rank": 2,
+    "label": "T0",
+    "rank": 0,
     "awareness": null,
-    "list": "kr"
+    "list": "global"
    },
    "tierKr": {
-    "label": "T1",
-    "rank": 2,
+    "label": "T0.5",
+    "rank": 1,
     "awareness": null,
     "list": "kr"
    },
@@ -4216,8 +4216,8 @@
     }
    ],
    "tier": {
-    "label": "T3",
-    "rank": 4,
+    "label": "T4",
+    "rank": 5,
     "awareness": 6,
     "list": "global"
    },
@@ -4633,8 +4633,8 @@
     }
    ],
    "tier": {
-    "label": "T3",
-    "rank": 4,
+    "label": "T4",
+    "rank": 5,
     "awareness": null,
     "list": "global"
    },
@@ -4804,8 +4804,8 @@
     }
    ],
    "tier": {
-    "label": "T1",
-    "rank": 2,
+    "label": "T2",
+    "rank": 3,
     "awareness": null,
     "list": "global"
    },
@@ -4935,8 +4935,8 @@
     }
    ],
    "tier": {
-    "label": "T3",
-    "rank": 4,
+    "label": "T4",
+    "rank": 5,
     "awareness": null,
     "list": "global"
    },
@@ -5176,8 +5176,8 @@
     }
    ],
    "tier": {
-    "label": "T0.5",
-    "rank": 1,
+    "label": "T1",
+    "rank": 2,
     "awareness": null,
     "list": "global"
    },
@@ -5570,8 +5570,8 @@
     }
    ],
    "tier": {
-    "label": "T3",
-    "rank": 4,
+    "label": "T0.5",
+    "rank": 1,
     "awareness": null,
     "list": "global"
    },
@@ -5752,8 +5752,8 @@
     }
    ],
    "tier": {
-    "label": "T0.5",
-    "rank": 1,
+    "label": "T1",
+    "rank": 2,
     "awareness": null,
     "list": "global"
    },
@@ -5884,7 +5884,7 @@
    "tier": {
     "label": "T4",
     "rank": 5,
-    "awareness": 6,
+    "awareness": null,
     "list": "global"
    },
    "tierKr": {
@@ -6084,14 +6084,14 @@
     }
    ],
    "tier": {
-    "label": "T0",
-    "rank": 0,
+    "label": "T0.5",
+    "rank": 1,
     "awareness": null,
     "list": "global"
    },
    "tierKr": {
-    "label": "T1",
-    "rank": 2,
+    "label": "T2",
+    "rank": 3,
     "awareness": null,
     "list": "kr"
    },
@@ -6225,8 +6225,8 @@
     }
    ],
    "tier": {
-    "label": "T2",
-    "rank": 3,
+    "label": "T3",
+    "rank": 4,
     "awareness": null,
     "list": "global"
    },
@@ -6239,6 +6239,198 @@
    "released": "2025-07-10",
    "added": null,
    "card": "cards/03edde21ada7.webp"
+  },
+  {
+   "id": "준페이",
+   "name": "Junpei Iori",
+   "codename": "JUNPEI",
+   "persona": "Hermes",
+   "rarity": 5,
+   "limited": true,
+   "elements": [
+    "Fire"
+   ],
+   "role": "Guardian",
+   "color": "#3b68d0",
+   "navigator": false,
+   "order": 40,
+   "speed": 103,
+   "roleDesc": "",
+   "tags": "",
+   "tagsKr": "도발, 크리티컬 효과, 공격력, 방어력 감소, 대미지 보너스, 화상",
+   "review": "An original P3 character, he’s a tank who supports Fire-attribute DPS units.\n\nHis standout trait is that he sacrifices general-purpose utility and, **specifically for Fire teams, provides extremely powerful buffs that push past the usual limits of a Defense-role character**.\n\nSkill 2 exists mainly for flexibility, but it’s generally a weaker version of Skill 1. In most cases, the standard play becomes a 2-turn cycle that repeatedly uses Skill 3, Skill 1, and Theurgy.\n\n",
+   "skills": {
+    "skill1": {
+     "name": "Scorching Strike",
+     "desc": "Deal Fire damage to 1 foe equal to 77.1%/85.0%/81.8%/89.7% of Junpei's max HP.\nIf the target has Clean Hit, spend all Clean Hit on the field and deal Fire damage to all foes equal to 38.6%/42.5%/40.9%/44.9% of Junpei's max HP. Also, decrease all foes' Defense by 7.8%/8.6%/8.3%/9.1%, and decrease more based on Junpei's max HP (up to 19520/21520/20720/22720 of max HP, up to 31.2%/34.4%/33.2%/36.4%) for 2 turns. Also, increase party's Fire damage by 18.7%/20.7%/19.9%/21.8%, and increase more based on Junpei's max HP (up to 19520/21520/20720/22720 of max HP, up to 75.0%/82.6%/79.6%/87.2%) for 2 turns.",
+     "type": "Single target",
+     "sp": 23
+    },
+    "skill2": {
+     "name": "Razorwing Slash",
+     "desc": "Deal Physical damage to 1 foe equal to 41.9%/46.2%/44.4%/48.7% of Junpei's max HP.\nIf the target has Clean Hit, spend all Clean Hit on the field and this damage is a guaranteed critical. Also, decrease the target's Defense by 7.8%/8.6%/8.3%/9.1%, and decrease more based on Junpei's max HP (up to 19520/21520/20720/22720 of max HP, up to 31.2%/34.4%/33.2%/36.4%) for 2 turns. Also, increase party's damage dealt by 7.8%/8.6%/8.3%/9.1%, and increase more based on Junpei's max HP (up to 19520/21520/20720/22720 of max HP, up to 31.2%/34.4%/33.2%/36.4%) for 2 turns.",
+     "type": "Single target",
+     "sp": null
+    },
+    "skill3": {
+     "name": "All Eyes on Me",
+     "desc": "Gain Center of Attention state for 2 turns, taunting all foes.\nAlso, increase party's critical damage by 5.9%/6.5%/6.2%/6.8%, and increase more based on Junpei's max HP (up to 19520/21520/20720/22720 of max HP, up to 23.4%/25.8%/24.9%/27.3%) for 2 turns. Also, increase Fire Sweeper or Assassin allies' critical damage by 14.1%/15.5%/14.9%/16.4%, and increase more based on Junpei's max HP (up to 19520/21520/20720/22720 of max HP, up to 56.2%/62.0%/59.7%/65.4%) for 2 turns.\nCenter of Attention: Null Down and spiritual ailments, and take 40% of damage in place of all allies. When allies take damage other than continuous damage, based on the number of targets (1/2/3/4), decrease damage taken to a certain percentage (75%/55%/45%/40%, respectively). When Junpei takes damage other than continuous damage, inflict Burn on the attacker. Also, if no damage is taken for 1 turn excluding continuous damage, and Batter Up can be activated, activate Batter Up.",
+     "type": "",
+     "sp": 26
+    },
+    "skill_highlight": {
+     "name": "Hack n' Blast",
+     "desc": "Can be activated when Theurgy gauge is at 140. Deal Physical damage to 1 foe equal to 138.3%/152.5%/146.8%/161.0% of Junpei's max HP, and decrease Down Points by 4 ignoring affinities. After target is knocked down, decrease other foes' Down Points based on the number of excess Down Points (if the target is defeated, this effect will not activate).\nGrant Voltage Up to all allies for 4 turns: Increase Attack based on Junpei's max HP (up to 19520/21520/20720/22720 of max HP, up to 19.5%/21.5%/20.7%/22.7%), and increase critical damage based on Junpei's max HP (up to 19520/21520/20720/22720 of max HP, up to 14.6%/16.1%/15.5%/17.0%). Stacks up to 2 times.\nIf there are Fire Sweeper or Assassin allies in the party at the start of battle, double Junpei's Theurgy gauge increase rate.",
+     "type": "Single target",
+     "sp": null
+    }
+   },
+   "rotations": [
+    {
+     "label": "A 0",
+     "steps": [
+      [
+       "3"
+      ],
+      [
+       "TH",
+       "1"
+      ],
+      [
+       "3"
+      ],
+      [
+       "TH",
+       "1"
+      ],
+      [
+       "3"
+      ],
+      [
+       "TH",
+       "1"
+      ]
+     ]
+    },
+    {
+     "label": "A 6",
+     "steps": [
+      [
+       "3"
+      ],
+      [
+       "TH",
+       "근접",
+       "1"
+      ],
+      [
+       "3"
+      ],
+      [
+       "TH",
+       "근접",
+       "1"
+      ],
+      [
+       "3"
+      ],
+      [
+       "TH",
+       "근접",
+       "1"
+      ]
+     ]
+    }
+   ],
+   "rotationNotes": [],
+   "parties": [
+    {
+     "members": [
+      "준페이",
+      "미츠루",
+      "유키 마코토",
+      "마나카"
+     ],
+     "comment": ""
+    },
+    {
+     "members": [
+      "준페이",
+      "미나미·여름",
+      "유키 마코토",
+      "마나카"
+     ],
+     "comment": ""
+    },
+    {
+     "members": [
+      "준페이",
+      "미나미·여름",
+      "야오링·사자무",
+      "마나카"
+     ],
+     "comment": ""
+    },
+    {
+     "members": [
+      "준페이",
+      "슌·프론티어",
+      "야오링·사자무",
+      "마나카"
+     ],
+     "comment": ""
+    }
+   ],
+   "friends": [
+    {
+     "id": "유키 마코토",
+     "comment": "Junpei Iori’s value increases significantly when a Fire attribute DPS is present."
+    },
+    {
+     "id": "미츠루",
+     "comment": "Junpei Iori’s buff is always conducted on all allies, and Mitsuru can perform Fire attribute attacks by copying the attribute of his allies."
+    },
+    {
+     "id": "야오링·사자무",
+     "comment": "Junpei Iori’s value increases significantly when a Fire attribute DPS is present. Additionally, Junpei Iori can inflict Burn on enemies by using Skill 3."
+    },
+    {
+     "id": "안",
+     "comment": "Junpei Iori’s value increases significantly when a Fire attribute DPS is present. Additionally, Junpei Iori can inflict Burn on enemies by using Skill 3."
+    }
+   ],
+   "skillPriority": "3>1>4>2",
+   "weapons": [
+    {
+     "key": "weapon5-1",
+     "rarity": 5,
+     "name": "Balmung",
+     "effect": "Hero's Sword",
+     "desc": "Increase max HP by 30.0%/30.0%/39.0%/39.0%/48.0%/48.0%/57.0%.\nAfter using All Eyes on Me, increase Junpei's damage reduction by 12.0%/15.6%/15.6%/19.2%/19.2%/22.8%/22.8% for 2 turns.\nAfter using Batter Up, increase party's critical damage by 30.6%/39.8%/39.8%/49.0%/49.0%/58.2%/58.2% for 2 turns."
+    },
+    {
+     "key": "weapon4-1",
+     "rarity": 4,
+     "name": "Elixir Sword",
+     "effect": "Oath of Protection",
+     "desc": "Increase max HP by 12.0%/12.0%/16.0%/16.0%/20.0%/20.0%/24.0%.\nAfter dealing damage, increase Junpei's max HP by 22.0%/29.0%/29.0%/36.0%/36.0%/43.0%/43.0% for 2 turns."
+    }
+   ],
+   "tier": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "global"
+   },
+   "tierKr": {
+    "label": "T0.5",
+    "rank": 1,
+    "awareness": null,
+    "list": "kr"
+   },
+   "released": "2026-11-26",
+   "added": "2026-11-27",
+   "card": "cards/50690938d3dd.webp"
   },
   {
    "id": "카스미",
@@ -6428,14 +6620,14 @@
     }
    ],
    "tier": {
-    "label": "T0.5",
-    "rank": 1,
+    "label": "T1",
+    "rank": 2,
     "awareness": null,
     "list": "global"
    },
    "tierKr": {
-    "label": "T2",
-    "rank": 3,
+    "label": "T3",
+    "rank": 4,
     "awareness": null,
     "list": "kr"
    },
@@ -6621,8 +6813,8 @@
     }
    ],
    "tier": {
-    "label": "T0",
-    "rank": 0,
+    "label": "T0.5",
+    "rank": 1,
     "awareness": null,
     "list": "global"
    },
@@ -7484,7 +7676,7 @@
    "tier": {
     "label": "T4",
     "rank": 5,
-    "awareness": 6,
+    "awareness": null,
     "list": "global"
    },
    "tierKr": {
@@ -7795,8 +7987,8 @@
     }
    ],
    "tier": {
-    "label": "T2",
-    "rank": 3,
+    "label": "T4",
+    "rank": 5,
     "awareness": null,
     "list": "global"
    },
@@ -7903,7 +8095,7 @@
    "tier": {
     "label": "T4",
     "rank": 5,
-    "awareness": 6,
+    "awareness": null,
     "list": "global"
    },
    "tierKr": {
@@ -8001,8 +8193,8 @@
     }
    ],
    "tier": {
-    "label": "T1",
-    "rank": 2,
+    "label": "T2",
+    "rank": 3,
     "awareness": 1,
     "list": "global"
    },
@@ -8141,7 +8333,7 @@
    "tier": {
     "label": "T4",
     "rank": 5,
-    "awareness": 6,
+    "awareness": null,
     "list": "global"
    },
    "tierKr": {
@@ -8317,8 +8509,8 @@
     }
    ],
    "tier": {
-    "label": "T0.5",
-    "rank": 1,
+    "label": "T2",
+    "rank": 3,
     "awareness": null,
     "list": "global"
    },
@@ -8902,9 +9094,9 @@
     }
    ],
    "tier": {
-    "label": "T3",
-    "rank": 4,
-    "awareness": 6,
+    "label": "T4",
+    "rank": 5,
+    "awareness": null,
     "list": "global"
    },
    "tierKr": {
@@ -9231,7 +9423,7 @@
    "tier": {
     "label": "T4",
     "rank": 5,
-    "awareness": 6,
+    "awareness": null,
     "list": "global"
    },
    "tierKr": {
@@ -9357,7 +9549,7 @@
    "tier": {
     "label": "T4",
     "rank": 5,
-    "awareness": 6,
+    "awareness": null,
     "list": "global"
    },
    "tierKr": {
@@ -9496,8 +9688,8 @@
     "list": "global"
    },
    "tierKr": {
-    "label": "T1",
-    "rank": 2,
+    "label": "T0.5",
+    "rank": 1,
     "awareness": null,
     "list": "kr"
    },
